@@ -10,7 +10,7 @@ Ziel ist es in Python Klassen wie auf dem UML Diagramm abgebildet zu erstellen.
 - ``LKW``: Kind von Fahrzeug
 - ``Person``: Bildet eine Person ab
 
-Es soll ermöglich werden Personen mit Name und Geburtsdatum anzulegen und einen Instanz von ``PKW``, ``LKW`` oder ``Motorrad`` mittels der ``HasFahrerlaubnis``-Methode zu fragen, ob die übergebene ``Person`` das jeweilige ``Fahrzeug`` (Basis) fahren darf.
+Es soll ermöglich werden Personen mit Name und Geburtsdatum anzulegen und einen Instanz von ``PKW``, ``LKW`` oder ``Motorrad`` mittels der ``hasFahrerlaubnis``-Methode zu fragen, ob die übergebene ``Person`` das jeweilige ``Fahrzeug`` (Basis) fahren darf.
 
 Die Grundlage zur Entscheidung, ob eine Person fahren darf bildet nachfolgende Matrix:
 
