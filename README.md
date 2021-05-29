@@ -40,8 +40,8 @@ Es soll der Aufruf ``audi.hasFahrerlaubnis(peter)`` möglich werden. (*audi* ist
 Nutze dazu die Datumsberechnung sowie die statische Methode aus dem Modul ``datetime``: ``datetime.date.today()``.
 8. Füge den Fahrzeugen eine Methode ``setSize (hoehe, breite, laenge)`` hinzu.
 Die übergebenen Werte sollen in Membervariablen gespeichert werden.
-9. Definiere eine ``@Property`` namens ```volumen``
-das errechnet aus ``hoehe``, ``breite`` und ``laenge`` das Volumen zurückgibt
+9. Definiere eine ``@property`` namens ``volumen``
+die das aus ``hoehe``, ``breite`` und ``laenge`` errechnete Volumen zurückgibt.
 
 Optional:
 
