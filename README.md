@@ -30,10 +30,12 @@ wie im Klassendiagramm abgebildet.
 3. Füge Membervariablen hinzu:
 ``baujahr``, ``erstzulassung``, ``identNr``, ``farbe``
 4. Füge der ``Person`` Klasse: 
-Vorname, Nachname und Geburtstag hinzu.
+- Vorname
+- Nachname 
+- und Geburtstag hinzu.
 5. Erstelle in ``Motorrad`` und ``PKW`` Membervariablen:
-Motorrad: ``automatik`` (bool)
-PKW: ``hubraum`` (int)
+- Motorrad: ``automatik`` (bool)
+- PKW: ``hubraum`` (int)
 6. Überlade die Methoden ``__repl__`` und ``__str__`` in allen Klassen entsprechend
 7. Definiere eine Methode ``hasFahrerlaubnis(Person)`` mit Rückgabewert ``bool``.
 Es soll der Aufruf ``audi.hasFahrerlaubnis(peter)`` möglich werden. (*audi* ist ein konkretes Objekt von ``PKW`` und *peter* eines von ``Person``).
