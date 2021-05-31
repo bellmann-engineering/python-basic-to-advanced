@@ -50,5 +50,4 @@ Optional:
 10. Mache es möglich, dass Objekte hinsichtlich ihres Volumens verglichen werden können.
 11. Überlade die ``__eq__`` Methode aller Klassen.
 12. Überlade die ``__ne__`` Methode aller Klassen.
-13. Kann ``Fahrzeug`` abstrakt gemacht werden? Falls ja, sieh dir das Modul ``abc`` dazu an.
-
+13. Wie muss ein ``@property`` für ``volumen`` aussehen um das Volumen direkt zu setzen?
