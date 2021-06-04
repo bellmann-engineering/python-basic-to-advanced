@@ -5,7 +5,7 @@
 
 Ziel ist es in Python Klassen wie auf dem UML Diagramm abgebildet zu erstellen.
 - ``Fahrzeug``: Basisklasse (Elternklasse) 
-- ``Kfz``: Kind von Fahrzeug
+- ``Pkw``: Kind von Fahrzeug
 - ``Motorrad``: Kind von Fahrzeug
 - ``LKW``: Kind von Fahrzeug
 - ``Person``: Bildet eine Person ab
