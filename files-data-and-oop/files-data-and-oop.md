@@ -21,8 +21,8 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
  - Datum
  - Startort
  - Zielort
- - Startkilometer
- - Zielkilometer
+ - Startkilometerstand (lt. Tacho)
+ - Endkilometerstand
  - Privatfahrt (bool: ja/nein)
  - Zweck
 7. Speichere eine Liste genannt ``logbook`` von ``Drive``-Objekten (*List of Drives*) beim jeweiligen Fahrzeug.
