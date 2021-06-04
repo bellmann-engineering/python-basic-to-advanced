@@ -17,11 +17,19 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 3. Mache aus der Liste ein Dictionary (https://docs.python.org/3/library/stdtypes.html#typesmapping). 
 - Entscheide selbst welches Attribut des Fahrzeugs sich am besten als ``Key`` eignet. Value ist ``Objekt`` selbst.
 4. Lade dir das zip Archiv mit den Fahrtenbüchern herunter und analysiere die darin befindlichen csv Dateien. Die Dateinamen können mit den vorhandenen Fahrzeugen über das Kennzeichen gematched werden.
-5. Erstelle eine Klasse ``Journey`` die für das Einlesen von Fahrtenbucheinträgen passend ist. 
-6. Speichere eine Liste genannt ``logbook`` von ``Drive``-Objekten (*List of Drives*) beim jeweiligen Fahrzeug.
-7. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger.
-8. Stelle im Fahrzeug eine Methode  ``getLastDrive`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
-9. Falls bisher noch nicht implementiert überlade in der ``Drive`` Klasse die Methode ```__str__`` 
+5. Erstelle eine Klasse ``Journey`` die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
+ - Datum
+ - Startort
+ - Zielort
+ - Startkilometer
+ - Zielkilometer
+ - Privatfahrt (bool: ja/nein)
+ - Zweck
+7. Speichere eine Liste genannt ``logbook`` von ``Drive``-Objekten (*List of Drives*) beim jeweiligen Fahrzeug.
+8. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger.
+9. Erweitere den Fahrtenbucheintrag um ein ``@Property`` welches die Distanz der Fahrt zurückgibt.
+10. Stelle im Fahrzeug eine Methode  ``getLastDrive`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
+11. Falls bisher noch nicht implementiert überlade in der ``Drive`` Klasse die Methode ```__str__`` 
 
 Optionale Zusatzaufgabe:
-10. Nutze das Factory Method Pattern (https://realpython.com/factory-method-python/) um Fahrzeuge und Fahrtenbücher in der jeweiligen Klasse einzulesen. 
+12. Nutze das Factory Method Pattern (https://realpython.com/factory-method-python/) um Fahrzeuge und Fahrtenbücher in der jeweiligen Klasse einzulesen. 
