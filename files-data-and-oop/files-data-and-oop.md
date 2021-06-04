@@ -34,3 +34,4 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 Optionale Zusatzaufgabe:
 
 12. Nutze das Factory Method Pattern (https://realpython.com/factory-method-python/) Fahrten ins Fahrtenbuch einzulesen. 
+13. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ```doNotShowPrivate`` ausgeblendet werden können.
