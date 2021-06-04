@@ -28,6 +28,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 > 4.5.2021,Hannover,Wolfsburg,40185,40270,Rückfahrt zum Standort,nein
 
 [Ein Beispiel hier zum Download](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/f0d9cf24ba06eb580315f8a4437d5c43fa3cf95e/files-data-and-oop/fahrtenbuecher/H-EL-99.csv)
+
 6. Erstelle eine Klasse ``Journey`` die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
  - Datum
  - Startort
@@ -47,5 +48,5 @@ Optionale Zusatzaufgabe:
 12. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ```doNotShowPrivate`` ausgeblendet werden können.
 
 
-[![uml](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/7157099aa44e7f41dc6aa1f8bc43fc25e8a29897/files-data-and-oop/classdiagramm.png)
+![uml](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/7157099aa44e7f41dc6aa1f8bc43fc25e8a29897/files-data-and-oop/classdiagramm.png)
 
