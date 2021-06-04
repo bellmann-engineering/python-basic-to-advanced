@@ -16,8 +16,12 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 2. Speichere alle eingelesen Fahrzeuge in einer Liste ab.
 3. Mache aus der Liste ein Dictionary (https://docs.python.org/3/library/stdtypes.html#typesmapping). 
 - Entscheide selbst welches Attribut des Fahrzeugs sich am besten als ``Key`` eignet. Value ist ``Objekt`` selbst.
-4. Lade dir das zip Archiv mit den Fahrtenbüchern herunter und analysiere die darin befindlichen csv Dateien. Die Dateinamen können mit den vorhandenen Fahrzeugen über das Kennzeichen gematched werden.
-5. Erstelle eine Klasse ``Journey`` die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
+4. Erstelle Fahrtenbücher mit dem Kennzeichen des jeweiligen Fahrzeuges als Dateinamen. Die Fahrtenbücher sollen folgendes Format haben:
+> 1.5.2021,Wolfsburg,Hannover,40100,40185,Warenlieferung,nein
+> 4.5.2021,Hannover,Wolfsburg,40185,40270,Rückfahrt zum Standort,nein
+
+[Ein Beispiel hier zum Download](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/f0d9cf24ba06eb580315f8a4437d5c43fa3cf95e/files-data-and-oop/fahrtenbuecher/H-EL-99.csv)
+6. Erstelle eine Klasse ``Journey`` die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
  - Datum
  - Startort
  - Zielort
@@ -25,7 +29,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
  - Endkilometerstand
  - Privatfahrt (bool: ja/nein)
  - Zweck
-7. Speichere eine Liste genannt ``fahrtenbuch`` von ``Journey``-Objekten (*List of Journeys*) beim jeweiligen Fahrzeug.
+7. Speichere eine Liste genannt ``fahrtenbuch`` von ``Journey``-Objekten (sprich: *List of Journeys*) beim jeweiligen Fahrzeug.
 8. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger.
 9. Erweitere den Fahrtenbucheintrag um ein ``@Property`` welches die Distanz der Fahrt zurückgibt.
 10. Stelle im Fahrzeug eine Methode  ``getLastDrive`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
