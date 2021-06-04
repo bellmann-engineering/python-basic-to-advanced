@@ -40,8 +40,8 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 7. Speichere eine Liste genannt ``fahrtenbuch`` von ``Journey``-Objekten (sprich: *List of Journeys*) beim jeweiligen Fahrzeug.
 8. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger.
 9. Erweitere den Fahrtenbucheintrag um ein ``@Property`` welches die Distanz der Fahrt zurückgibt.
-10. Stelle im Fahrzeug eine Methode  ``getLastDrive`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
-11. Falls bisher noch nicht implementiert überlade in der ``Drive`` Klasse die Methode ```__str__`` 
+10. Ertelle in der Klasse ``Fahrzeug`` eine Methode  ``get_last_journey(self)`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
+
 
 Optionale Zusatzaufgabe:
 
