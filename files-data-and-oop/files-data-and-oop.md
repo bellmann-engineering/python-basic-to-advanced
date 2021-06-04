@@ -11,8 +11,8 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 **Aufgaben:**
 
 1. Lese die Datei ``fahrzeuge.csv`` (...) ein und verarbeite sie. Über das csv Modul und den notwendigen Import kannst du hier nachlesen: https://docs.python.org/3/library/csv.html
-** Die Spalten stellen Attribute der Klasse (Membervariablen) dar. Die erste Spalte zeigt an um welche Art von Fahrzeug es sich handelt. 
-** Entsprechend der Spalte 1 soll der richtige Fahrzeugtyp (Objekt) angelegt werden.
+ - Die Spalten stellen Attribute der Klasse (Membervariablen) dar. Die erste Spalte zeigt an um welche Art von Fahrzeug es sich handelt. 
+ - Entsprechend der Spalte 1 soll der richtige Fahrzeugtyp (Objekt) angelegt werden.
 2. Speichere alle eingelesen Fahrzeuge in einer Liste ab.
 3. Mache aus der Liste ein Dictionary (https://docs.python.org/3/library/stdtypes.html#typesmapping). 
 - Entscheide selbst welches Attribut des Fahrzeugs sich am besten als ``Key`` eignet. Value ist ``Objekt`` selbst.
