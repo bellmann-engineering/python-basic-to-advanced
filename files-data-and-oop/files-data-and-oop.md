@@ -10,7 +10,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 
 **Aufgaben:**
 
-1. Lese die Datei ``fahrzeuge.csv`` (...) ein und verarbeite sie. Über das csv Modul und den notwendigen Import kannst du hier nachlesen: https://docs.python.org/3/library/csv.html
+1. Lese die Datei ``fahrzeuge.csv`` (...) ein und verarbeite sie. Über das build-in csv Modul und den notwendigen Import kannst du hier nachlesen: https://docs.python.org/3/library/csv.html
  - Die Spalten stellen Attribute der Klasse (Membervariablen) dar. Die erste Spalte zeigt an um welche Art von Fahrzeug es sich handelt. 
  - Entsprechend der Spalte 1 soll der richtige Fahrzeugtyp (Objekt) angelegt werden.
 2. Speichere alle eingelesen Fahrzeuge in einer Liste ab.
@@ -25,7 +25,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
  - Endkilometerstand
  - Privatfahrt (bool: ja/nein)
  - Zweck
-7. Speichere eine Liste genannt ``logbook`` von ``Drive``-Objekten (*List of Drives*) beim jeweiligen Fahrzeug.
+7. Speichere eine Liste genannt ``fahrtenbuch`` von ``Journey``-Objekten (*List of Journeys*) beim jeweiligen Fahrzeug.
 8. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger.
 9. Erweitere den Fahrtenbucheintrag um ein ``@Property`` welches die Distanz der Fahrt zurückgibt.
 10. Stelle im Fahrzeug eine Methode  ``getLastDrive`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
@@ -33,5 +33,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 
 Optionale Zusatzaufgabe:
 
-12. Nutze das Factory Method Pattern (https://realpython.com/factory-method-python/) Fahrten ins Fahrtenbuch einzulesen. 
-13. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ```doNotShowPrivate`` ausgeblendet werden können.
+12. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ```doNotShowPrivate`` ausgeblendet werden können.
+
+
+
