@@ -3,16 +3,16 @@
 ## Übung zu Dateihandling, Datenkapselung und Objektorientierter Programmierung (OOP)
 
 **Motivation:**
-Bisher haben wir in den vorhergehenden Übungen Fahrzeuge (PKWs, LKWs und Motorräder) programmatorisch, also händisch, mit einer Zeile Code angelegt. Das die Erstellung in REPL oder Sourcecode war denkbar einfach:
+Bisher haben wir in den vorhergehenden Übungen Fahrzeuge (PKWs, LKWs und Motorräder) programmatorisch, also händisch, mit einer Zeile Code angelegt. Das die Erstellung in Python REPL oder im Sourcecode war denkbar einfach:
 ``audi = Pkw(parameter...)``
 
 Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte erstellen, welche in einer Liste gespeichert werden sollen. Des Weiteren sollen zu den Fahrzeugen Fahrtenbücher eingelesen und beim Fahrzeug verwaltet werden.
 
 **Aufgaben:**
 
-1. Lese die Datei ``fahrzeuge.csv`` ([Dateidownload](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/761ac2a7e3c132d8f9f992818a9881d6f5bdbecb/files-data-and-oop/fahrzeuge.csv)) ein und verarbeite sie. Über das build-in csv Modul und den notwendigen Import kannst du hier nachlesen: https://docs.python.org/3/library/csv.html
+1. Lese die Datei ``fahrzeuge.csv`` ([Dateidownload](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/761ac2a7e3c132d8f9f992818a9881d6f5bdbecb/files-data-and-oop/fahrzeuge.csv)) ein und verarbeite sie. Über das build-in csv Module und den notwendigen Import kannst du hier nachlesen: https://docs.python.org/3/library/csv.html
  - Die Spalten stellen Attribute der Klasse (Membervariablen) dar. Die erste Spalte zeigt an um welche Art von Fahrzeug es sich handelt. 
- - Entsprechend der Spalte 1 soll der richtige Fahrzeugtyp (Objekt) angelegt werden.
+ - Entsprechend der ersten Spalte soll der richtige Fahrzeugtyp (Objekt) angelegt werden.
 
 >TYP,MARKE,KENNZEICHEN,ID,BJ,EZ<br>
 >PKW,Volkswagen,WOB-A-123,W0L000051T2123456,1.7.2012,1.12.2013<br>
@@ -27,9 +27,10 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 > 1.5.2021,Wolfsburg,Hannover,40100,40185,Warenlieferung,nein<br>
 > 4.5.2021,Hannover,Wolfsburg,40185,40270,Rückfahrt zum Standort,nein
 
-[Ein Beispiel hier zum Download](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/f0d9cf24ba06eb580315f8a4437d5c43fa3cf95e/files-data-and-oop/fahrtenbuecher/H-EL-99.csv)
+Das Beisiel kann so verwendet werden. 
+[Hier zum Download](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/f0d9cf24ba06eb580315f8a4437d5c43fa3cf95e/files-data-and-oop/fahrtenbuecher/H-EL-99.csv)
 
-6. Erstelle eine Klasse ``Journey`` die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
+6. Erstelle eine Klasse ``Journey``, die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
  - Datum
  - Startort
  - Zielort
@@ -38,7 +39,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
  - Privatfahrt (bool: ja/nein)
  - Zweck
 7. Speichere eine Liste genannt ``fahrtenbuch`` von ``Journey``-Objekten (sprich: *List of Journeys*) beim jeweiligen Fahrzeug.
-8. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger.
+8. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger dazu.
 9. Erweitere den Fahrtenbucheintrag um ein ``@Property`` welches die Distanz der Fahrt zurückgibt.
 10. Ertelle in der Klasse ``Fahrzeug`` eine Methode  ``get_last_journey(self)`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
 
@@ -46,7 +47,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 Optionale Zusatzaufgabe:
 
 12. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ```doNotShowPrivate`` ausgeblendet werden können.
-
+13. Entwickle eine Methode die Lücken im Fartenbuch aufdeckt.
 
 ![uml](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/7157099aa44e7f41dc6aa1f8bc43fc25e8a29897/files-data-and-oop/classdiagramm.png)
 
