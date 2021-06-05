@@ -1,5 +1,5 @@
 import csv
-from datetime import datetime
+from datetime import datetime # für strptime
 import os.path
 
 class Fahrzeug():
@@ -91,8 +91,7 @@ if __name__ == '__main__':
 			with open(filepath) as f:
 				kennzeichen = os.path.splitext(fname)[0] # dateiendung von dateinamen entfernen
 				for line in f:
-					lkws[kennzeichen].fahrtenbuch.append(Journey.from_csv_line(line))   # an der richtigen stelle im dict
-                                                                                        # an die fahrtenbuchliste anfügen
+					lkws[kennzeichen].fahrtenbuch.append(Journey.from_csv_line(line))   # an der richtigen stelle im dict an die fahrtenbuchliste anfügen
 
 	# Test:		
 	lkw = lkws["H-EL-99"]
