@@ -18,7 +18,7 @@ class Fahrzeug():
 		return "EZ: {}, BJ: {}".format(self.erstzulassung, self.baujahr)
 
 	def get_last_journey(self):
-		return self.fahrtenbuch[-1]
+		return self.fahrtenbuch[-1] #letzten Eintrag aus der Liste holen
 
 class Pkw(Fahrzeug): 
 	def __init__(self, marke, kennzeichen, fahrgestellnummer, baujahr, erstzulassung, hubraum = 0):
@@ -34,32 +34,35 @@ class Journey():
 		self.datum = datetime.strptime(datum_as_string, '%d.%m.%Y')
 		self.startort = startort
 		self.zielort = zielort
-		self.startkm = int(startkm)
+		self.startkm = int(startkm) # Kilometerstände zwingend als integer damit wir damit rechnen können
 		self.endkm = int(endkm)
 		self.zweck = zweck
-		self.privat = (privat == 'ja')
+		self.privat = (privat == 'ja') # soll bool-Variable sein
 
 	@property
 	def distance(self):
 		return self.endkm - self.startkm
 	
+    # factory method
 	@classmethod
-	def from_csv_line(cls, line):
+	def from_csv_line(cls, line): 
 		datum, startort, zielort, startkm, endkm, zweck, privat = line.rstrip().split(',')
 		return cls(datum, startort, zielort, startkm, endkm, zweck, privat)
 
 	
 # init arrays
 pkws = []
-lkws = dict() # alternativ: {}
-bikes = []
+lkws = dict() # alternative Schreibweise: {}
+bikes = [] # vorgesehen für die Motorräder
 
+# Einelesen der fahrzeuge.csv mitteld DictReader 
+# damit in [] Bezeichner verwendet werden können.
 def read_cars(file):
 	with open(file) as csvfile:
 		reader = csv.DictReader(csvfile, delimiter=',')
 		for row in reader:
 			if row["TYP"] == "PKW":
-				pkws.append(
+				pkws.append(    # in pkw liste hinzufügen
 					Pkw(row["MARKE"], 
 						row["KENNZEICHEN"],
 						row["ID"],
@@ -67,7 +70,7 @@ def read_cars(file):
 						row["EZ"])
 						)
 			elif row["TYP"] == "LKW":
-				lkws[row["KENNZEICHEN"]] = Lkw(row["MARKE"], 
+				lkws[row["KENNZEICHEN"]] = Lkw(row["MARKE"], # dem dict hinzufügen, Schlüssel ist das Kennzeichen
 										row["KENNZEICHEN"],
 										row["ID"],
 										row["BJ"],
@@ -77,19 +80,19 @@ def read_cars(file):
 if __name__ == '__main__':
 	fahrzeuge_file = 'fahrzeuge.csv'
 	fahrtenbuch_folder = 'fahrtenbuecher/'
-	if os.path.isfile(fahrzeuge_file):
+    
+	if os.path.isfile(fahrzeuge_file): # prüfen ob die Datei vorhannden ist
 		read_cars(fahrzeuge_file)
 
-		#print(lkws[0].marke)
-
-	if os.path.isdir(fahrtenbuch_folder):
-		fahrtenbuecher_files = os.listdir(fahrtenbuch_folder)
+	if os.path.isdir(fahrtenbuch_folder): # prüfen ob es das verzeichnis gibt
+		fahrtenbuecher_files = os.listdir(fahrtenbuch_folder) # ermitteln der dateien im verzeichnis
 		for fname in fahrtenbuecher_files:
-			filepath = os.path.join(fahrtenbuch_folder, fname)
+			filepath = os.path.join(fahrtenbuch_folder, fname) # pfad zusammensetzen
 			with open(filepath) as f:
-				kennzeichen = os.path.splitext(fname)[0] # remove ext from filename
+				kennzeichen = os.path.splitext(fname)[0] # dateiendung von dateinamen entfernen
 				for line in f:
-					lkws[kennzeichen].fahrtenbuch.append(Journey.from_csv_line(line))
+					lkws[kennzeichen].fahrtenbuch.append(Journey.from_csv_line(line))   # an der richtigen stelle im dict
+                                                                                        # an die fahrtenbuchliste anfügen
 
 	# Test:		
 	lkw = lkws["H-EL-99"]
