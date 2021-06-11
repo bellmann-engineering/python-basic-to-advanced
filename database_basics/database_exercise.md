@@ -6,7 +6,8 @@ Unser Fuhrpark bestehend aus PKWs, LKWs und Motorrädern wächst stetig an. Eine
 SQL Lite ist einfach mit Python zu verbinden, erfordert keine aufwändige Installation eines Datenbankservers und verwendet die Sprache *SQL*.
 
 In folgendem Codebeispiel siehst du wie eine Datenbanktabelle angelegt, Daten eingefügt und wieder ausgelesen werden können:
-https://github.com/bellmann-engineering/python-basic-to-advanced/blob/21edcafdc181695e835cd25586976177535b4b03/database_basics/database_example.py
+[Beispiel](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/21edcafdc181695e835cd25586976177535b4b03/database_basics/database_example.py)
+
 
 Schritt für Schritte Hilfe zur SQL Syntax findest du hier: https://www.sqlitetutorial.net/
 
