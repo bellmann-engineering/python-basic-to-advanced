@@ -1,6 +1,6 @@
 # Camp 2 Code
 
-## Basiswissen Datenbank SQLite mit Python
+## Basiswissen Datenbank mit SQLite in Python
 
 Unser Fuhrpark bestehend aus PKWs, LKWs und Motorrädern wächst stetig an. Eine Speicherung in Dateien ist daher nicht zukunftsweisend und wir wollen die Datenhaltung in einer SQL Datenbank realisieren.
 SQL Lite ist einfach mit Python zu verbinden, erfordert keine aufwändige Installation eines Datenbankservers und verwendet die Sprache *SQL*.
