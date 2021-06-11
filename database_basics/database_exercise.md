@@ -9,7 +9,7 @@ In folgendem Codebeispiel siehst du wie eine Datenbanktabelle angelegt, Daten ei
 [Beispiel](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/21edcafdc181695e835cd25586976177535b4b03/database_basics/database_example.py)
 
 
-Schritt für Schritte Hilfe zur SQL Syntax findest du hier: https://www.sqlitetutorial.net/
+Schritt für Schritte Hilfe zur SQL Syntax findest du hier: [SQLLite Tutorial](https://www.sqlitetutorial.net/)
 
 
 1. Erstelle mittels SQL und dem ``sqlite3`` Modul Tabellen für Fahrzeuge und Fahrtenbücher über ein Python Script. Beispielname: ``create_tables.py``
@@ -17,7 +17,7 @@ Name der Datenbank: ``fuhrpark.db``
 
 Tabellennamen: ``fahrzeuge``, ``fahrtenbuch``
 
-2. Jede Tabelle soll eine ID als Primärschlüssel haben. 
+2. Jede Tabelle soll eine ID alsPrimärschlüssel haben. Der Primärschlüssel kommt in relationalen Datenbanken immer dann zum Einsatz wenn Datensätze eindeutig identifiziert werden sollen. Mehr dazu: [Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
 3. Für Textfelder verwende ``TEXT`` oder ``varchar(50)`` (Wert in Klammern ist die Größe). Für Zahlenfelder verwende ``INT``. 
 Für Baujahr und Erstzulassung kann wahlweise ``INTEGER`` oder ``TEXT`` verwendet werden. Eine Date-Datentyp sieht SqLite nicht vor. Mehr zu Datentypen findest du hier:
 https://www.sqlite.org/datatype3.html
