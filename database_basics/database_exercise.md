@@ -27,7 +27,7 @@ https://www.sqlite.org/datatype3.html
 4. Welche Datentypen kommen für die Spalte ``privat`` (um eine Privatfahrt zu kennezeichnen) der Tabelle ``fahrtenbuch`` in Frage?
 
 5. Entwickle ein Python Script das zur Migration der Daten von csv in die SQL-Datenbank dient. Beispielname: ``migrate.py``
- - Mache zu diesem Zwecke eine Schleife die zeilenweise aus der csv Datei leist und daraus INSERT Befehle erzeugt für die Datenbank.
+ - Mache zu diesem Zwecke eine Schleife die zeilenweise aus der csv Datei liest und daraus ``INSERT``-Befehle für die Datenbank erzeugt.
 7. Entwickle auf Basis des Programms der Vorwoche eine Version die ohne CSV dafür mit SQL arbeitet.
  Beginne mit dem Einlesen der Fahrzeuge:
  - Ersetze die Datei-Einleseroutinen durch passende SQL Aufrufe.
