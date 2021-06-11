@@ -17,7 +17,7 @@ Name der Datenbank: ``fuhrpark.db``
 
 Tabellennamen: ``fahrzeuge``, ``fahrtenbuch``
 
-2. Jede Tabelle soll eine ID alsPrimärschlüssel haben. Der Primärschlüssel kommt in relationalen Datenbanken immer dann zum Einsatz wenn Datensätze eindeutig identifiziert werden sollen. Mehr dazu: [Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
+2. Jede Tabelle soll eine Spalte ID als Primärschlüssel besitzen. Der Primärschlüssel kommt in relationalen Datenbanken immer dann zum Einsatz wenn Datensätze eindeutig identifiziert werden sollen. Mehr dazu: [Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
 3. Für Textfelder verwende ``TEXT`` oder ``varchar(50)`` (Wert in Klammern ist die Größe). Für Zahlenfelder verwende ``INT``. 
 Für Baujahr und Erstzulassung kann wahlweise ``INTEGER`` oder ``TEXT`` verwendet werden. Eine Date-Datentyp sieht SqLite nicht vor. Mehr zu Datentypen findest du hier:
 https://www.sqlite.org/datatype3.html
