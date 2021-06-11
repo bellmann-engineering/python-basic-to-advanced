@@ -3,7 +3,7 @@
 ## Basiswissen Datenbank mit SQLite in Python
 
 Unser Fuhrpark bestehend aus PKWs, LKWs und Motorrädern wächst stetig an. Eine Speicherung in Dateien ist daher nicht zukunftsweisend und wir wollen die Datenhaltung in einer SQL Datenbank realisieren.
-SQL Lite ist einfach mit Python zu verbinden, erfordert keine aufwändige Installation eines Datenbankservers und verwendet die Sprache *SQL*.
+SqLite ist einfach mit Python zu verbinden, erfordert keine aufwändige Installation eines Datenbankservers und verwendet die Sprache *SQL*.
 
 In folgendem Codebeispiel siehst du wie eine Datenbanktabelle angelegt, Daten eingefügt und wieder ausgelesen werden können:
 [Beispiel](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/21edcafdc181695e835cd25586976177535b4b03/database_basics/database_example.py)
