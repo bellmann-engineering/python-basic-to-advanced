@@ -28,11 +28,11 @@ https://www.sqlite.org/datatype3.html
  - Mache zu diesem Zwecke eine Schleife die zeilenweise aus der csv Datei leist und daraus INSERT Befehle erzeugt für die Datenbank.
 7. Entwickle auf Basis des Programms der Vorwoche eine Version die ohne CSV dafür mit SQL arbeitet.
  Beginne mit dem Einlesen der Fahrzeuge:
- - Ersetze die Datei-Einleseroutinen durch passende SQL Aufrufe
- - Füge Testweise neue Daten in die SQL Datenbank ein und prüfe das Ergebnis
+ - Ersetze die Datei-Einleseroutinen durch passende SQL Aufrufe.
+ - Füge testweise neue Daten in die SQL Datenbank ein und prüfe das Ergebnis.
  
- Nun sollen die Fahrten aus der Fahrtenbuchtabelle gelesen werden. Da wir keine Dateien mit Kennzeichen als Dateinamen mehr führen benötigt die Tabelle Fahrtenbuch eine Spalte ``kennzeichen`` zur Zuordnung. Achte darauf, dass die Spalte den exakt gleichen Datentyp wie in der Fahrzeugtabelle hat.
- Erstelle ein Python Script ``alter_tables``, um die Spalte der Tabelle hinzufügen.
+ Nun sollen die Fahrten aus der Fahrtenbuchtabelle gelesen werden: Da wir keine Dateien mit Kennzeichen als Dateinamen mehr führen benötigt die Tabelle Fahrtenbuch eine Spalte ``kennzeichen`` zur Zuordnung. Achte darauf, dass die Spalte den exakt gleichen Datentyp wie in der Fahrzeugtabelle hat.
+ Erstelle ein Python Script ``alter_tables``, um die Spalte der Tabelle hinzufügen. Sieh dir dazu den SQL Befehl ``ALTER TABLE`` an.
  
 7. Hole mittels SELECT und WHERE-Bedindung für das jeweilige Fahrzeug die Fahrtenbucheintäge aus der Datenbanktabelle und speichere sie als ``Journey``-Objekte beim Fahrzeug.
  WHERE: https://www.sqlitetutorial.net/sqlite-where/
