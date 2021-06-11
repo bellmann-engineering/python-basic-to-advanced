@@ -46,8 +46,8 @@ Das Beisiel kann so verwendet werden.
 
 Optionale Zusatzaufgabe:
 
-12. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ```doNotShowPrivate`` ausgeblendet werden können.
-13. Entwickle eine Methode die Lücken im Fartenbuch aufdeckt.
+11. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ``doNotShowPrivate`` ausgeblendet werden können.
+12. Entwickle eine Methode die Lücken im Fartenbuch aufdeckt.
 
 ![uml](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/7157099aa44e7f41dc6aa1f8bc43fc25e8a29897/files-data-and-oop/classdiagramm.png)
 
