@@ -30,7 +30,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 Das Beisiel kann so verwendet werden. 
 [Hier zum Download](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/f0d9cf24ba06eb580315f8a4437d5c43fa3cf95e/files-data-and-oop/fahrtenbuecher/H-EL-99.csv)
 
-6. Erstelle eine Klasse ``Journey``, die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
+5. Erstelle eine Klasse ``Journey``, die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
  - Datum
  - Startort
  - Zielort
@@ -38,16 +38,16 @@ Das Beisiel kann so verwendet werden.
  - Endkilometerstand
  - Privatfahrt (bool: ja/nein)
  - Zweck
-7. Speichere eine Liste genannt ``fahrtenbuch`` von ``Journey``-Objekten (sprich: *List of Journeys*) beim jeweiligen Fahrzeug.
-8. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger dazu.
-9. Erweitere den Fahrtenbucheintrag um ein ``@Property`` welches die Distanz der Fahrt zurückgibt.
-10. Ertelle in der Klasse ``Fahrzeug`` eine Methode  ``get_last_journey(self)`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
+6. Speichere eine Liste genannt ``fahrtenbuch`` von ``Journey``-Objekten (sprich: *List of Journeys*) beim jeweiligen Fahrzeug.
+7. Teste (manuell) ob du auf ein eingelesen Fahrzeug und sein Fahrtenbuch zugreifen kannst. Verwende ggf. den Debugger dazu.
+8. Erweitere den Fahrtenbucheintrag um ein ``@Property`` welches die Distanz der Fahrt zurückgibt.
+9. Ertelle in der Klasse ``Fahrzeug`` eine Methode  ``get_last_journey(self)`` die aus dem Fahrzeugfahrtenbuch den letzten Eintrag holt und ihn ansprechend darstellt. 
 
 
 Optionale Zusatzaufgabe:
 
-11. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ``doNotShowPrivate`` ausgeblendet werden können.
-12. Entwickle eine Methode die Lücken im Fartenbuch aufdeckt.
+10. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ``doNotShowPrivate`` ausgeblendet werden können.
+11. Entwickle eine Methode die Lücken im Fartenbuch aufdeckt.
 
 ![uml](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/7157099aa44e7f41dc6aa1f8bc43fc25e8a29897/files-data-and-oop/classdiagramm.png)
 
