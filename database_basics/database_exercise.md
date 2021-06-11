@@ -1,7 +1,8 @@
-# Camp 2 Code
+# Camp2Code
 
 ## Basiswissen Datenbank mit SQLite in Python
 
+**Motivation:**
 Unser Fuhrpark bestehend aus PKWs, LKWs und Motorrädern wächst stetig an. Eine Speicherung in Dateien ist daher nicht zukunftsweisend und wir wollen die Datenhaltung in einer SQL Datenbank realisieren.
 SqLite ist einfach mit Python zu verbinden, erfordert keine aufwändige Installation eines Datenbankservers und verwendet die Sprache *SQL*.
 
@@ -11,6 +12,7 @@ In folgendem Codebeispiel siehst du wie eine Datenbanktabelle angelegt, Daten ei
 
 Schritt für Schritte Hilfe zur SQL Syntax findest du hier: [SQLLite Tutorial](https://www.sqlitetutorial.net/)
 
+**Aufgaben:**
 
 1. Erstelle mittels SQL und dem ``sqlite3`` Modul Tabellen für Fahrzeuge und Fahrtenbücher über ein Python Script. Beispielname: ``create_tables.py``
 Name der Datenbank: ``fuhrpark.db``
