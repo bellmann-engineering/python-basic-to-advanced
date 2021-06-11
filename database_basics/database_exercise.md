@@ -22,9 +22,7 @@ Tabellennamen: ``fahrzeuge``, ``fahrtenbuch``
 Für Baujahr und Erstzulassung kann wahlweise ``INTEGER`` oder ``TEXT`` verwendet werden. Eine Date-Datentyp sieht SqLite nicht vor. Mehr zu Datentypen findest du hier:
 https://www.sqlite.org/datatype3.html
 
-![fahrzeuge_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/96e5d90c5eadaf6dfb9a5f80458d6493c9a51659/database_basics/fahrzeuge_table.PNG)
-
-![fahrtenbuch_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/96e5d90c5eadaf6dfb9a5f80458d6493c9a51659/database_basics/fahrenbuch_table.PNG)
+![fahrzeuge_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/96e5d90c5eadaf6dfb9a5f80458d6493c9a51659/database_basics/fahrzeuge_table.PNG) ![fahrtenbuch_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/96e5d90c5eadaf6dfb9a5f80458d6493c9a51659/database_basics/fahrenbuch_table.PNG)
 
 
 4. Welche Datentypen kommen für die Spalte ``privat`` (um eine Privatfahrt zu kennezeichnen) der Tabelle ``fahrtenbuch`` in Frage?
