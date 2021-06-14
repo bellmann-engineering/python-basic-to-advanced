@@ -39,7 +39,7 @@ https://www.sqlite.org/datatype3.html
 
 4. Welche Datentypen passen für die Spalte `privat`, zur Kennzeichnung einer Privatfahrt, in der Tabelle `fahrtenbuch`?
 
-5. Entwickle ein Python Script das zum Einlesen von Daten aus einer csv-Datei in die SQL-Datenbank dient. Beispielname: `seed.py` (Aus dem englischen *säen*)
+5. Entwickle ein Python Script das zum Einlesen von Daten aus einer csv-Datei in die SQL-Datenbank dient. Beispielname: `seed.py` (Aus dem Englischen *säen*)
  - Erzeuge eine Schleife die zeilenweise Daten aus der CSV Datei einließt und diese in `INSERT`-Befehle übersetzt
  - Führe anschließend die erzeugten `INSERT` Befehle aus um die Daten in der Datenbank zu speichern
 
