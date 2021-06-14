@@ -2,44 +2,56 @@
 
 ## Basiswissen Datenbank mit SQLite in Python
 
-**Motivation:**
-Unser Fuhrpark bestehend aus PKWs, LKWs und Motorrädern wächst stetig an. Eine Speicherung in Dateien ist daher nicht zukunftsweisend und wir wollen die Datenhaltung in einer SQL Datenbank realisieren.
-SqLite ist einfach mit Python zu verbinden, erfordert keine aufwändige Installation eines Datenbankservers und verwendet die Sprache *SQL*.
+### Motivation
 
-In folgendem Codebeispiel siehst du wie eine Datenbanktabelle angelegt, Daten eingefügt und wieder ausgelesen werden können:
-[Beispiel](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/21edcafdc181695e835cd25586976177535b4b03/database_basics/database_example.py)
+Unser Fuhrpark wächst stetig an. Weitere LKWs, PKWs oder Motorräder müssten immer wieder per Hand im Code hinzugefügt werden. Das wird mit der Zeit sehr aufwändig und das Programm wird sehr unübersichtlich.
 
+Jetzt ist es an der Zeit in unserem Code die Logik und die Datenaufbewahrung voneinander zu trennen.
 
-Schritt für Schritte Hilfe zur SQL Syntax findest du hier: [SQLLite Tutorial](https://www.sqlitetutorial.net/)
+Dies erreichen wir mit einer einfachen `SQLite` Datenbank. Diese spricht wie alle anderen Datenbanken die Sprache `SQL`. Dies ist eine standartisierte Sprache die SQL Datenbankserver wie postgresql, MS SQL Server, MySQL oder MariaDB sprich.
 
-**Aufgaben:**
+[Wikipedia Artikel zu SQL Sprache](https://de.wikipedia.org/wiki/SQL)
 
-1. Erstelle mittels SQL und dem ``sqlite3`` Modul Tabellen für Fahrzeuge und Fahrtenbücher über ein Python Script. Beispielname: ``create_tables.py``
-Name der Datenbank: ``fuhrpark.db``
+`SQLite` ist eine sehr kompakte Datenbank für die keine weiteren Programme oder Dienste installiert werden müssen. `sqlite3` ist ein Modul das bereits bei Python mitgeliefert wird und die Schnittstelle zur Kommunikation bereitstellt.
 
-Tabellennamen: ``fahrzeuge``, ``fahrtenbuch``
+```pyhton
+import sqlite3
+```
 
-2. Jede Tabelle soll eine Spalte ID als Primärschlüssel besitzen. Der Primärschlüssel kommt in relationalen Datenbanken immer dann zum Einsatz wenn Datensätze eindeutig identifiziert werden sollen. Mehr dazu: [Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
-3. Für Textfelder verwende ``TEXT`` oder ``varchar(50)`` (Wert in Klammern ist die Größe). Für Zahlenfelder verwende ``INTEGER``. 
-Für Baujahr und Erstzulassung kann wahlweise ``INTEGER`` oder ``TEXT`` verwendet werden. Eine Date-Datentyp sieht SqLite nicht vor. Mehr zu Datentypen findest du hier:
+Eine kompakte Einführung in SQL findest du hier in einer interaktiven Schritt-Für-Schritt-Anleitung bei der du auch eigene kleine Dinge ausprobieren kannst: [SQLite Tutorial](https://www.sqlitetutorial.net/)
+
+Eine grundlegendes Datenbankschema für diese Übung haben wir dir vorbereitet: [create_tables.py](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/database_basics/create_tables.py)
+
+### Aufgaben
+
+1. Erstelle mittels SQL und dem `sqlite3` Modul Tabellen für Fahrzeuge und Fahrtenbücher über ein Python Script. 
+ - Tabellen erstellen: `create_tables.py` 
+ - Datenbankname: `fuhrpark.db`
+ - Tabellen: `fahrzeuge`, `fahrtenbuch`
+
+2. Jede Tabelle soll eine Spalte `Id` als Primärschlüssel besitzen. Diese `Id` (Abkürzung aus dem englischen Identity) dient zur eindeutigen Identifizierung der gespeicherten Daten. Eine kompakte Erklärung zu diesem Themea findest du auf Website [Dateneule: Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
+
+3. Für Textfelder verwende `VARCHAR(50)` oder `TEXT` (Wert in den Klammern gibt die maximale Feldänge an. SQLite ignoriert auf Grund der einfachen Struktur die Länge an den Spaltentypen, erkennt diese als gültig an um kompatibel mit anderen SQL Datenbank zu sein). Für Zahlenfelder verwende `INTEGER`.  
+Für Baujahr und Erstzulassung kann wahlweise `INTEGER`, `VARCHAR(4)` oder `TEXT` verwendet werden. Eine Date-Datentyp sieht SqLite nicht vor. Mehr zu Datentypen findest du hier:
 https://www.sqlite.org/datatype3.html
 
-4. Welche Datentypen kommen für die Spalte ``privat`` (um eine Privatfahrt zu kennezeichnen) der Tabelle ``fahrtenbuch`` in Frage?
+4. Welche Datentypen passen für die Spalte `privat`, zur Kennzeichnung einer Privatfahrt, in der Tabelle `fahrtenbuch`?
 
-5. Entwickle ein Python Script das zur Migration der Daten von csv in die SQL-Datenbank dient. Beispielname: ``migrate.py``
- - Mache zu diesem Zwecke eine Schleife die zeilenweise aus der csv Datei liest und daraus ``INSERT``-Befehle für die Datenbank erzeugt.
-7. Entwickle auf Basis des Programms der Vorwoche eine Version die ohne CSV dafür mit SQL arbeitet.
+5. Entwickle ein Python Script das zum Einlesen von Daten aus einer csv-Datei in die SQL-Datenbank dient. Beispielname: `seed.py` (Aus dem englischen `säen`)
+ - Erzeuge eine Schleife die zeilenweise Daten aus der CSV Datei einließt und diese in `INSERT`-Befehle übersetzt
+ - Führe anschließend die erzeugten `INSERT` Befehle aus um die Daten in der Datenbank zu speichern
+
+6. Entwickle auf Basis des Programms der Vorwoche eine Version die ohne CSV dafür mit SQL arbeitet.
  Beginne mit dem Einlesen der Fahrzeuge:
  - Ersetze die Datei-Einleseroutinen durch passende SQL Aufrufe.
  - Füge testweise neue Daten in die SQL Datenbank ein und prüfe das Ergebnis.
+ - Nun sollen die Fahrten aus der Fahrtenbuchtabelle gelesen werden: Da wir keine Dateien mit Kennzeichen als Dateinamen mehr führen benötigt die Tabelle Fahrtenbuch eine Spalte `kennzeichen` zur Zuordnung. Achte darauf die die Spalte `kennzeichen` in der Tabelle `fahrzeuge` und `fahrtenbuch` den exakt gleichen Typen haben.  
+ Erstelle ein Python Script `alter_tables.py`, um die Spalte der Tabelle hinzufügen. Der SQL Befehl `ALTER TABLE` ermöglicht Anpassungen an bestehenden Datenbankstrukturen.
  
- - Nun sollen die Fahrten aus der Fahrtenbuchtabelle gelesen werden: Da wir keine Dateien mit Kennzeichen als Dateinamen mehr führen benötigt die Tabelle Fahrtenbuch eine Spalte ``kennzeichen`` zur Zuordnung. Achte darauf, dass die Spalte den exakt gleichen Datentyp wie in der Fahrzeugtabelle hat.
- Erstelle ein Python Script ``alter_tables``, um die Spalte der Tabelle hinzufügen. Sieh dir dazu den SQL Befehl ``ALTER TABLE`` an.
+7. Hole mittels SELECT und WHERE-Bedindung für das jeweilige Fahrzeug die Fahrtenbucheintäge aus der Datenbanktabelle und speichere sie als ``Journey``-Objekte beim Fahrzeug. SQL Befehk `WHERE`: https://www.sqlitetutorial.net/sqlite-where/
  
-7. Hole mittels SELECT und WHERE-Bedindung für das jeweilige Fahrzeug die Fahrtenbucheintäge aus der Datenbanktabelle und speichere sie als ``Journey``-Objekte beim Fahrzeug.
- WHERE: https://www.sqlitetutorial.net/sqlite-where/
- 
- 
-![fahrzeuge_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/96e5d90c5eadaf6dfb9a5f80458d6493c9a51659/database_basics/fahrzeuge_table.PNG) ![fahrtenbuch_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/96e5d90c5eadaf6dfb9a5f80458d6493c9a51659/database_basics/fahrenbuch_table.PNG)
+![fahrzeuge_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/database_basics/fahrzeuge_table.PNG) 
+
+![fahrtenbuch_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/database_basics/fahrenbuch_table.PNG)
 
  
