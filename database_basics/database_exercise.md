@@ -34,12 +34,12 @@ Eine grundlegendes Datenbankschema für diese Übung haben wir dir vorbereitet: 
 2. Jede Tabelle soll eine Spalte `Id` als Primärschlüssel besitzen. Diese `Id` (Abkürzung aus dem englischen Identity) dient zur eindeutigen Identifizierung der gespeicherten Daten. Eine kompakte Erklärung zu diesem Thema findest du auf Website [Dateneule: Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
 
 3. Für Textfelder verwende `VARCHAR(50)` oder `TEXT` (Wert in den Klammern gibt die maximale Feldänge an. SQLite ignoriert auf Grund der einfachen Struktur die Länge an den Spaltentypen, erkennt diese als gültig an um kompatibel mit anderen SQL Datenbank zu sein). Für Zahlenfelder verwende `INTEGER`.  
-Für Baujahr und Erstzulassung kann wahlweise `INTEGER`, `VARCHAR(4)` oder `TEXT` verwendet werden. Eine Date-Datentyp sieht SqLite nicht vor. Mehr zu Datentypen findest du hier:
+Für Baujahr und Erstzulassung kann wahlweise `INTEGER`, `VARCHAR(4)` oder `TEXT` verwendet werden. Eine Date-Datentyp sieht SQLite nicht vor. Mehr zu Datentypen findest du hier:
 https://www.sqlite.org/datatype3.html
 
 4. Welche Datentypen passen für die Spalte `privat`, zur Kennzeichnung einer Privatfahrt, in der Tabelle `fahrtenbuch`?
 
-5. Entwickle ein Python Script das zum Einlesen von Daten aus einer csv-Datei in die SQL-Datenbank dient. Beispielname: `seed.py` (Aus dem englischen `säen`)
+5. Entwickle ein Python Script das zum Einlesen von Daten aus einer csv-Datei in die SQL-Datenbank dient. Beispielname: `seed.py` (Aus dem englischen *säen*)
  - Erzeuge eine Schleife die zeilenweise Daten aus der CSV Datei einließt und diese in `INSERT`-Befehle übersetzt
  - Führe anschließend die erzeugten `INSERT` Befehle aus um die Daten in der Datenbank zu speichern
 
