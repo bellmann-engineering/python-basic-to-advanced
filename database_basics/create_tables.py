@@ -1,6 +1,6 @@
 import sqlite3
 
-db = sqlite3.connect('fuhrpark.db')
+db = sqlite3.connect('fahrzeugverwaltung.db')
 
 db.execute("""
     CREATE TABLE fahrzeuge (
