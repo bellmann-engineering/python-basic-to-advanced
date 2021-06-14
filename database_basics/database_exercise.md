@@ -51,6 +51,7 @@ https://www.sqlite.org/datatype3.html
  Erstelle ein Python Script `alter_tables.py`, um die Spalte der Tabelle hinzufügen. Der SQL Befehl `ALTER TABLE` ermöglicht Anpassungen an bestehenden Datenbankstrukturen.
 
 Optional:
+
 7. Hole mittels SELECT und WHERE-Bedindung für das jeweilige Fahrzeug die Fahrtenbucheintäge aus der Datenbanktabelle und speichere sie als ``Journey``-Objekte beim Fahrzeug. SQL Befehl `WHERE`: https://www.sqlitetutorial.net/sqlite-where/
  
 ![fahrzeuge_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/database_basics/fahrzeuge_table.PNG) 
