@@ -49,7 +49,8 @@ https://www.sqlite.org/datatype3.html
  - Füge testweise neue Daten in die SQL Datenbank ein und prüfe das Ergebnis.
  - Nun sollen die Fahrten aus der Fahrtenbuchtabelle gelesen werden: Da wir keine Dateien mit Kennzeichen als Dateinamen mehr führen benötigt die Tabelle Fahrtenbuch eine Spalte `kennzeichen` zur Zuordnung. Achte darauf die die Spalte `kennzeichen` in der Tabelle `fahrzeuge` und `fahrtenbuch` den exakt gleichen Typen haben.  
  Erstelle ein Python Script `alter_tables.py`, um die Spalte der Tabelle hinzufügen. Der SQL Befehl `ALTER TABLE` ermöglicht Anpassungen an bestehenden Datenbankstrukturen.
- 
+
+Optional:
 7. Hole mittels SELECT und WHERE-Bedindung für das jeweilige Fahrzeug die Fahrtenbucheintäge aus der Datenbanktabelle und speichere sie als ``Journey``-Objekte beim Fahrzeug. SQL Befehl `WHERE`: https://www.sqlitetutorial.net/sqlite-where/
  
 ![fahrzeuge_schema](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/database_basics/fahrzeuge_table.PNG) 
