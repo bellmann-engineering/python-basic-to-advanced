@@ -20,6 +20,8 @@ import sqlite3
 
 Eine kompakte Einführung in SQL findest du hier in einer interaktiven Schritt-Für-Schritt-Anleitung bei der du auch eigene kleine Dinge ausprobieren kannst: [SQLite Tutorial](https://www.sqlitetutorial.net/)
 
+Um SQL Syntax zu validieren hilft diese Seite: [sql-syntax-check-validator](https://www.eversql.com/sql-syntax-check-validator/)
+
 Eine grundlegendes Datenbankschema für diese Übung haben wir dir vorbereitet: [create_tables.py](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/database_basics/create_tables.py)
 
 ### Aufgaben
@@ -29,7 +31,7 @@ Eine grundlegendes Datenbankschema für diese Übung haben wir dir vorbereitet: 
  - Datenbankname: `fuhrpark.db`
  - Tabellen: `fahrzeuge`, `fahrtenbuch`
 
-2. Jede Tabelle soll eine Spalte `Id` als Primärschlüssel besitzen. Diese `Id` (Abkürzung aus dem englischen Identity) dient zur eindeutigen Identifizierung der gespeicherten Daten. Eine kompakte Erklärung zu diesem Themea findest du auf Website [Dateneule: Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
+2. Jede Tabelle soll eine Spalte `Id` als Primärschlüssel besitzen. Diese `Id` (Abkürzung aus dem englischen Identity) dient zur eindeutigen Identifizierung der gespeicherten Daten. Eine kompakte Erklärung zu diesem Thema findest du auf Website [Dateneule: Primär-  und Fremdschlüssel](https://www.dateneule.de/2019/05/27/primaer-und-fremdschluessel/)
 
 3. Für Textfelder verwende `VARCHAR(50)` oder `TEXT` (Wert in den Klammern gibt die maximale Feldänge an. SQLite ignoriert auf Grund der einfachen Struktur die Länge an den Spaltentypen, erkennt diese als gültig an um kompatibel mit anderen SQL Datenbank zu sein). Für Zahlenfelder verwende `INTEGER`.  
 Für Baujahr und Erstzulassung kann wahlweise `INTEGER`, `VARCHAR(4)` oder `TEXT` verwendet werden. Eine Date-Datentyp sieht SqLite nicht vor. Mehr zu Datentypen findest du hier:
