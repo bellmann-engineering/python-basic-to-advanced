@@ -113,5 +113,5 @@ Achten auf die Reihenfolge, da Spalten von Tabellen auf Spalten anderer Tabellen
 3. Stelle sicher, dass jedes Feld den passenden Datentypen hat.
 
 Optional:
-Füge der Tabelle Employees eine zusätzliche Spalte Plz hinzu. 
-Löschen die zuvor angelegte Spalte Plz wieder.
+- Füge der Tabelle Employees eine zusätzliche Spalte Plz hinzu. 
+- Löschen die zuvor angelegte Spalte Plz wieder.
