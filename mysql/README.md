@@ -53,7 +53,7 @@ Diese Definition ist erst einmal schwer zu verstehen. Mit einer weiteren Grafik 
 ![table4.PNG](table4.PNG)
 
 
-Die Spalte "Straße" hängt von "Ort" ab und das obwohl Ort kein Primärschlüssel-Attribut ist.   Um den Verstoß aufzulösen wird eine zweite Tabelle "Cities" für die Orte gebildet und in der "Customers" Tabelle ein Verweis gespeichert. Den Verweis nennt man Fremdschlüssel, was oftmals mit „FK“ in der Spaltenbezeichnung abgekürzt wird. 
+Die Spalte "Straße" hängt von "Ort" ab und das obwohl Ort kein Primärschlüssel-Attribut ist. Um den Verstoß aufzulösen wird eine zweite Tabelle "Cities" für die Orte gebildet und in der "Customers" Tabelle ein Verweis gespeichert. Den Verweis nennt man Fremdschlüssel, was oftmals mit „FK“ in der Spaltenbezeichnung abgekürzt wird. 
 
 ![table5.PNG](table5.PNG)
 
@@ -79,28 +79,29 @@ Wobei die Beziehungen zwischen den Tabellen folgendermaßen definiert sind:
 
 Die Syntax für die erste Tabelle "Abteilung" ist folgende:
 
-CREATE TABLE Departments (
+``CREATE TABLE Departments (
     Id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(25) NOT NULL,
     PRIMARY KEY(Id)
-);
+);``
 
 Die Tabelle "Departments" (englisch für "Abteilung") hat zwei Spalten: "Id" und "Name". Der Primärschlüssel ist "Id". Der Schlüssel entspricht hier eine natürlichen Zahl, die fortlaufend hochgezählt wird.
 
 Für jede Spalte müssen wir einen Namen spezifizieren. Spaltennamen dürfen keine Leerzeichen enthalten (nutze stattdessen den Unterstrich). Ebenso darf keine Zahl am Anfang des Namens stehen. Ein Minus ist ebenfalls problematisch, dort lieber den Unterstrich verwenden.
 
-Autoincrement ist eine Hilfsfunktion die mittlerweile in die meisten Datenbanken Einzug gehalten hat. Es handelt sich um einen Mechanismus den Zahlenwert in der Primärschlüsselspalte 
+``Autoincrement`` ist eine Hilfsfunktion die mittlerweile in die meisten Datenbanken Einzug gehalten hat. Es handelt sich um einen Mechanismus den Zahlenwert in der Primärschlüsselspalte 
 
 Bei Anlegen der Tabelle:
-CREATE TABLE Departments (
+
+``CREATE TABLE Departments (
     Id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(25) NOT NULL,
     PRIMARY KEY(Id),
-);
+);``
 
 Wenn wir es nachträglich bei der bereits angelegten Tabelle ändern wollen:
 
-ALTER TABLE Departments CHANGE Id Id INT(10) AUTO_INCREMENT PRIMARY KEY;
+``ALTER TABLE Departments CHANGE Id Id INT(10) AUTO_INCREMENT PRIMARY KEY;``
 
 
 1.	Lege folgende vier Tabellen an:
