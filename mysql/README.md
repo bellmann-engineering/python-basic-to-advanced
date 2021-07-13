@@ -1,6 +1,7 @@
 # Tabellendesign
 
 Die Hauptmotivation des Tabellendesign ist es innerhalb des rationalen Schemas folgende Ziele zu verfolgen:
+
 • Redundanz und Inkonsistenz vermeiden
 • Anomalien vermeiden
 • Verlustlose Zerlegungen finden
@@ -11,8 +12,7 @@ Unter Normalisierung eines relationalen Datenbankmodells versteht man die Auftei
 Normalformen, sodass eine Form entsteht, die keine vermeidbaren Redundanzen mehr enthält.
 Ziel der Normalisierung ist eine redundanzfreie Datenspeicherung zu erstellen. Redundanzfrei bedeutet, dass Duplikate entfernt werden können, ohne dass es zu Informationsverlusten kommt.
 Weiterhin soll die Normalisierung Anomalien entfernen. Im Normalisierungsprozess gibt es fünf Normalformen, welche im Folgenden genauer erklärt werden.
-In der Datenbankentwicklung ist die Dritte Normalform oft ausreichend, um die perfekte Balance aus Redundanz, Performance und Flexibilität für eine Datenbank zu gewährleisten. Natürlich gibt es
-auch Sonderfälle, z.B. im wissenschaftlichen Bereich, wo eine Datenbank bis zur 5. Normalform normalisiert werden kann bzw. muss.
+In der Datenbankentwicklung ist die Dritte Normalform oft ausreichend, um die perfekte Balance aus Redundanz, Performance und Flexibilität für eine Datenbank zu gewährleisten. Natürlich gibt es auch Sonderfälle, z.B. im wissenschaftlichen Bereich, wo eine Datenbank bis zur 5. Normalform normalisiert werden kann bzw. muss.
 
 ## Erste Normalform
 _Die Erste Normalform (1NF) ist dann gegeben, wenn alle Informationen in einer Tabelle atomar vorliegen._
@@ -27,7 +27,7 @@ einer Tabellenspalte vorliegen dürfen.
 ║ 2  │ Peter Meier │ Hauptstr. 5, 12345 Entenhausen │ peter@gmail.com ║
 ╚════╧═════════════╧════════════════════════════════╧═════════════════╝
 
-Sowohl die Werte in der Spalte „Name“ als auch die "Adresse" sind nicht *atomar* gespeichert. 
+Sowohl die Werte in der Spalte "Name" als auch die "Adresse" sind nicht *atomar* gespeichert. 
 Um die 1. Normalform zu erfüllen sollte das Tabellendesign so aussehen:
 
 ╔════╤═══════╤════════╤══════════════╤═══════════════════╤═════════════════╗
@@ -65,7 +65,7 @@ Diese Definition ist erst einmal schwer zu verstehen. Mit einer weiteren Grafik 
 ![NE3.png](http://url/to/img.png)
 
 
-Die Spalte "Straße" hängt von "Ort" ab und das obwohl Ort kein Primärschlüssel-Attribut ist.   Um den Verstoß aufzulösen wird eine zweite Tabelle "Cities" für die Orte gebildet und in der „Customers“ Tabelle ein Verweis gespeichert. Den Verweis nennt man Fremdschlüssel, was oftmals mit „FK“ in der Spaltenbezeichnung abgekürzt wird. 
+Die Spalte "Straße" hängt von "Ort" ab und das obwohl Ort kein Primärschlüssel-Attribut ist.   Um den Verstoß aufzulösen wird eine zweite Tabelle "Cities" für die Orte gebildet und in der "Customers" Tabelle ein Verweis gespeichert. Den Verweis nennt man Fremdschlüssel, was oftmals mit „FK“ in der Spaltenbezeichnung abgekürzt wird. 
 
 ╔════╤═══════╤════════╤══════════════╤════════╤═════════════════╗
 ║ Id │ FName │ LName  │ Strasse      │ Ort_FK │ Email           ║
@@ -114,7 +114,7 @@ Wenn wir nun die neu erstellte Tabelle "Cites" mit den Spalten "Id" und "Ort" ge
 ## Übung 1 (Tabellendesign)
 
 1.	Die Daten eines Busreiseunternehmens sollen in einer relationalen Datenbank abgespeichert werden. Die folgende Abbildung zeigt den Datenbestand in einer nicht-Normalisierten Form.
-Führen schrittweise die Normalformen 1–3 durch.
+Führe schrittweise die Normalformen 1–3 durch.
 ╔══════════╤════════╤════════════════╤════════╤══════════════╤═════════════╗
 ║ FahrtNr. │ BusNr. │ Busbezeichnung │ Bustyp │ Fahrer       │ Ziel        ║
 ╠══════════╪════════╪════════════════╪════════╪══════════════╪═════════════╣
@@ -158,10 +158,11 @@ CREATE TABLE Departments (
 );
 
 Wenn wir es nachträglich bei der bereits angelegten Tabelle ändern wollen:
+
 ALTER TABLE Departments CHANGE Id Id INT(10) AUTO_INCREMENT PRIMARY KEY;
 
 
-1.	Legen Sie folgende 4 Tabellen an:
+1.	Lege folgende vier Tabellen an:
 
 •	Cars  
 o	Id INT(10)
