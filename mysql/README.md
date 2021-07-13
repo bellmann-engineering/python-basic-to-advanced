@@ -24,13 +24,7 @@ einer Tabellenspalte vorliegen dürfen.
 Sowohl die Werte in der Spalte "Name" als auch die "Adresse" sind nicht *atomar* gespeichert. 
 Um die 1. Normalform zu erfüllen sollte das Tabellendesign so aussehen:
 
-╔════╤═══════╤════════╤══════════════╤═══════════════════╤═════════════════╗
-║ Id │ FName │ LName  │ Strasse      │ Ort               │ Email           ║
-╠════╪═══════╪════════╪══════════════╪═══════════════════╪═════════════════╣
-║ 1  │ Hans  │ Müller │ Musterstr. 1 │ 99871 Berlin      │ h@mueller.de    ║
-╟────┼───────┼────────┼──────────────┼───────────────────┼─────────────────╢
-║ 2  │ Peter │ Meier  │ Hauptstr. 5  │ 12345 Entenhausen │ peter@gmail.com ║
-╚════╧═══════╧════════╧══════════════╧═══════════════════╧═════════════════╝
+![table2.PNG](table2.PNG)
 
 Die Spalten wurden entsprechend aufgeteilt.
 
@@ -47,7 +41,7 @@ Eine Relation befindet sich in der zweiten Normalform, wenn
 Zuerst müssen wir den Begriff Primärschlüssel aufklären: Er wird zur eindeutigen Identifizierung eines Datensatzes verwendet. In einer normalisierten Datenbank besitzen alle Tabellen einen Primärschlüssel.
 In unserem Beispiel handelt es sich um die Spalte "Id", welche eine fortlaufende eindeutige Nummer für jeden Kundeneintrag in der Tabelle führt. Nun müssen wir also sicherstellen, dass jedes Feld der Tabelle sich inhaltlich auf die Schlüsselspalte bezieht:
 
-![NE2.png](http://url/to/img.png)
+![table3.PNG](table1.PNG)
 
 ## Dritte Normalform
 Eine Relation befindet sich in der dritten Normalform, wenn 
@@ -56,70 +50,23 @@ Eine Relation befindet sich in der dritten Normalform, wenn
 
 Diese Definition ist erst einmal schwer zu verstehen. Mit einer weiteren Grafik lässt sich jedoch aufzeigen, was mit Punkt 2 gemeint ist:
 
-![NE3.png](http://url/to/img.png)
+![table4.PNG](table1.PNG)
 
 
 Die Spalte "Straße" hängt von "Ort" ab und das obwohl Ort kein Primärschlüssel-Attribut ist.   Um den Verstoß aufzulösen wird eine zweite Tabelle "Cities" für die Orte gebildet und in der "Customers" Tabelle ein Verweis gespeichert. Den Verweis nennt man Fremdschlüssel, was oftmals mit „FK“ in der Spaltenbezeichnung abgekürzt wird. 
 
-╔════╤═══════╤════════╤══════════════╤════════╤═════════════════╗
-║ Id │ FName │ LName  │ Strasse      │ Ort_FK │ Email           ║
-╠════╪═══════╪════════╪══════════════╪════════╪═════════════════╣
-║ 1  │ Hans  │ Müller │ Musterstr. 1 │ 3      │ h@mueller.de    ║
-╟────┼───────┼────────┼──────────────┼────────┼─────────────────╢
-║ 2  │ Peter │ Meier  │ Hauptstr. 5  │ 4      │ peter@gmail.com ║
-╚════╧═══════╧════════╧══════════════╧════════╧═════════════════╝
-
-
-╔════╤═══════════════════╗
-║ Id │ Ort               ║
-╠════╪═══════════════════╣
-║ 1  │ 80331 München     ║
-╟────┼───────────────────╢
-║ 2  │ 50667 Köln        ║
-╟────┼───────────────────╢
-║ 3  │ 99871 Berlin      ║
-╟────┼───────────────────╢
-║ 4  │ 12345 Entenhausen ║
-╚════╧═══════════════════╝
+![table5.PNG](table5.PNG)
 
 Wenn wir nun die neu erstellte Tabelle "Cites" mit den Spalten "Id" und "Ort" genau ansehen stellen wir fest, dass sie gegen die 2. Normalform verstößt. Dementsprechend sollen auch hier drei Spalten anstelle von zwei gebildet werden, sodass sich folgendes Bild ergibt:
 
-╔════╤═══════╤════════╤══════════════╤════════╤═════════════════╗
-║ Id │ FName │ LName  │ Strasse      │ Ort_FK │ Email           ║
-╠════╪═══════╪════════╪══════════════╪════════╪═════════════════╣
-║ 1  │ Hans  │ Müller │ Musterstr. 1 │ 3      │ h@mueller.de    ║
-╟────┼───────┼────────┼──────────────┼────────┼─────────────────╢
-║ 2  │ Peter │ Meier  │ Hauptstr. 5  │ 4      │ peter@gmail.com ║
-╚════╧═══════╧════════╧══════════════╧════════╧═════════════════╝
-
-
-╔════╤═══════╤═════════════╗
-║ Id │ Plz   │ Ort         ║
-╠════╪═══════╪═════════════╣
-║ 1  │ 80331 │ München     ║
-╟────┼───────┼─────────────╢
-║ 2  │ 50667 │ Köln        ║
-╟────┼───────┼─────────────╢
-║ 3  │ 99871 │ Berlin      ║
-╟────┼───────┼─────────────╢
-║ 4  │ 12345 │ Entenhausen ║
-╚════╧═══════╧═════════════╝
+![table6.PNG](table6.PNG)
 
 ## Übung 1 (Tabellendesign)
 
 1.	Die Daten eines Busreiseunternehmens sollen in einer relationalen Datenbank abgespeichert werden. Die folgende Abbildung zeigt den Datenbestand in einer nicht-Normalisierten Form.
 Führe schrittweise die Normalformen 1–3 durch.
-╔══════════╤════════╤════════════════╤════════╤══════════════╤═════════════╗
-║ FahrtNr. │ BusNr. │ Busbezeichnung │ Bustyp │ Fahrer       │ Ziel        ║
-╠══════════╪════════╪════════════════╪════════╪══════════════╪═════════════╣
-║ 1        │ 455    │ EG1            │ Lang   │ Hans Meier   │ Heide       ║
-╟──────────┼────────┼────────────────┼────────┼──────────────┼─────────────╢
-║ 2        │ 1212   │ Regio4         │ Kurz   │ Peter Fahrer │ Moor        ║
-╟──────────┼────────┼────────────────┼────────┼──────────────┼─────────────╢
-║ 3        │ 633    │ Regio1         │ Kurz   │ Peter Fahrer │ World's End ║
-╟──────────┼────────┼────────────────┼────────┼──────────────┼─────────────╢
-║ 4        │ 303    │ Schnellbus     │ Lang   │ Bill Gates   │ Wonderland  ║
-╚══════════╧════════╧════════════════╧════════╧══════════════╧═════════════╝
+
+![table7.PNG](table7.PNG)
 
 2.	Welche weiteren Spalten wären denkbar und welchen Typ sollten diese haben? Zur Auswahl stehen die folgenden Datentypen: Zahl, Datum, Text, Zahl (Währung). 
 
@@ -158,35 +105,7 @@ ALTER TABLE Departments CHANGE Id Id INT(10) AUTO_INCREMENT PRIMARY KEY;
 
 1.	Lege folgende vier Tabellen an:
 
-•	Cars  
-o	Id INT(10)
-o	CustomerId INT(10)
-o	EmployeeId INT(10)
-o	Model VARCHAR(50)
-o	Status VARCHAR(25)
-o	TotalCost INT(10)
-
-•	Customers
-o	Id INT(10)
-o	FName VARCHAR(35)
-o	LName VARCHAR(35)
-o	Email VARCHAR(100)
-o	PhoneNumber VARCHAR(11)
-o	PreferredContact VARCHAR(5)
-
-•	Departments 
-o	Id INT(10)
-o	Name VARCHAR(25)
-
-•	Employees 
-o	Id INT(10)
-o	FName VARCHAR(35)
-o	LName VARCHAR(35)
-o	PhoneNumber VARCHAR(11)
-o	ManagerId INT(10)
-o	DepartmentId INT(10)
-o	Salary INT(10)
-o	HireDate DATETIME(19)
+![table8.PNG](table8.PNG)
 
 Achten auf die Reihenfolge, da Spalten von Tabellen auf Spalten anderer Tabellen verweisen.
 
