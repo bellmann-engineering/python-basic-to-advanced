@@ -41,7 +41,7 @@ Eine Relation befindet sich in der zweiten Normalform, wenn
 Zuerst müssen wir den Begriff Primärschlüssel aufklären: Er wird zur eindeutigen Identifizierung eines Datensatzes verwendet. In einer normalisierten Datenbank besitzen alle Tabellen einen Primärschlüssel.
 In unserem Beispiel handelt es sich um die Spalte "Id", welche eine fortlaufende eindeutige Nummer für jeden Kundeneintrag in der Tabelle führt. Nun müssen wir also sicherstellen, dass jedes Feld der Tabelle sich inhaltlich auf die Schlüsselspalte bezieht:
 
-![table3.PNG](table1.PNG)
+![table3.PNG](table3.PNG)
 
 ## Dritte Normalform
 Eine Relation befindet sich in der dritten Normalform, wenn 
@@ -50,7 +50,7 @@ Eine Relation befindet sich in der dritten Normalform, wenn
 
 Diese Definition ist erst einmal schwer zu verstehen. Mit einer weiteren Grafik lässt sich jedoch aufzeigen, was mit Punkt 2 gemeint ist:
 
-![table4.PNG](table1.PNG)
+![table4.PNG](table4.PNG)
 
 
 Die Spalte "Straße" hängt von "Ort" ab und das obwohl Ort kein Primärschlüssel-Attribut ist.   Um den Verstoß aufzulösen wird eine zweite Tabelle "Cities" für die Orte gebildet und in der "Customers" Tabelle ein Verweis gespeichert. Den Verweis nennt man Fremdschlüssel, was oftmals mit „FK“ in der Spaltenbezeichnung abgekürzt wird. 
