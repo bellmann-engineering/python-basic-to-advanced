@@ -2,10 +2,10 @@
 
 Die Hauptmotivation des Tabellendesign ist es innerhalb des rationalen Schemas folgende Ziele zu verfolgen:
 
-• Redundanz und Inkonsistenz vermeiden
-• Anomalien vermeiden
-• Verlustlose Zerlegungen finden
-• Abhängigkeiten bewahren
+- Redundanz und Inkonsistenz vermeiden
+- Anomalien vermeiden
+- Verlustlose Zerlegungen finden
+- Abhängigkeiten bewahren
 
 ## Normalformen
 Unter Normalisierung eines relationalen Datenbankmodells versteht man die Aufteilung von Attributen in mehrere Relationen (Tabellen) mithilfe der Normalisierungsregeln und deren
@@ -19,13 +19,7 @@ _Die Erste Normalform (1NF) ist dann gegeben, wenn alle Informationen in einer T
 Es bedeutet, dass jede Information innerhalb einer Tabelle eine eigene Tabellenspalte bekommt und zusammenhängende Informationen, wie zum Beispiel die Postleitzahl (PLZ) und der Ort, nicht in
 einer Tabellenspalte vorliegen dürfen.
 
-╔════╤═════════════╤════════════════════════════════╤═════════════════╗
-║ Id │ Name        │ Adresse                        │ Email           ║
-╠════╪═════════════╪════════════════════════════════╪═════════════════╣
-║ 1  │ Hans Müller │ Musterstr. 1, 99871 Berlin     │ h@mueller.de    ║
-╟────┼─────────────┼────────────────────────────────┼─────────────────╢
-║ 2  │ Peter Meier │ Hauptstr. 5, 12345 Entenhausen │ peter@gmail.com ║
-╚════╧═════════════╧════════════════════════════════╧═════════════════╝
+![table1.PNG](table1.PNG)
 
 Sowohl die Werte in der Spalte "Name" als auch die "Adresse" sind nicht *atomar* gespeichert. 
 Um die 1. Normalform zu erfüllen sollte das Tabellendesign so aussehen:
@@ -197,7 +191,7 @@ o	HireDate DATETIME(19)
 Achten auf die Reihenfolge, da Spalten von Tabellen auf Spalten anderer Tabellen verweisen.
 
 2. Identifiziere in jeder Tabelle den Primärschlüssel.
-3. Stellen sicher, dass jedes Feld den passenden Datentypen hat.
+3. Stelle sicher, dass jedes Feld den passenden Datentypen hat.
 
 Optional:
 Füge der Tabelle Employees eine zusätzliche Spalte Plz hinzu. 
