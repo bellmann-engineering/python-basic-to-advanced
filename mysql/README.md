@@ -74,7 +74,8 @@ Führe schrittweise die Normalformen 1–3 durch.
 
 Wir möchten vier Tabellen anlegen: Abteilungen, Angestellte, Kunden und Autos.
 Wobei die Beziehungen zwischen den Tabellen folgendermaßen definiert sind:
-•	Jede Abteilung kann 0 oder mehr Mitarbeiter haben 
+
+•	Jede Abteilung kann 0 oder mehr Mitarbeiter haben
 •	Jeder Kunde kann 0 oder mehr Autos haben 
 
 Die Syntax für die erste Tabelle "Abteilung" ist folgende:
