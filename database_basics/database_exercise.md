@@ -2,9 +2,11 @@
 
 ### Motivation
 
-Unser Fuhrpark wächst stetig an. Weitere LKWs, PKWs oder Motorräder müssten immer wieder per Hand im Code hinzugefügt werden. Das wird mit der Zeit sehr aufwändig und das Programm wird sehr unübersichtlich.
+<!--Unser Fuhrpark wächst stetig an. Weitere LKWs, PKWs oder Motorräder müssten immer wieder per Hand im Code hinzugefügt werden. Das wird mit der Zeit sehr aufwändig und das Programm wird sehr unübersichtlich.
 
-Jetzt ist es an der Zeit in unserem Code die Logik und die Datenaufbewahrung voneinander zu trennen.
+Jetzt ist es an der Zeit in unserem Code die Logik und die Datenaufbewahrung voneinander zu trennen.-->
+
+Wir möchten einen Fuhrpark bestehend aus LKWs, PKWs und Motorrädern aufbauen. Diese Datenmenge lässt sich nicht mehr gut in Dateien organisieren. Wir benötigen eine konsistente Datenhaltung.
 
 Dies erreichen wir mit einer einfachen `SQLite` Datenbank. Diese spricht wie alle anderen Datenbanken die Sprache `SQL`. Dies ist eine standartisierte Sprache die SQL Datenbankserver wie postgresql, MS SQL Server, MySQL oder MariaDB sprich.
 
