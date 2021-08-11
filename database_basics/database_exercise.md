@@ -1,5 +1,3 @@
-# Camp2Code
-
 ## Basiswissen Datenbank mit SQLite in Python
 
 ### Motivation
