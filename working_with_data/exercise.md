@@ -1,5 +1,5 @@
 # Camp2Code
-## Datenverarbeitung
+## Arbeiten mit Daten
 
 Uns liegt ein Datensatz in Form einer CSV Datei ([athletes.csv](athletes.csv)) vor, welcher Daten aller Athleten die 2016 in Rio an den Olympischen Spielen teilgenommen haben, enthält. Der Datensatz enthält 11.538 Athleten (6333 Männer und 5205 Frauen).
 
