@@ -9,7 +9,7 @@ Bei den Ländercodes handelt es sich um IOC Länderschlüssel (https://en.wikipe
 
 Aufgaben: 
 1. Lese die CSV Datei mittels dem build in module `csv` ein. Hinweis: Die CSV Datei liegt im UTF-8 Zeichensatz vor.
-- Ignoriere Datei die Kopfzeile mit den Spaltenbeschriftungen.
+- Ignoriere dabei die Kopfzeile mit den Spaltenbeschriftungen.
 - Zähle die Anzahl an Goldmedaille die während der Austragung verliehen wurden.
 2. Ermittle mittels eines Dictionaries wieviele Goldmedaille je Land gewonnen wurden.
 3. Ermittele wieviele Goldmedaille Deutschland gewonnen hat.
