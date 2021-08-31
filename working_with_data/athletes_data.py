@@ -31,7 +31,7 @@ print("Alle Länder mit Anzahl Gold Medallien dahinter", countries)
 # 3. Um die Anzahl deutscher Medallien auszugeben
 print("GER: ", countries["GER"])
 
-# 3. weitere Möglichkeit: wir verwenden eine Liste, bilden Tuples und summieren
+# 4. weitere Möglichkeit: wir verwenden eine Liste, bilden Tuples und summieren
 countries_list = []
 
 with open("athletes.csv", encoding="utf8") as fin:
@@ -49,16 +49,16 @@ total_german_gold = sum([pair[1] for pair in countries_list if pair[0] == "GER"]
 print("German Gold:", total_german_gold)
 
 
-# 4. Anzahl Gold Medallien direkt mit sum im CSV Reader ermitteln
+# 5. Anzahl Gold Medallien direkt mit sum im CSV Reader ermitteln
 with open("athletes.csv", encoding="utf8") as fin:
     next(fin)  # kopfzeile überspringen
     total = sum(int(r[GOLD_COL]) for r in csv.reader(fin))
 
     print("Anz. Gold: ", total)
 
-# 5. Filtern nach Ländern die mindestens eine Gold Medallie haben / eine Gold Medallie haben
+# 6. Filtern nach Ländern die mindestens eine Gold Medallie haben / eine Gold Medallie haben
 countriesWithGoldMedals = {key: value for (key, value) in countries.items() if value > 0}
 print("Ländern mit Gold:", countriesWithGoldMedals)
 
-# 6. Anzahl der Einträge aus 5 verwenden, um Anzahl der Länder mit Gold zu ermitteln
+# 7. Anzahl der Einträge aus 5 verwenden, um Anzahl der Länder mit Gold zu ermitteln
 print("Anzahl der Länder die eine Gold Medallie bekommen haben:", len(countriesWithGoldMedals))
