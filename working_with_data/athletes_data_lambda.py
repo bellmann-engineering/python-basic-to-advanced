@@ -44,6 +44,18 @@ print("Alle Länder mit Anzahl Gold Medallien dahinter", countries)
 # 3.
 print("GER: ", countries["GER"])
 
+# Alle Länder ausgeben
+print("Länder mit Goldmedallien (nach Land sortiert)")
+for (k, v) in sorted(filter(lambda r: r[1] > 0, countries.items())):
+    print(f"    {k}: {v}")
+
+print("Länder mit Goldmedallien (nach Medallien sortiert)")
+
+for (k, v) in sorted(
+    filter(lambda r: r[1] > 0, countries.items()), reverse=True, key=lambda row: row[1]
+):
+    print(f"    {k}: {v}")
+
 print("Land mit den meisten Goldmedallien", max(countries, key=countries.get))
 
 # 4.
