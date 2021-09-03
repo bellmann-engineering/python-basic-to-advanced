@@ -9,6 +9,7 @@ with open("athletes.csv", encoding="utf8") as file:
     csv_data = [row for row in csv.DictReader(file)]
 
 # 1.
+
 # sum
 total = sum([int(row["gold"]) for row in csv_data])
 print("[sum] Anzahl Gold Medallien (overall): ", total)
@@ -59,10 +60,10 @@ for (k, v) in sorted(
 print("Land mit den meisten Goldmedallien", max(countries, key=countries.get))
 
 # 4.
-
 print("Alle Gold Medallien", sum([int(row["gold"]) for row in csv_data]))
 print("Alle Silber Medallien", sum([int(row["silver"]) for row in csv_data]))
 print("Alle Bronze Medallien", sum([int(row["bronze"]) for row in csv_data]))
+
 
 # 5.
 total = sum(int(row["gold"]) for row in csv_data)
