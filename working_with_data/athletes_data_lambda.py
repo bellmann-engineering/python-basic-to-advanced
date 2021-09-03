@@ -8,7 +8,7 @@ csv_data = []
 with open("athletes.csv", encoding="utf8") as file:
     csv_data = [row for row in csv.DictReader(file)]
 
-# 1. Anzahl alle Goldmedallien zählen
+# 1.
 # sum
 total = sum([int(row["gold"]) for row in csv_data])
 print("[sum] Anzahl Gold Medallien (overall): ", total)
@@ -21,7 +21,7 @@ print("[map + sum] Anzahl Gold Medallien (overall): ", total)
 total = functools.reduce(lambda val, row: val + int(row["gold"]), csv_data, 0)
 print("[reduce] Anzahl Gold Medallien (overall): ", total)
 
-# 2. Es wird ein Dictionary verwendet und value beim Key (Land) hochgezählt
+# 2.
 countries = {}
 
 
@@ -39,25 +39,24 @@ def reducer(value, row):
 
 countries = functools.reduce(reducer, csv_data, {})
 
-# Alle Länder mit Gold-Medallienanzahl:
 print("Alle Länder mit Anzahl Gold Medallien dahinter", countries)
 
-# 3. Um die Anzahl deutscher Medallien auszugeben
+# 3.
 print("GER: ", countries["GER"])
 
 print("Land mit den meisten Goldmedallien", max(countries, key=countries.get))
 
-# 4. weitere Möglichkeit: wir verwenden eine Liste, bilden Tuples und summieren
+# 4.
 
 print("Alle Gold Medallien", sum([int(row["gold"]) for row in csv_data]))
 print("Alle Silber Medallien", sum([int(row["silver"]) for row in csv_data]))
 print("Alle Bronze Medallien", sum([int(row["bronze"]) for row in csv_data]))
 
-# 5. Anzahl Gold Medallien direkt mit sum im CSV Reader ermitteln
+# 5.
 total = sum(int(row["gold"]) for row in csv_data)
 print("Anz. Gold: ", total)
 
-# 6. Filtern nach Ländern die mindestens eine Gold Medallie haben / eine Gold Medallie haben
+# 6.
 def countries_gold_reducter(data, row):
     country = row["nationality"]
     gold_count = int(row["gold"])
@@ -76,7 +75,7 @@ def countries_gold_reducter(data, row):
 countriesWithGoldMedals = functools.reduce(countries_gold_reducter, csv_data, {})
 print("Ländern mit Gold:", countriesWithGoldMedals)
 
-# 7. Anzahl der Einträge aus 5 verwenden, um Anzahl der Länder mit Gold zu ermitteln
+# 7.
 print(
     "Anzahl der Länder die eine Gold Medallie bekommen haben:",
     len(countriesWithGoldMedals),
