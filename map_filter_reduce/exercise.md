@@ -8,7 +8,7 @@ Ziel der Aufgabenstellung ist *Funktionale Programmierung* besser kennenzulernen
  a) Runde alle Einträge auf 2 Nachkommastellen
  b) Runde den ersten Eintrag auf eine Stelle, den zweiten auf zwei Stellen, den dritten auf drei, usw.
 3. Verwende die `zip` Funktion, um die Listen 
-`my_chars = ['a', 'b', 'c', 'd', 'e']`
+`my_chars = ['a', 'b', 'c', 'd', 'e']` und 
 `my_nums = [1,2,3,4,5]`
 zusammenzuführen: a zu 1, b zu 2, ...
 4. Filter eine Liste von `scores = [66, 90, 68, 59, 76, 60, 88, 74, 81, 65, 92, 85]` sodass nurnoch Einträge größer als 80 übrig bleiben.
