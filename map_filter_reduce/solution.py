@@ -48,7 +48,7 @@ print(passing)
 
 #5
 myStrings = ("Regallager", "Anna", "C++", "python", "Volkswagen", "PHP")
-palindromes = list(filter(lambda word: word == word[::-1], myStrings))
+palindromes = list(filter(lambda word: word.upper() == word.upper()[::-1], myStrings)) # alternativ lower()
 print(palindromes)
 
 #6
