@@ -2,11 +2,11 @@ Ziel der Aufgabenstellung ist *Funktionale Programmierung* besser kennenzulernen
 
 
 1. Erstelle eine Liste von Namen. Alle Namen in der Liste sind in Kleinbuchstaben. Nun soll der erste Buchstabe eines jeden Namens Großgeschrieben werden. 
- - Verwerden dazu zuerst die native Herangehensweise (Schleife)
- - danach die `map` Funktion
+ a) Verwerden dazu zuerst die native Herangehensweise (Schleife)
+ b) danach die `map` Funktion
 2. Eine Liste von Gleitkommazahlen  `[6.56773, 9.57668, 4.00914, 56.24241, 9.01344, 32.00013]` soll gerundet werden. 
- - Runde alle Einträge auf 2 Nachkommastellen
- - Runde den ersten Eintrag auf eine Stelle, den zweiten auf zwei Stellen, den dritten auf drei, usw.
+ a) Runde alle Einträge auf 2 Nachkommastellen
+ b) Runde den ersten Eintrag auf eine Stelle, den zweiten auf zwei Stellen, den dritten auf drei, usw.
 3. Verwende die `zip` Funktion, um die Listen 
 `my_chars = ['a', 'b', 'c', 'd', 'e']`
 `my_nums = [1,2,3,4,5]`
