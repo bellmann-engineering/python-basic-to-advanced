@@ -1,6 +1,6 @@
 #1a
 
-persons = ['Tina', 'Marcus', 'Natalie', 'Dirk']
+persons = ['tina', 'marcus', 'natalie', 'dirk']
 uppered_persons = []
 
 for person in persons:
@@ -11,7 +11,7 @@ print(uppered_persons)
 
 #1b
 
-persons = ['Tina', 'Marcus', 'Natalie', 'Dirk']
+persons = ['tina', 'marcus', 'natalie', 'dirk']
 uppered_persons = list(map(str.capitalize, persons))
 
 print(uppered_persons)
