@@ -21,7 +21,7 @@ Die SQL Datenbank dient als Persistenz für Auswertung.
 
 
 
-3. Lese die SQL Tabelle mit `pandas` ein und ermittele die Jetzt-Auslastung einzelner Netze. 
+3. Lese die SQL Tabelle mit `pandas` ein. 
 4. Entwickle eine Funktion zur Vorausschau, um die nächsten 3 Monate vorauszusagen. Nutze um einen Trend zu generieren lineare Regression. 
-5. Sollten nicht ausreichend Datenpunkte für ein Netz aus der Vergangenheit vorliegen so kann kein Trend berechnet werden.
-6. Zeige an welche Netze in den nächsten 3 Monaten nurnoch 5% und 10% freie Kapazität haben.
+Sollten nicht ausreichend Datenpunkte für ein Netz aus der Vergangenheit vorliegen so kann kein Trend berechnet werden.
+5. Zeige an welche Netze in den nächsten 3 Monaten nurnoch 5% und 10% freie Kapazität haben.
