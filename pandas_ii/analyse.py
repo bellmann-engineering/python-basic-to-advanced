@@ -1,4 +1,5 @@
 import argparse
+import numpy as np
 import pandas as pd
 import sqlite3 as sql
 from datetime import datetime
@@ -7,6 +8,8 @@ from sklearn import linear_model
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('--db', type=str, required=True)
+  parser.add_argument('--print', type=int, required=True)
+  parser.add_argument('--predict', type=int, required=True)
 
   args = parser.parse_args()
 
@@ -46,19 +49,28 @@ if __name__ == '__main__':
     # exit()
 
     preds = dict()
+    coefs = dict()
     # x_test = [ datetime(2021, m, 1) for m in range(8,11) ]
     # x_test = [list(range(8,14))]
 
     for id_, data in d.items():
-      # ul = usage_len[id_]
-      usage_len = len(data[0])
       last_month = data[1][-1]
-      x_test = [list(range(last_month + 1, last_month + 1 + usage_len))]
+
+      # x werte für die Vorhersage: Letzter Monat + gewünschte Anzahl an Monaten
+      x_test = np.array(range(last_month + 1, last_month + 1 + args.predict)).reshape((-1, 1))
+
       # data: [0.854, 0.854, 0.85, 0.732, 0.85, 0.85], [2, 3, 4, 5, 6, 7]
-      y_train = [data[0]]
-      # print(usage_vs, usage_vs[0], usage_vs[1])
-      x_train = [data[1]]
-      # x_train = 
+      # x_train: months -> data[1]
+      # y_train: usage -> data[0]
+
+      # You should call .reshape() on x because this array is required to be
+      # two-dimensional, or to be more precise, to have one column and as many
+      # rows as necessary
+      x_train = np.array(data[1]).reshape((-1, 1))
+      y_train = np.array(data[0])
+
+      # print(x_train, x_train.shape)
+      # print(y_train, y_train.shape)
 
       # print(f'y_train {y_train}')
       # print(f'x_train {x_train}')
@@ -68,15 +80,18 @@ if __name__ == '__main__':
       # print(f'y_pred {y_pred}')
 
       preds[id_] = (x_test, y_pred)
+      coefs[id_] = regr.coef_
+      # mse[id_] = mean_squared_error(
+      # r2[id_] = regr.coef_
 
       # break
 
-    for i in range(0,5):
+    for i in range(0, args.print):
       net, ps = preds.popitem()
       us = d[net]
 
-      # print(ps[0], ps[1])
       print(f'Usage for {net}:')
       print(list(zip(us[1], us[0])))
       print(f'Predictions for {net}:')
-      print(list(zip(ps[0][0], ps[1].tolist()[0])))
+      print(list(zip(ps[0].reshape((1, -1))[0], ps[1])))
+      print(f'Coefficients: {coefs[net]}')
