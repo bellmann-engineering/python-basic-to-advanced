@@ -23,7 +23,6 @@ def reshape(df):
     #   -> [('10.252.114.0', 0.125, datetime.datetime(2021, 2, 1, 0, 0)), ('10.252.114.0', 0.125, datetime.datetime(2021, 3, 1, 0, 0)), ..
     for u in map(lambda u: [d[0], u[0], u[1]], zip(d[1::2], dates)):
       usage.append(u)
-    # usage.append(map(lambda u: [d[0], u[0], u[1]], zip(d[1::2], dates)))
 
   res = pd.DataFrame(usage, columns=['NET', 'USAGE', 'TIMESTAMP'])
   res.index.name = 'ID'
