@@ -9,7 +9,7 @@ from sklearn import linear_model
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('--db', type=str, required=True)
-  parser.add_argument('--plot', action='store_true', required=True)
+  parser.add_argument('--plot', action='store_true')
   parser.add_argument('--print', type=int, required=True)
   parser.add_argument('--predict', type=int, required=True)
 
