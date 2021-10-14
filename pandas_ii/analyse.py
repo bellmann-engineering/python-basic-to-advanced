@@ -10,7 +10,7 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('--db', type=str, required=True)
   parser.add_argument('--plot', action='store_true')
-  parser.add_argument('--print', type=int, required=True)
+  parser.add_argument('--print', type=int, default=0)
   parser.add_argument('--predict', type=int, required=True)
 
   args = parser.parse_args()
@@ -59,25 +59,36 @@ if __name__ == '__main__':
       preds[id_] = (x_test, y_pred)
       coefs[id_] = regr.coef_
 
-    for i in range(0, args.print):
-      net, ps = preds.popitem()
-      us = d[net]
-      x_test = ps[0].reshape((1, -1))[0]
-      y_pred = list(map(lambda v: round(v, 3), ps[1]))
+    for net, ps in preds.items():
+      months = ps[0].reshape((1, -1))[0]
+      usage_preds = ps[1]
 
-      print(f'{net}:')
-      print(f'Usage:          ', list(zip(us[1], us[0])))
-      print(f'Predictions:    ', list(zip(x_test, y_pred)))
-      print(f'Coefficients:    {coefs[net]}')
-      print()
+      for n, month in enumerate(months):
+        if usage_preds[n] > 0.95:
+          print(f'VERY critical usage of {net} in month {month}')
+        elif usage_preds[n] > 0.9:
+          print(f'Critical usage of {net} in month {month}')
+
+    if args.print > 0:
+      for i in range(0, args.print):
+        net, ps = preds.popitem()
+        us = d[net]
+        x_test = ps[0].reshape((1, -1))[0]
+        y_pred = list(map(lambda v: round(v, 3), ps[1]))
+
+        print(f'{net}:')
+        print(f'Usage:          ', list(zip(us[1], us[0])))
+        print(f'Predictions:    ', list(zip(x_test, y_pred)))
+        print(f'Coefficients:    {coefs[net]}')
+        print()
+
+        if args.plot:
+          plt.scatter(us[1], us[0], color='black')
+          plt.plot(us[1], us[0], color='black')
+          plt.scatter(x_test, y_pred, color='blue')
+          plt.plot(x_test, y_pred, color='blue')
 
       if args.plot:
-        plt.scatter(us[1], us[0], color='black')
-        plt.plot(us[1], us[0], color='black')
-        plt.scatter(x_test, y_pred, color='blue')
-        plt.plot(x_test, y_pred, color='blue')
-
-    if args.plot:
-      plt.xticks(())
-      plt.yticks(())
-      plt.show()
+        plt.xticks(())
+        plt.yticks(())
+        plt.show()
