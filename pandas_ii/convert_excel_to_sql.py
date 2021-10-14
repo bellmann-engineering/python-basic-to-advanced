@@ -6,9 +6,7 @@ from datetime import datetime
 # reshape to ID, NET, USAGE, TIMESTAMP
 def reshape(df):
   # [datetime.datetime(2021, 2, 1, 0, 0), datetime.datetime(2021, 3, 1, 0, 0), ..
-  dates = []
-  for m in range(2,8):
-    dates.append(datetime(2021, m, 1))
+  dates = [ datetime(2021, m, 1) for m in range(2,8) ]
 
   usage = []
   for d in df.values:
