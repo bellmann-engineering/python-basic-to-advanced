@@ -19,8 +19,6 @@ if __name__ == '__main__':
 
     # ('10.252.166.0', [[0.854, '2021-02-01 00:00:00'], [0.854, '2021-03-01 00:00:00'], ..])
     d = dict()
-    # usage_len = dict()
-    # last_month = dict()
     for v in df.values:
       id_ = v[0]
       usage_vs = v[1:].tolist()
@@ -33,25 +31,8 @@ if __name__ == '__main__':
       else:
         d[id_] = ([usage], [month])
 
-      # old_usage_len = 0
-      # new_usage_len = len(d[id_][0])
-      # if id_ in usage_len:
-      #   old_usage_len = usage_len[id_]
-
-      # if new_usage_len > old_usage_len:
-      #   usage_len[id_] = new_usage_len
-
-      # if id_ in last_month:
-      # usage_len[id_] = len(d[id_][0])
-      # last_month[id_] = month
-
-    # print(d.popitem())
-    # exit()
-
     preds = dict()
     coefs = dict()
-    # x_test = [ datetime(2021, m, 1) for m in range(8,11) ]
-    # x_test = [list(range(8,14))]
 
     for id_, data in d.items():
       last_month = data[1][-1]
@@ -69,22 +50,12 @@ if __name__ == '__main__':
       x_train = np.array(data[1]).reshape((-1, 1))
       y_train = np.array(data[0])
 
-      # print(x_train, x_train.shape)
-      # print(y_train, y_train.shape)
-
-      # print(f'y_train {y_train}')
-      # print(f'x_train {x_train}')
       regr = linear_model.LinearRegression()
       regr.fit(x_train, y_train)
       y_pred = regr.predict(x_test)
-      # print(f'y_pred {y_pred}')
 
       preds[id_] = (x_test, y_pred)
       coefs[id_] = regr.coef_
-      # mse[id_] = mean_squared_error(
-      # r2[id_] = regr.coef_
-
-      # break
 
     for i in range(0, args.print):
       net, ps = preds.popitem()
