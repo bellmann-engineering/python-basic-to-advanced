@@ -61,8 +61,8 @@ if __name__ == '__main__':
       net, ps = preds.popitem()
       us = d[net]
 
-      print(f'Usage for {net}:')
-      print(list(zip(us[1], us[0])))
-      print(f'Predictions for {net}:')
-      print(list(zip(ps[0].reshape((1, -1))[0], ps[1])))
-      print(f'Coefficients: {coefs[net]}')
+      print(f'{net}:')
+      print(f'Usage:          ', list(zip(us[1], us[0])))
+      print(f'Predictions:    ', list(zip(ps[0].reshape((1, -1))[0], map(lambda v: round(v, 3), ps[1]))))
+      print(f'Coefficients:    {coefs[net]}')
+      print()
