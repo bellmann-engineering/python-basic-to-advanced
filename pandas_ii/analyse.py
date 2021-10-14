@@ -19,12 +19,18 @@ if __name__ == '__main__':
     df = pd.read_sql('SELECT * FROM NET_USAGE', db, index_col='ID')
     df.dropna(inplace=True)
 
+    # df.values:
     # ('10.252.166.0', [[0.854, '2021-02-01 00:00:00'], [0.854, '2021-03-01 00:00:00'], ..])
+    # reformat data:
+    # {'10.252.166.0': ([0.854, 0.854, ..], ['2021-02-01 00:00:00', '2021-03-01 00:00:00', ..])}
     d = dict()
     for v in df.values:
       id_ = v[0]
+      # usage + date values are everything after the first list entry
       usage_vs = v[1:].tolist()
+      # single usage value
       usage = usage_vs[0]
+      # take only the month as int from the date string
       month = datetime.fromisoformat(usage_vs[1]).month
 
       if id_ in d:
@@ -37,20 +43,20 @@ if __name__ == '__main__':
     coefs = dict()
 
     for id_, data in d.items():
-      last_month = data[1][-1]
-
-      # x werte für die Vorhersage: Letzter Monat + gewünschte Anzahl an Monaten
-      x_test = np.array(range(last_month + 1, last_month + 1 + args.predict)).reshape((-1, 1))
-
       # data: [0.854, 0.854, 0.85, 0.732, 0.85, 0.85], [2, 3, 4, 5, 6, 7]
-      # x_train: months -> data[1]
-      # y_train: usage -> data[0]
+      months = data[1]
+      usages = data[0]
+      # last month is last value in list of months
+      last_month = months[-1]
+
+      # x values for prediction: last month + desired amount of months
+      x_test = np.array(range(last_month + 1, last_month + 1 + args.predict)).reshape((-1, 1))
 
       # You should call .reshape() on x because this array is required to be
       # two-dimensional, or to be more precise, to have one column and as many
       # rows as necessary
-      x_train = np.array(data[1]).reshape((-1, 1))
-      y_train = np.array(data[0])
+      x_train = np.array(months).reshape((-1, 1))
+      y_train = np.array(usages)
 
       regr = linear_model.LinearRegression()
       regr.fit(x_train, y_train)
@@ -59,6 +65,7 @@ if __name__ == '__main__':
       preds[id_] = (x_test, y_pred)
       coefs[id_] = regr.coef_
 
+    # Solution for 5.
     for net, ps in preds.items():
       months = ps[0].reshape((1, -1))[0]
       usage_preds = ps[1]
@@ -73,6 +80,7 @@ if __name__ == '__main__':
       for i in range(0, args.print):
         net, ps = preds.popitem()
         us = d[net]
+        # reformat data for printing
         x_test = ps[0].reshape((1, -1))[0]
         y_pred = list(map(lambda v: round(v, 3), ps[1]))
 
