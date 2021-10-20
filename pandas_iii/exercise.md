@@ -7,21 +7,22 @@ Mit pandas Dataframes Pandas wird die Bearbeitung von Daten einfach(er). Wir kö
 2. Sieh dir die CheatSheets zu Pandas Basics, Dataframes und Data Wrangling an.
  
 3. Arbeite mit dem employees Datensatz ([employees.csv](https://raw.githubusercontent.com/bellmann-engineering/python-basic-to-advanced/main/pandas_iii/employees.csv)) und verwende die nachfolgenden Funktionen aus dem pandas Paket:
-
-   - isnull()
+  
+  - isnull()
    - notnull()
    - dropna()
    - fillna()
    - replace()
 
-1. Ist das Feld "Gender" immer gefüllt? Gebe alle Datensätze aus bei denen es nicht gefüllt ist.
-2. Fülle die leeren "Gender" Felder mit dem Wert "No Gender" auf.
-3. Ersetze alle weiteren Leerwerte (NaN) mit dem Wert -99.
-4. Lösche alle Zeilen aus dem Dataset die einen Leerwert enthalten. Speichere das Ergebnis in einem neuen Dataset.
-5. Ermittle die Anzahl der in 4. gelöschen Zeilen.
-6. Lösche Spalten die mind. 1 Leerwert enthalten.
+Folgende Aufgaben sind zu lösen:
+ 1. Ist das Feld "Gender" immer gefüllt? Gebe alle Datensätze aus bei denen es nicht gefüllt ist.
+ 2. Fülle die leeren "Gender" Felder mit dem Wert "No Gender" auf.
+ 3. Ersetze alle weiteren Leerwerte (NaN) mit dem Wert -99.
+ 4. Lösche alle Zeilen aus dem Dataset die einen Leerwert enthalten. Speichere das Ergebnis in einem neuen Dataset.
+ 5. Ermittle die Anzahl der in 4. gelöschen Zeilen.
+ 6. Lösche Spalten die mind. 1 Leerwert enthalten.
 
-Hinweis: Beachte, dass es nicht immer sinnvoll ist die Werte _inplace_ zu ersetzen/zu löschen sofern mit Daten weitergearbeitet werden soll.
+> Hinweis: Beachte, dass es nicht immer sinnvoll ist die Werte _inplace_ zu ersetzen/zu löschen sofern mit Daten weitergearbeitet werden soll.
 
 Daten sind in der realen Welt unvermeidlich nicht perfekt. Pandas kann uns helfen, wenn es um das Bereinigen, Umwandeln, Manipulieren und Analysieren von Daten geht.
 Einfach ausgedrückt: Pandas hilft, das Chaos zu beseitigen.
