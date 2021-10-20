@@ -2,17 +2,15 @@
 
 Mit pandas Dataframes Pandas wird die Bearbeitung von Daten einfach(er). Wir können Spalten auswählen oder ersetzen und die Daten darin umgestalten.
 
-1. Wiederhole und erweitere dein Wissen im Bezug auf Dataframes mithilfe des nachfolgenden interaktiven Tutorials:
- -> https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python
+1. Wiederhole und erweitere dein Wissen im Bezug auf Dataframes mithilfe des nachfolgenden interaktiven Tutorials: https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python
  
-2. Arbeite mit dem employees Datensatz (employees.csv) und verwende die nachfolgenden Funktionen:
+2. Arbeite mit dem employees Datensatz ([employees.csv](../employees.csv)) und verwende die nachfolgenden Funktionen:
 
    - isnull()
    - notnull()
    - dropna()
    - fillna()
    - replace()
-   - interpolate()
 
 1. Ist das Feld "Gender" immer gefüllt? Gebe alle Datensätze aus bei denen es nicht gefüllt ist.
 2. Fülle die leeren "Gender" Felder mit dem Wert "No Gender" auf.
