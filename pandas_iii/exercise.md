@@ -3,8 +3,10 @@
 Mit pandas Dataframes Pandas wird die Bearbeitung von Daten einfach(er). Wir können Spalten auswählen oder ersetzen und die Daten darin umgestalten.
 
 1. Wiederhole und erweitere dein Wissen im Bezug auf Dataframes mithilfe des nachfolgenden interaktiven Tutorials: https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python
+
+2. Sieh dir die CheatSheets zu Pandas Basics, Dataframes und Data Wrangling an.
  
-2. Arbeite mit dem employees Datensatz ([employees.csv](../employees.csv)) und verwende die nachfolgenden Funktionen aus dem pandas Paket:
+3. Arbeite mit dem employees Datensatz ([employees.csv](https://raw.githubusercontent.com/bellmann-engineering/python-basic-to-advanced/main/pandas_iii/employees.csv)) und verwende die nachfolgenden Funktionen aus dem pandas Paket:
 
    - isnull()
    - notnull()
