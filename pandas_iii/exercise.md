@@ -4,7 +4,7 @@ Mit pandas Dataframes Pandas wird die Bearbeitung von Daten einfach(er). Wir kö
 
 1. Wiederhole und erweitere dein Wissen im Bezug auf Dataframes mithilfe des nachfolgenden interaktiven Tutorials: https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python
  
-2. Arbeite mit dem employees Datensatz ([employees.csv](../employees.csv)) und verwende die nachfolgenden Funktionen:
+2. Arbeite mit dem employees Datensatz ([employees.csv](../employees.csv)) und verwende die nachfolgenden Funktionen aus dem pandas Paket:
 
    - isnull()
    - notnull()
