@@ -22,6 +22,10 @@ Folgende Aufgaben sind zu lösen:
  5. Ermittle die Anzahl der in 4. gelöschen Zeilen.
  6. Lösche Spalten die mind. 1 Leerwert enthalten.
 
+Zusatzaufgaben (optional):
+ 1. Ersetze alle Salery Werte über 100.000 mit dem Median der Spalte.
+ 2. Entferne die Zeilen (Employees) mit Salery über 100.000 aus dem Datensatz.
+
 > Hinweis: Beachte, dass es nicht immer sinnvoll ist die Werte _inplace_ zu ersetzen/zu löschen sofern mit Daten weitergearbeitet werden soll.
 
 Daten sind in der realen Welt unvermeidlich nicht perfekt. Pandas kann uns helfen, wenn es um das Bereinigen, Umwandeln, Manipulieren und Analysieren von Daten geht.
