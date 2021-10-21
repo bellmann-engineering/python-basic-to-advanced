@@ -36,4 +36,8 @@ print (anz)
 smallerset = data.dropna(axis = 1)
 print (smallerset)
 
+# opt. 1
+smooth = data.fillna(data.mean())
 
+# opt. 2
+data2 = data[data['Salary'] > 10*100*100]  # 100k
