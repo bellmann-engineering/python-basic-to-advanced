@@ -1,0 +1,9 @@
+python -m pip jupyterlab
+python -m pip install scikit-learn
+python -m pip install pandas
+python -m pip install matplotlib
+python -m pip install seaborn
+
+jupyter notebook
+
+https://cocalc.com/
