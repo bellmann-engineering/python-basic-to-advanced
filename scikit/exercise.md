@@ -23,11 +23,12 @@ housing = fetch_california_housing() `
 11. Wie verhält es sich wenn du Variablen aus dem Datensatz entfernst die eine mittelstarke Korrelation aufweisen.
 12. Warum hat die Variable Location scheinbar keinen Einfluss obwohl Häuser an der Küste doch sicherer teuer sind.
 
-
+Aufgabe 11 + 12 sind optional.
 
 Weiterführende Informationen:
 
 https://de.wikipedia.org/wiki/N%C3%A4chste-Nachbarn-Klassifikation
+
 https://towardsdatascience.com/decisiontreeregressor-stop-using-for-future-projections-e27104537f6a
 
 https://de.wikipedia.org/wiki/Streudiagramm
