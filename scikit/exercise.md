@@ -6,9 +6,8 @@ Die Ausführung der Analyse soll in *jupyter notebook* stattfinden.
 Orientiere dich bei der nachfolgenden Aufgabe an der Durchführung ähnlicher Aufgaben am _Boston_ Datensatz: [Link](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/scikit/boston3.ipynb)
 
 1. Lade den Datensatz mittels
-`from sklearn.datasets import fetch_california_housing
-
-housing = fetch_california_housing() `
+`from sklearn.datasets import fetch_california_housing`
+`housing = fetch_california_housing()`
 
 2. Sieh dir an welche Felder es gibt und analysiere die Spalten in `data`. Welche Ausprägung haben diese?
 3. Erstelle aus `data` und Hauspreisen in `target` ein `pandas dataframe`.
