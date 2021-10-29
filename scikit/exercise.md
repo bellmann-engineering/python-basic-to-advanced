@@ -7,6 +7,7 @@ Orientiere dich bei der nachfolgenden Aufgabe an der Durchführung ähnlicher Au
 
 1. Lade den Datensatz mittels
 `from sklearn.datasets import fetch_california_housing
+
 housing = fetch_california_housing() `
 
 2. Sieh dir an welche Felder es gibt und analysiere die Spalten in `data`. Welche Ausprägung haben diese?
