@@ -8,7 +8,9 @@ Hierzu zählen:
  * Anzahl Sitze
  * Höchstgeschwindigkeit
 
-[Screenshot](list_loops_tuples/input_screenshot.png)
+
+[![Screenshot](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/f1ab0ed06c03904b97340fb9150d205b6e02c8e6/list_loops_tuples/input_screenshot.png)](list_loops_tuples/input_screenshot.png)
+
 
 Ist ein Fahrzeug vollständig eingegeben, so soll der Benutzer gefragt werden ob er ein weiteres Fahrzeug eingeben möchte. 
 
