@@ -8,6 +8,8 @@ Hierzu zählen:
  * Anzahl Sitze
  * Höchstgeschwindigkeit
 
+(https://github.com/bellmann-engineering/python-basic-to-advanced/blob/70cff86edc27491e159627c07167bb68d285405c/list_loops_tuples/input_screenshot.png)
+
 Ist ein Fahrzeug vollständig eingegeben, so soll der Benutzer gefragt werden ob er ein weiteres Fahrzeug eingeben möchte. 
 
 Die Werte (Hersteller, Bezeichnung, ...) sollen als passende Datentypen in einem Tuple gespeichert werden. Die Tuple wiederrum in einer Liste.
