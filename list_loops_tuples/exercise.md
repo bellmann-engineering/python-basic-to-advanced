@@ -23,6 +23,9 @@ Schritte:
 5. Speichere die Tuples in einer Liste.
 6. Gebe die Liste möglichst ansprechend aus.
 
+Zusatzaufgabe:
+Stelle sicher, dass nur Autos der Marken Volkswagen, Audi, Skoda und Porsche erfasst werden können.
+
 Hinweis: Eine Datenhaltung in Datenbank oder Textdatei ist nicht notwendig. Die Daten werden nur zur Laufzeit des Programmes gespeichert.
 
 Zusatzaufgabe: 
