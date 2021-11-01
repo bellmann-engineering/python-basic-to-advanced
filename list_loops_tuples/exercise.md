@@ -15,9 +15,10 @@ Die Kapselung davon ist Folgende: `liste = [('Volkswagen', 'ID3', 200, 4, 220), 
 
 Entscheidet der Benutzer er hat ausreichend Fahrzeuge eingegeben werden alle Fahrzeuge tabellarisch ausgegeben.
 
-1. Programmiere eine Schleife für die Fahrzeugeingabe
+Schritte:
+1. Programmiere eine Schleife für die Fahrzeugeingabe.
 2. Validiere die eingegeben Werte (Hersteller und Bezeichung sind Zeichenketten, PS, Sitzanzahl und Höchstgeschwindigkeit Zahlenwerte).
-3. Erweitere die Validierung um eine Plausibilitätsprüfung (PS größer 30 und kleiner 300, Anzahl Sitze mind. 2, ...)
+3. Erweitere die Validierung um eine Plausibilitätsprüfung (PS größer 30 und kleiner 300, Anzahl Sitze mind. 2, ...).
 4. Nehme die Speicherung im Tuple vor.
 5. Speichere die Tuples in einer Liste.
 6. Gebe die Liste möglichst ansprechend aus.
