@@ -459,3 +459,15 @@ fehlerbehaftet sind:
 Die meiste Zeit ist man besser damit beraten diese zu nutzen anstelle von
 Metaklassen. Die allermeiste Zeit braucht man Klassenmanipulation jedoch
 überhaupt nicht.
+
+Übung 1
+==
+
+Schreibe ein Funktion, die für alle Klassen auf Modulebene die Namen aller
+Attribute in Großbuchstaben umwandelt.
+
+Übung 2
+==
+
+Schreibe eine Metaklasse, welche dieselbe Funktion wie in Übung 1 erfüllt,
+jedoch nur für eine Klasse, welche von ihr ableitet.
