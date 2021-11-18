@@ -405,7 +405,8 @@ Mehrere Gründe sprechen dafür:
 Warum sollte man überhaupt Metaklassen nutzen?
 ===
 
-Üblicherweise eigentlich gar nicht:
+Der Anwendungsfall für Metaklassen ist relativ eingeschränkt und im Zweifel
+sollte man sich genau überlegen, ob man sie nutzen sollte:
 
 > Metaclasses are deeper magic that 99% of users should never worry about it.
 > If you wonder whether you need them, you don't (the people who actually need
@@ -460,14 +461,45 @@ Die meiste Zeit ist man besser damit beraten diese zu nutzen anstelle von
 Metaklassen. Die allermeiste Zeit braucht man Klassenmanipulation jedoch
 überhaupt nicht.
 
-Übung 1
+Übung
 ==
 
-Schreibe ein Funktion, die für alle Klassen auf Modulebene die Namen aller
-Attribute in Großbuchstaben umwandelt.
+1. Schreibe eine Funktion, welche ein Dictionary als Argument akzeptiert und
+   alle *Schlüssel* in Großbuchstaben wandelt und das veränderte Dictionary
+   zurückgibt. Gehe davon aus, dass jeder Schlüssel ein `str` ist.
 
-Übung 2
-==
+2. Erstelle ein Python Modul, dass eine Beispielsklasse mit einem oder mehreren
+   Attributen enthält.
 
-Schreibe eine Metaklasse, welche dieselbe Funktion wie in Übung 1 erfüllt,
-jedoch nur für eine Klasse, welche von ihr ableitet.
+3. Schreibe eine Funktion, die diese Klasse instantiiert und mittels `hasattr`
+   prüft ob alle gesetzten Attribute vorhanden sind.
+
+4. Nutze nun `__metaclass__` auf Modulebene, um mit der Funktion aus 1) die
+   Attribute aller Klassen in dem Modul zu verändern. Bedenke, dass die Signatur
+   der Funktion dieselbe wie bei `type` sein muss.
+
+5. Prüfe nochmal die Attribute der Beispielsklasse, ob diese nun alle in
+   Großbuchstaben geschrieben sind
+
+6. Erstelle eine neues Python Modul
+
+7. Erstelle eine neue Klasse, welche von `type` erbt und damit zur Metaklasse
+   wird
+
+8. Überschreibe die `__new__()` Methode um mit Hilfe der Funktion aus 1) alle
+   Attribute einer neuen Klasse zu ändern.
+
+   Hinweis a: Die Signatur von `__new__()` lautet:
+
+   ```python
+    def __new__(metaclass_name, class_name, class_parents, class_attrs)
+   ```
+
+   Hinweis b: Nutze `super()` und die `__new__()` Methode der Superklasse um den
+   Rückgabewert zu erzeugen
+
+9. Schreibe eine neue Beispielsklasse und nutze die Metaklasse aus 7) und 8) um
+   die Attribute anzupassen (Tipp: In Python 3 kann der `metaclass` Parameter
+   genutzt werden)
+
+10. Prüfe wieder die Attribute mit `hasattr()`
