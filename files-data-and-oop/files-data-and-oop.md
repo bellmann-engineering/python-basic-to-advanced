@@ -10,7 +10,7 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 
 **Aufgaben:**
 
-1. Lese die Datei ``fahrzeuge.csv`` ([Dateidownload](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/761ac2a7e3c132d8f9f992818a9881d6f5bdbecb/files-data-and-oop/fahrzeuge.csv)) ein und verarbeite sie. Über das build-in csv Module und den notwendigen Import kannst du hier nachlesen: https://docs.python.org/3/library/csv.html
+1. Lese die Datei ``fahrzeuge.csv`` ([Dateidownload](https://raw.githubusercontent.com/bellmann-engineering/python-basic-to-advanced/main/files-data-and-oop/fahrzeuge.csv)) ein und verarbeite sie. Über das build-in csv Module und den notwendigen Import kannst du hier nachlesen: https://docs.python.org/3/library/csv.html
  - Die Spalten stellen Attribute der Klasse (Membervariablen) dar. Die erste Spalte zeigt an um welche Art von Fahrzeug es sich handelt. 
  - Entsprechend der ersten Spalte soll der richtige Fahrzeugtyp (Objekt) angelegt werden.
 
