@@ -503,3 +503,7 @@ Metaklassen. Die allermeiste Zeit braucht man Klassenmanipulation jedoch
    genutzt werden)
 
 10. Prüfe wieder die Attribute mit `hasattr()`
+
+11. (Fakultativ) Implementiere eine Metaklasse, von der nicht vererbt werden
+    kann, d.h. beim Versuch davon abzuleiten soll eine Exception ausgegeben
+    werden
