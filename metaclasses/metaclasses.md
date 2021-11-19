@@ -469,7 +469,8 @@ Metaklassen. Die allermeiste Zeit braucht man Klassenmanipulation jedoch
 
 1. Schreibe eine Funktion, welche ein Dictionary als Argument akzeptiert und
    alle *Schlüssel* in Großbuchstaben wandelt und das veränderte Dictionary
-   zurückgibt. Gehe davon aus, dass jeder Schlüssel ein `str` ist.
+   zurückgibt. Gehe davon aus, dass jeder Schlüssel ein `str` ist. Lasse
+   strings, die mit `__` beginnen unverändert.
 
 2. Erstelle ein Python Modul, dass eine Beispielsklasse mit einem oder mehreren
    Attributen enthält.
