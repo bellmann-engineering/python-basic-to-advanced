@@ -1,6 +1,36 @@
 Metaclasses
 ==
 
+Motivation - wofür werden Metaklassen genutzt
+===
+
+Der klassische Anwendungsfall für Metaklassen sind APIs. Ein typisches Beispiel
+dazu ist die Django ORM. Dort ist es möglich etwas in der nachfolgenden zu
+definieren:
+
+```python
+    class Person(models.Model):
+        name = models.CharField(max_length=30)
+        age = models.IntegerField()
+```
+
+Wenn man jedoch folgenden Code ausführt:
+
+```python
+    person = Person(name='bob', age='35')
+    print(person.age)
+```
+
+wird ein `int` zurück gegeben, der sogar direkt aus einer Datenbank stammen
+kann.
+
+Dies ist möglich, weil `models.Model` eine `__metaclass__` definiert, welche die
+einfache Definition von `Person` in einen komplexen Datenbankaufruf wandelt.
+
+Django lässt dadurch etwas komplexes sehr simpel erscheinen, indem es eine eine
+einfache API anbietet und Metaklassen nutzt, um den komplexen Code im
+Hintergrund zu verstecken.
+
 Klassen *sind* Objekte
 ===
 
@@ -414,33 +444,6 @@ sollte man sich genau überlegen, ob man sie nutzen sollte:
 > about why).
 
   *Python Guru Tim Peters*
-
-Der klassische Anwendungsfall für Metaklassen sind APIs. Ein typisches Beispiel
-dazu ist die Django ORM. Dort ist es möglich etwas in der nachfolgenden zu
-definieren:
-
-```python
-    class Person(models.Model):
-        name = models.CharField(max_length=30)
-        age = models.IntegerField()
-```
-
-Wenn man jedoch folgenden Code ausführt:
-
-```python
-    person = Person(name='bob', age='35')
-    print(person.age)
-```
-
-wird ein `int` zurück gegeben, der sogar direkt aus einer Datenbank stammen
-kann.
-
-Dies ist möglich, weil `models.Model` eine `__metaclass__` definiert, welche die
-einfache Definition von `Person` in einen komplexen Datenbankaufruf wandelt.
-
-Django lässt dadurch etwas komplexes sehr simpel erscheinen, indem es eine eine
-einfache API anbietet und Metaklassen nutzt, um den komplexen Code im
-Hintergrund zu verstecken.
 
 Zum Schluss
 ==
