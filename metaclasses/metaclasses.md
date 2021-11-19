@@ -474,9 +474,9 @@ Metaklassen. Die allermeiste Zeit braucht man Klassenmanipulation jedoch
 3. Schreibe eine Funktion, die diese Klasse instantiiert und mittels `hasattr`
    prüft ob alle gesetzten Attribute vorhanden sind.
 
-4. Nutze nun `__metaclass__` auf Modulebene, um mit der Funktion aus 1) die
-   Attribute aller Klassen in dem Modul zu verändern. Bedenke, dass die Signatur
-   der Funktion dieselbe wie bei `type` sein muss.
+4. Nutze nun `__metaclass__`, um mit der Funktion aus 1) die Attribute der
+   Beispielsklasse in dem Modul zu verändern. Bedenke, dass die Signatur der
+   Funktion dieselbe wie bei `type` sein muss.
 
 5. Prüfe nochmal die Attribute der Beispielsklasse, ob diese nun alle in
    Großbuchstaben geschrieben sind
