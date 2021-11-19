@@ -1,3 +1,5 @@
+# ACHTUNG: Funktioniert nur mir Python 2!
+
 # die gleiche Signatur wie `type`
 def upper_attr(class_name, class_bases, class_attrs):
     """
@@ -14,6 +16,7 @@ def upper_attr(class_name, class_bases, class_attrs):
     # `type` erzeugt weiterhin die Klasse
     return type(class_name, class_bases, uppercase_attrs)
 
+# Ab Python 3 funktioniert das modul-weite setzen von __metaclass__ *nicht* mehr
 # wird von allen Klassen in diesem Modul genutzt
 __metaclass__ = upper_attr
 
