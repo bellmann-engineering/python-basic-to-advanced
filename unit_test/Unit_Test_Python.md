@@ -2,22 +2,20 @@
 
 Beim Unit-Test wird einen Teil des Codes isoliert. Die einzelnen Codes werden auf Funktionalitäten überprüft. Die Tests validieren das Verhalten und die Funktion des Codes.
 
-Unit-Tests werden in der Regel in der Entwicklungsphase durchgeführt. Diese Tests werden normalerweise von Entwicklern durchgeführt, können aber in der Praxis von Qualitätsmanagern durchgeführt werden.
+Unit-Tests werden in der Regel in der Entwicklungsphase durchgeführt. Diese Tests werden normalerweise von Entwicklern durchgeführt, können aber in der Praxis von auch von Softwaretestern durchgeführt werden.
 
 Einige Entwickler sind der Meinung, dass diese Tests Zeitverschwendung sind und vermeiden diese ganz und sind im Glauben, dass die Zeit effektiver verwendet werden kann.
 
 
-# Warum das nicht so ist?
+# Warum sind Unit Tests keine Zeitverschwendung?
 
 Durch die Durchführung werden Fehler früh erkannt – Fehler, die ohne Unit-Test erst in fortgeschritteneren Phasen wie System-, Integrations- oder sogar Beta-Test erkannt werden würden.
 
-Die regelmäßige Durchführung von Unit-Tests bedeutet letztlich Zeit- und Kostenersparnis.
-
+Die regelmäßige Durchführung von Unit-Tests bedeutet letztlich Zeit- und Kostenersparnis. Je später ein Fehler im Entwicklungsprozess auftritt desto teurer wird seine Behebung.
 
 # Vorteile:
 
-
-Wenn Sie sich noch nicht sicher sind, warum Sie Unit-Testing in Ihren Alltag als Entwickler einbinden sollten, gibt es hier einige Gründe die dafür sprechen:
+Es gibt gute Gründe die dafür sprechen:
 
 - Der Unit-Test zeigt, ob die Codelogik angemessen ist und funktioniert.
 - Es verbessert die Lesbarkeit des Codes. Entwicklern verstehen dadurch den Quellcode schneller und Änderungen sind leichter zu implementieren.
@@ -28,7 +26,6 @@ Wenn Sie sich noch nicht sicher sind, warum Sie Unit-Testing in Ihren Alltag als
 - Da Unit Testing den Code in Elemente unterteilt, können Abschnitte getestet werden, ohne auf die Fertigstellung einzelner Bausteine warten zu müssen.
 
 
-
 # Struktur-Prinzip eines eines Tests:
     
     # Wir müssen das Paket 'inittest' importieren
@@ -36,7 +33,7 @@ Wenn Sie sich noch nicht sicher sind, warum Sie Unit-Testing in Ihren Alltag als
     
     import unittetst
 
-    # Anschließend wrapt man seine tests in einer Klasse
+    # Anschließend wrappt man seine Tests in einer Klasse
     # Die Klasse muss von 'unittest.TestCaste' erben, damit sie später erkannt wird.
     
     class MyTest(unittest.TestCase):
