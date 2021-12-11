@@ -1,4 +1,4 @@
-#Was ist Unit-Testing?
+# Was ist Unit-Testing?
 
 Beim Unit-Test wird einen Teil des Codes isoliert. Die einzelnen Codes werden auf Funktionalitäten überprüft. Die Tests validieren das Verhalten und die Funktion des Codes.
 
@@ -7,14 +7,14 @@ Unit-Tests werden in der Regel in der Entwicklungsphase durchgeführt. Diese Tes
 Einige Entwickler sind der Meinung, dass diese Tests Zeitverschwendung sind und vermeiden diese ganz und sind im Glauben, dass die Zeit effektiver verwendet werden kann.
 
 
-#Warum das nicht so ist?
+# Warum das nicht so ist?
 
 Durch die Durchführung werden Fehler früh erkannt – Fehler, die ohne Unit-Test erst in fortgeschritteneren Phasen wie System-, Integrations- oder sogar Beta-Test erkannt werden würden.
 
 Die regelmäßige Durchführung von Unit-Tests bedeutet letztlich Zeit- und Kostenersparnis.
 
 
-#Vorteile:
+# Vorteile:
 
 
 Wenn Sie sich noch nicht sicher sind, warum Sie Unit-Testing in Ihren Alltag als Entwickler einbinden sollten, gibt es hier einige Gründe die dafür sprechen:
@@ -29,7 +29,7 @@ Wenn Sie sich noch nicht sicher sind, warum Sie Unit-Testing in Ihren Alltag als
 
 
 
-#Struktur-Prinzip eines eines Tests:
+# Struktur-Prinzip eines eines Tests:
     
     # Wir müssen das Paket 'inittest' importieren
     # Es gibt verschiedene Test-Framework
@@ -65,7 +65,7 @@ Wenn Sie sich noch nicht sicher sind, warum Sie Unit-Testing in Ihren Alltag als
         # Dann wird wieder 'setUp' auferufen, dann 'test_B', dann 'tearDown usw. 
 
 
-#Ausgabe
+# Ausgabe
 
         Ran 3 tests in 0.003s
 
