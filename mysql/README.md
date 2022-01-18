@@ -63,6 +63,8 @@ Wenn wir nun die neu erstellte Tabelle "Cities" mit den Spalten "Id" und "Ort" g
 
 ## Übung 1 (Tabellendesign)
 
+Die nachfolgenden Aufgaben können auf Papier, in Excel oder jedem anderen vergleichbaren Tool durchgeführt werden. 
+
 1.	Die Daten eines Busreiseunternehmens sollen in einer relationalen Datenbank abgespeichert werden. Die folgende Abbildung zeigt den Datenbestand in einer nicht-Normalisierten Form.
 Führe schrittweise die Normalformen 1–3 durch.
 
@@ -70,7 +72,10 @@ Führe schrittweise die Normalformen 1–3 durch.
 
 2.	Welche weiteren Spalten wären denkbar und welchen Typ sollten diese haben? Zur Auswahl stehen die folgenden Datentypen: Zahl, Datum, Text, Zahl (Währung). 
 
-## Übung 2 (Arbeit mit Mysql Workbench)
+## Übung 2
+
+Die nachfolgenden Aufgaben können in der MySQL Workbench (sofern installiert), dem MySQL Query Explorer, PhpMyAdmin oder auch einem Online Tool durchgeführt werden.
+Als Online-Tool empfiehlt sich z.B.: https://onecompiler.com/mysql
 
 Wir möchten vier Tabellen anlegen: Abteilungen, Angestellte, Kunden und Autos.
 Wobei die Beziehungen zwischen den Tabellen folgendermaßen definiert sind:
