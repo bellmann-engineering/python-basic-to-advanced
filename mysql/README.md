@@ -122,3 +122,6 @@ Achten auf die Reihenfolge, da Spalten von Tabellen auf Spalten anderer Tabellen
 Optional:
 - Füge der Tabelle Employees eine zusätzliche Spalte Plz hinzu. 
 - Löschen die zuvor angelegte Spalte Plz wieder.
+
+4. Nun wollen wir konsitente Daten in die Tabellen eintragen. Hierzu verwenden wir bereits bekannten ``INSERT``-Befehl.
+5. Mit welcher Abfrage bekommen wir besonders einfach den Abteilungsnamen eines bestimmten Mitarbeiters zusammen mit seinen Nachnamen angezeigt?
