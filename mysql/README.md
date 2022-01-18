@@ -57,7 +57,7 @@ Die Spalte "Straße" hängt von "Ort" ab und das obwohl Ort kein Primärschlüss
 
 ![table5.PNG](table5.PNG)
 
-Wenn wir nun die neu erstellte Tabelle "Cites" mit den Spalten "Id" und "Ort" genau ansehen stellen wir fest, dass sie gegen die 2. Normalform verstößt. Dementsprechend sollen auch hier drei Spalten anstelle von zwei gebildet werden, sodass sich folgendes Bild ergibt:
+Wenn wir nun die neu erstellte Tabelle "Cities" mit den Spalten "Id" und "Ort" genau ansehen stellen wir fest, dass sie gegen die 2. Normalform verstößt. Dementsprechend sollen auch hier drei Spalten anstelle von zwei gebildet werden, sodass sich folgendes Bild ergibt:
 
 ![table6.PNG](table6.PNG)
 
