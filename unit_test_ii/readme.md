@@ -395,7 +395,7 @@ Wir sehen jeweils den Beispielaufruf hinter der Zeile "Failed example:". Hinter
 folgt der von der Funktion produzierte Ausdruck, also der Wert, den doctest beim
 Aufruf von fib erhalten hat.
 
-Testgetriebene Entwicklung oder "Im Anfang war der Test"
+Testgetriebene Entwicklung oder "Am Anfang war der Test"
 ==
 
 Im vorigen Kapitel hatten wir bereits eine fertig geschriebene
@@ -694,6 +694,15 @@ ausgeben.
 Aufgabe
 ==
 
-1) Nutze TDD, um ein Programm zur Primzahlberechnung zu entwickeln
-2) Überlege dir dazu geeignete Unittests
-3) Nutze zusätzlich Doctests um die Funktion des Programms zu prüfen
+1) Schreibe einen Modul-, Unit- und Doctest für das Codebeispiel in
+`primzahlen.py`.
+
+2) Erstelle eine Klasse für geometrische Objekte (z.B. Rechteck, Quadrat, Kreis)
+mit Berechnungsfunktionen für Umfang und Fläche. Teste die Korrektheit mit Hilfe
+von doctests
+
+3) Nutze TDD um ein Klasse zu entwickeln, die mathematische Grundoperationen
+ermöglicht, also z.B. `add()`, `sub()`, `mul()` und `div()`. Erstelle dazu das
+Klassengerüst mit "leeren" Funktionen und entwickle zuerst die Testmethoden nach
+dem Muster "Was muss das Ergebnis einer Addition, Subtraktion, etc sein".
+Ziel ist es eine möglichst hohe Testabdeckung zu erreichen!
