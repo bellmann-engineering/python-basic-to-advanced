@@ -395,92 +395,6 @@ Wir sehen jeweils den Beispielaufruf hinter der Zeile "Failed example:". Hinter
 folgt der von der Funktion produzierte Ausdruck, also der Wert, den doctest beim
 Aufruf von fib erhalten hat.
 
-Testgetriebene Entwicklung oder "Am Anfang war der Test"
-==
-
-Im vorigen Kapitel hatten wir bereits eine fertig geschriebene
-Fibonacci-Funktion. Man kann auch so vorgehen, dass man bereits am Anfang
-Ergebnisse in den Docstring schreibt und die Funktion dann erst entwickelt. Das
-ist die Grund-Idee von "Testgetriebener Entwicklung". Der Entwickler definiert
-ein Testszenario, welches die gewünschte Funktion abbildet. Zu Beginn wird der
-Test fehlschlagen, denn der Code muss noch geschrieben werden.
-
-Die Kunst dabei ist, passende Testszenarien zu schreiben. Es ist natürlich
-erstrebenswert, dass der Test alle möglichen Argumente und alle möglichen
-Rückgabewerte prüft. Das ist aber in der Regel nicht machbar.
-
-Im Folgenden haben wir den Rückgabewert der Funktion fib fest auf 0 gesetzt:
-
-```python
-import doctest
-
-def fib(n):
-    """ 
-    Die Fibonacci-Zahl für die n-te 
-    Generation wird iterativ berechnet 
-
-    >>> fib(0)
-    0
-    >>> fib(1)
-    1
-    >>> fib(10) 
-    55
-    >>> fib(15)
-    610
-    >>> 
-
-    """
-
-    return 0
-
-if __name__ == "__main__": 
-    doctest.testmod()
-```
-
-Es versteht sich von selbst, dass ein Test dieses Moduls außer für fib(0) nur
-Fehler liefert:
-
-```bash
-$ python3 fibonacci_TDD.py 
-**********************************************************************
-File "fibonacci_TDD.py", line 10, in __main__.fib
-Failed example:
-    fib(1)
-Expected:
-    1
-Got:
-    0
-**********************************************************************
-File "fibonacci_TDD.py", line 12, in __main__.fib
-Failed example:
-    fib(10) 
-Expected:
-    55
-Got:
-    0
-**********************************************************************
-File "fibonacci_TDD.py", line 14, in __main__.fib
-Failed example:
-    fib(15)
-Expected:
-    610
-Got:
-    0
-**********************************************************************
-1 items had failures:
-   3 of   4 in __main__.fib
-***Test Failed*** 3 failures.
-```
-
-Man ändert bzw. schreibt nun den eigentlichen Code der Funktion fib solange, bis
-die Tests im Doctest "bestanden" werden.
-
-Dieses Vorgehen ist eine Methode der Software-Entwicklung, die man als
-"Testgetriebene Entwicklung" oder auch "Testgesteuerte Entwicklung" bezeichnet.
-Aber wie so häufig in der SW-Branche werden auch in diesem Fall die englischen
-Fachbegriffe benutzt, d.h. "test first development" oder noch geläufiger
-"test-driven development" (TDD).
-
 unittest
 ==
 
@@ -690,6 +604,92 @@ OK
 Die meisten der TestCase-Methoden verfügen über einen optionalen Parameter
 `msg`. Mit `msg` kann man eine zusätzliche Beschreibung für einen Fehler
 ausgeben.
+
+Testgetriebene Entwicklung oder "Am Anfang war der Test"
+==
+
+Im vorigen Kapitel hatten wir bereits eine fertig geschriebene
+Fibonacci-Funktion. Man kann auch so vorgehen, dass man bereits am Anfang
+Ergebnisse in den Docstring schreibt und die Funktion dann erst entwickelt. Das
+ist die Grund-Idee von "Testgetriebener Entwicklung". Der Entwickler definiert
+ein Testszenario, welches die gewünschte Funktion abbildet. Zu Beginn wird der
+Test fehlschlagen, denn der Code muss noch geschrieben werden.
+
+Die Kunst dabei ist, passende Testszenarien zu schreiben. Es ist natürlich
+erstrebenswert, dass der Test alle möglichen Argumente und alle möglichen
+Rückgabewerte prüft. Das ist aber in der Regel nicht machbar.
+
+Im Folgenden haben wir den Rückgabewert der Funktion fib fest auf 0 gesetzt:
+
+```python
+import doctest
+
+def fib(n):
+    """ 
+    Die Fibonacci-Zahl für die n-te 
+    Generation wird iterativ berechnet 
+
+    >>> fib(0)
+    0
+    >>> fib(1)
+    1
+    >>> fib(10) 
+    55
+    >>> fib(15)
+    610
+    >>> 
+
+    """
+
+    return 0
+
+if __name__ == "__main__": 
+    doctest.testmod()
+```
+
+Es versteht sich von selbst, dass ein Test dieses Moduls außer für fib(0) nur
+Fehler liefert:
+
+```bash
+$ python3 fibonacci_TDD.py 
+**********************************************************************
+File "fibonacci_TDD.py", line 10, in __main__.fib
+Failed example:
+    fib(1)
+Expected:
+    1
+Got:
+    0
+**********************************************************************
+File "fibonacci_TDD.py", line 12, in __main__.fib
+Failed example:
+    fib(10) 
+Expected:
+    55
+Got:
+    0
+**********************************************************************
+File "fibonacci_TDD.py", line 14, in __main__.fib
+Failed example:
+    fib(15)
+Expected:
+    610
+Got:
+    0
+**********************************************************************
+1 items had failures:
+   3 of   4 in __main__.fib
+***Test Failed*** 3 failures.
+```
+
+Man ändert bzw. schreibt nun den eigentlichen Code der Funktion fib solange, bis
+die Tests im Doctest "bestanden" werden.
+
+Dieses Vorgehen ist eine Methode der Software-Entwicklung, die man als
+"Testgetriebene Entwicklung" oder auch "Testgesteuerte Entwicklung" bezeichnet.
+Aber wie so häufig in der SW-Branche werden auch in diesem Fall die englischen
+Fachbegriffe benutzt, d.h. "test first development" oder noch geläufiger
+"test-driven development" (TDD).
 
 Aufgabe
 ==
