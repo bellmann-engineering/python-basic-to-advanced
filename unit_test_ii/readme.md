@@ -694,16 +694,16 @@ Fachbegriffe benutzt, d.h. "test first development" oder noch geläufiger
 Aufgabe
 ==
 
-1) Schreibe für das Codebeispiel `primzahlen.py` einen
- - 1.1 Modultest
- - 1.2 Unittest
- - 1.3 Doctest 
+1.) Schreibe für das Codebeispiel `primzahlen.py` einen
+1.1) Modultest
+1.2) Unittest
+1.3) Doctest 
 
-2) Erstelle eine Klasse _Geo_ für geometrische Objekte (z.B. Rechteck, Quadrat, Kreis)
+2.) Erstelle eine Klasse _Geo_ für geometrische Objekte (z.B. Rechteck, Quadrat, Kreis)
 mit Berechnungsfunktionen für Umfang und Fläche. 
-3) Teste die Korrektheit der _Geo_-Klasse mit Hilfe von doctests.
+3.) Teste die Korrektheit der _Geo_-Klasse mit Hilfe von doctests.
 
-4) Nutze TDD um ein Klasse zu entwickeln, die mathematische Grundoperationen
+4.) Nutze TDD um ein Klasse zu entwickeln, die mathematische Grundoperationen
 ermöglicht, also z.B. `add()`, `sub()`, `mul()` und `div()`. Erstelle dazu das
 Klassengerüst mit "leeren" Funktionen und entwickle zuerst die Testmethoden nach
 dem Muster "Was muss das Ergebnis einer Addition, Subtraktion, etc sein".
