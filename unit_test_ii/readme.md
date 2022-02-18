@@ -538,10 +538,7 @@ Hook-Methoden `setUp()` und `tearDown()` vor.
 | tearDown()  | Die Methode tearDown wird nach dem Aufruf einer Testmethode gestartet. Ebenso wie bei setUp gilt, dass im Code von tearDown generierte Ausnahmen auch in der Testausgabe ausgegeben werden. |
 | assertEqual(self, first, second, msg=None)  | Der Test schlägt fehl, wenn die Parameter "first" und "second" nicht gleich sind. Dabei ist Gleichheit im Sinne von "==" gemeint, also Wertegleichheit und nicht nur reine Objektgleichheit. |
 | assertAlmostEqual(self, first, second, places=None, msg=None, delta=None)  | Diese Methode schlägt fehl, wenn die Differenz der beiden Parameter "first" und "second" gleich 0 ist, nachdem man sie vor dem Vergleich auf "places" Nachkommastellen gerundet hatte. Der Default-Wert für "places" ist 7. |
-| assertCountEqual(self, first, second, msg=None)  | Die Parameter "first" und "second" müssen hierbei sequentielle Datentypen sein. Es muss folgendes gelten: Alle Elemente müssen genauso oft in "first" wie in "second" vorkommen. |
-| Beispiel: |
-| [0, 1, 1] und [1, 0, 1] gelten in obigem Sinne als gleich, weil die 0 und die 1 jeweils gleich oft vorkommen. |
-| [0, 0, 1] und [0, 1] sind verschieden, weil die 0 in der ersten Liste zweimal vorkommt und in der zweiten Liste nur einmal. |
+| assertCountEqual(self, first, second, msg=None)  | Die Parameter "first" und "second" müssen hierbei sequentielle Datentypen sein. Es muss folgendes gelten:<br>Alle Elemente müssen genauso oft in "first" wie in "second" vorkommen.<br><br>Beispiel:<br><br>[0, 1, 1] und [1, 0, 1] gelten in obigem Sinne als gleich, weil die 0 und die 1 jeweils gleich oft vorkommen.<br><br>[0, 0, 1] und [0, 1] sind verschieden, weil die 0 in der ersten Liste zweimal vorkommt und in der zweiten Liste nur einmal. |
 | assertDictEqual(self, d1, d2, msg=None)  | Betrachtet die beiden Argumente als Dictionaries und prüft auf Gleichheit. |
 | assertTrue(self, expr, msg=None)  | Prüft, ob der Ausdruck "expr" True ist. |
 | assertGreater(self, a, b, msg=None)  | Prüft, ob a > b gilt. |
