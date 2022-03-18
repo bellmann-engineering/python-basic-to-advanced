@@ -33,11 +33,11 @@ if __name__ == "__main__":
         # Erstelle Tabelle 'fahrzeuge'
         db.execute("""
             CREATE TABLE fahrzeuge(
-                id INTEGER
-                , marke varchar(50),
-                , kennzeichen varchar(10)
-                PRIMARY KEY(id)
-            )""")
+        id INTEGER
+        , marke varchar(50)
+        , kennzeichen varchar(10),
+        PRIMARY KEY(id)
+        )""")
 
         print("Tabelle erstellt.\n")
 
