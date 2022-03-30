@@ -18,5 +18,8 @@ Aufgaben:
 6. Definiere einen Filter über das Dictionary aus Aufgabe 2, sodass ein neues Dictionary entsteht, welches nur die Länder mit mind. einer Goldmedaille enthält.
 7. Wieviele Ländern haben mind. eine Goldmedaille gewinnen können?
 
---
-Zusatzaufgabe:
+Zusatzaufgabe A:
+Die Aufgaben 1-5 lassen sich mit lamba(s) anstelle des nativen Weges lösen. Versuche geschickte, aber lesbare Lösungen zu finden.
+
+Zusatzaufgabe B:
+Löse Aufgabe 1 statt mit dem CSV Reader mit `pandas`. Probiere anschließend Aufgabe 3 unter Zuhilfenahme der pandas Funktionen.
