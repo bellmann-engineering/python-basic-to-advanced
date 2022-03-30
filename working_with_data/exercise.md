@@ -3,7 +3,7 @@
 
 Uns liegt ein Datensatz in Form einer CSV Datei ([athletes.csv](athletes.csv)) vor, welcher Daten aller Athleten die 2016 in Rio an den Olympischen Spielen teilgenommen haben, enthält. Der Datensatz enthält 11.538 Athleten (6333 Männer und 5205 Frauen).
 
-Die CSV Datei hat 12 Spalten, wovoen vorallem für unsere Auswertung die Spalte `gold`, welche die Anzahl Goldmedaille die der Athlet gewonnen hat enthält, sowie die Spalte `nationality`, die eine 3-stelligen Ländercode enthält.
+Die CSV Datei hat 12 Spalten, wobei vorallem für unsere Auswertung die Spalte `gold`, welche die Anzahl Goldmedaille die der Athlet gewonnen hat enthält, sowie die Spalte `nationality`, die eine 3-stelligen Ländercode enthält, für uns von Interesse sind.
 Bei den Ländercodes handelt es sich um IOC Länderschlüssel (https://en.wikipedia.org/wiki/List_of_IOC_country_codes), wobei z.B. "GER" für Deutschland steht.
 
 
@@ -18,3 +18,5 @@ Aufgaben:
 6. Definiere einen Filter über das Dictionary aus Aufgabe 2, sodass ein neues Dictionary entsteht, welches nur die Länder mit mind. einer Goldmedaille enthält.
 7. Wieviele Ländern haben mind. eine Goldmedaille gewinnen können?
 
+--
+Zusatzaufgabe:
