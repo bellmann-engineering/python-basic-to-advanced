@@ -22,8 +22,8 @@ CREATE TABLE Employees (
     Salary INT NOT NULL,
     HireDate DATETIME NOT NULL,
     PRIMARY KEY(Id),
-    FOREIGN KEY (ManagerId) REFERENCES Employees(Id),
-    FOREIGN KEY (DepartmentId) REFERENCES Departments(Id)
+    /* FOREIGN KEY (ManagerId) REFERENCES Employees(Id),
+    FOREIGN KEY (DepartmentId) REFERENCES Departments(Id) */
 );
 
 INSERT INTO Employees
@@ -62,8 +62,8 @@ CREATE TABLE Cars (
     Status varchar(25) NOT NULL,
     TotalCost INT NOT NULL,
     PRIMARY KEY(Id),
-    FOREIGN KEY (CustomerId) REFERENCES Customers(Id),
-    FOREIGN KEY (EmployeeId) REFERENCES Employees(Id)
+    /*FOREIGN KEY (CustomerId) REFERENCES Customers(Id),
+    FOREIGN KEY (EmployeeId) REFERENCES Employees(Id)*/
 );
 
 INSERT INTO Cars
