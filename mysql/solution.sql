@@ -76,5 +76,8 @@ VALUES
 ;
 
 
+ALTER TABLE Employees ADD Plz VARCHAR(5);
+ALTER TABLE Employees DROP COLUMN Plz;
+
 -- SELECT e.LName, d.Name FROM Employees as e, Departments as d WHERE e.DepartmentId = d.Id;
 SELECT e.LName, d.Name FROM Employees as e INNER JOIN Departments as d ON e.DepartmentId = d.Id;
