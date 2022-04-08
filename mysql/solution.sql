@@ -5,11 +5,11 @@ CREATE TABLE Departments (
 );
 
 INSERT INTO Departments
-    (Id, Name)
+    (Name)
 VALUES
-    (1, 'HR'),
-    (2, 'Sales'),
-    (3, 'Tech')
+    ('HR'),
+    ('Sales'),
+    ('Tech')
 ;
 
 CREATE TABLE Employees (
