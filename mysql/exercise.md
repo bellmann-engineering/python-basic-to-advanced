@@ -112,12 +112,12 @@ Wenn wir es nachträglich bei der bereits angelegten Tabelle ändern wollen:
 
 ![table8.PNG](table8.PNG)
 
-Achten auf die Reihenfolge, da Spalten von Tabellen auf Spalten anderer Tabellen verweisen.
+Solltet ihr das Attribut `FOREIGN KEY` einsetzten so ist es wichtig auf die Reihenfolge bei der Erstellung zu achten, da die Tabellen damit aufeinander verweisen.
 
 2. Identifiziere in jeder Tabelle den Primärschlüssel.
 3. Stelle sicher, dass jedes Feld den passenden Datentypen hat.
 
-Optional:
+Zur Übung:
 - Füge der Tabelle Employees eine zusätzliche Spalte Plz hinzu. 
 - Löschen die zuvor angelegte Spalte Plz wieder.
 
