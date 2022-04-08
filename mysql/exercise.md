@@ -95,9 +95,7 @@ Die Tabelle "Departments" (englisch für "Abteilung") hat zwei Spalten: "Id" und
 
 Für jede Spalte müssen wir einen Namen spezifizieren. Spaltennamen dürfen keine Leerzeichen enthalten (nutze stattdessen den Unterstrich). Ebenso darf keine Zahl am Anfang des Namens stehen. Ein Minus ist ebenfalls problematisch, dort lieber den Unterstrich verwenden.
 
-``Autoincrement`` ist eine Hilfsfunktion die mittlerweile in die meisten Datenbanken Einzug gehalten hat. Es handelt sich um einen Mechanismus den Zahlenwert in der Primärschlüsselspalte 
-
-Bei Anlegen der Tabelle:
+``Autoincrement`` ist eine Hilfsfunktion die mittlerweile in die meisten Datenbanken Einzug gehalten hat. Es handelt sich um einen Mechanismus den Zahlenwert in der Primärschlüsselspalte beim Anlegen der Tabelle:
 
 ``CREATE TABLE Departments (
     Id INT NOT NULL AUTO_INCREMENT,
