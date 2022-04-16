@@ -398,8 +398,7 @@ Aufruf von fib erhalten hat.
 unittest
 ==
 
-Für das Modul `unittest` standen JUnit von Erich Gamma und SUnit von Kent Beck
-Pate.  Ein deutlicher Unterschied zum Modul doctest besteht darin, dass die
+Eine weitere Möglichkeit Unittests zu schreiben ist mittels des Pakets `unittest`. Der offensichtlichste Unterschied zum Modul `doctest` besteht darin, dass die
 Testfälle bei dem Modul "unittest" außerhalb des eigentlichen Programmcodes
 definiert werden, d.h. in einer eigenen Datei. Der Vorteil besteht unter anderem
 darin, dass die Programmdokumentation und die Testbeschreibungen voneinander
