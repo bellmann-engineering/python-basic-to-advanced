@@ -409,6 +409,8 @@ Wir wollen nun für unser Modul `fibonacci.py` einen Test mit unittest erstellen
 In einer Datei, z.B. `fibonacci_unittest.py`, müssen wir das Modul unittest und
 das zu testende Modul, also in unserem Fall `fibonacci`, importieren.
 
+*Hinweis:* Es empfiehlt sich eine einheitliche Konventions innerhalb des Projekts für die Dateinamen die Tests enthalten zu wählen. Wird _Visual Studio Code_ verwendet so sollte für die Ausführungserkennung das Wort `test` im Dateinamen vorkommen. Entweder `fibonacci_test.py` oder `test_fibonacci.py` abhängig davon, ob bevorzugt wird alle Testdateien im Dateibaum nebeneinandern zu haben, oder alternativ die Testdatei neben der Codedatei die sie testet liegen zu haben.
+
 Außerdem müssen wir eine Klasse mit beliebigem Namen - wir wählen in unserem
 Beispiel `FibonacciTest` - erstellen, die von `unittest.TestCase` erbt. In
 dieser Klasse werden die nötigen Testfälle in Methoden definiert. Der Name
