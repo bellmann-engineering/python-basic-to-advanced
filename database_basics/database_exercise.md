@@ -43,7 +43,7 @@ https://www.sqlite.org/datatype3.html
  - Erzeuge eine Schleife die zeilenweise Daten aus der CSV Datei einließt und diese in `INSERT`-Befehle übersetzt
  - Führe anschließend die erzeugten `INSERT` Befehle aus um die Daten in der Datenbank zu speichern
 
-6. Entwickle auf Basis des Programms der Vorwoche eine Version die ohne CSV dafür mit SQL arbeitet.
+6. Entwickle auf Basis des Programms der Vorwoche eine Version, die **ohne CSV dafür mit SQL** arbeitet.
  Beginne mit dem Einlesen der Fahrzeuge:
  - Ersetze die Datei-Einleseroutinen durch passende SQL Aufrufe.
  - Füge testweise neue Daten in die SQL Datenbank ein und prüfe das Ergebnis.
