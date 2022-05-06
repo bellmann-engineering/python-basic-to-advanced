@@ -28,7 +28,7 @@ Es gibt gute Gründe die dafür sprechen:
 
 # Struktur-Prinzip eines eines Tests:
     
-    # Wir müssen das Paket 'inittest' importieren
+    # Wir müssen das Paket 'unittest' importieren
     # Es gibt verschiedene Test-Framework
     
     import unittetst
