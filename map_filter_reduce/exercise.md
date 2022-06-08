@@ -2,7 +2,7 @@ Ziel der Aufgabenstellung ist *Funktionale Programmierung* besser kennenzulernen
 
 
 1. Erstelle eine Liste von Namen. Alle Namen in der Liste sind in Kleinbuchstaben. Nun soll der erste Buchstabe eines jeden Namens Großgeschrieben werden. 
- - a) Verwerden dazu zuerst die native Herangehensweise (Schleife)
+ - a) Verwerden dazu zuerst die imperative/native Herangehensweise (Schleife)
  - b) danach die `map` Funktion
 2. Eine Liste von Gleitkommazahlen  `[6.56773, 9.57668, 4.00914, 56.24241, 9.01344, 32.00013]` soll gerundet werden. 
  - a) Runde alle Einträge auf 2 Nachkommastellen
