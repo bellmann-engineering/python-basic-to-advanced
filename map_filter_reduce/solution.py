@@ -41,6 +41,9 @@ def is_over80(score):
 passing = list(filter(is_over80, scores))
 print(passing)
 
+# oder mit anonymer Funktion:
+list(filter(lambda s: s > 80, scores))
+
 #5
 myStrings = ("Regallager", "Anna", "C++", "python", "Volkswagen", "PHP")
 palindromes = list(filter(lambda word: word.upper() == word.upper()[::-1], myStrings)) # alternativ lower()
