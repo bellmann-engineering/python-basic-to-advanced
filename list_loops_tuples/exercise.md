@@ -1,4 +1,4 @@
-### Camp2Code: Aufgabe zu Listen, Schleifen und Tuples
+### Aufgabe zu Listen, Schleifen und Tuples
 
 Ziel ist es ein Konsoleprogramm zu schreiben das Benutzereingaben entgegennimmt. Der Aufrufer des Programms soll Parameter eines Fahrzeuges abgefragt werden. 
 Hierzu zählen:
