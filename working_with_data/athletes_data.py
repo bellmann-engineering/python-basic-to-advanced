@@ -38,6 +38,7 @@ with open("athletes.csv", encoding="utf8") as fin:
     next(fin)  # kopfzeile überspringen
     total = 0
     for row in csv.reader(fin):
+        country = row[COUNTRY_COL]
         countries_list.append((country, int(row[GOLD_COL])))
 
 # sum funktion auf tuple index 1 => anzahl
