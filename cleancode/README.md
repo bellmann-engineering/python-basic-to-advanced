@@ -21,7 +21,7 @@ Clean Code ist nicht nur für Computer geschrieben, sondern auch eine Methode, u
 
 Ein Teil des Codes kann ordentlich geschrieben werden und korrekt funktionieren, aber der nächste Schritt besteht darin, sicherzustellen, dass der Leser den Code versteht, indem er erklärt, wie er funktioniert.
 
-Codestellen, ganze klassen oder Dateien die schwer verständlich oder kompliziert erweiterbar sind nennt man "Code Smells".
+Codestellen, ganze Klassen oder Module die schwer verständlich oder kompliziert erweiterbar sind nennt man "Code Smells".
 
 Aufgaben:
 1. Lese dich in PEP8 ein und formuliere ggf. die Regeln in eigenen Worten, die du anwenden willst.
