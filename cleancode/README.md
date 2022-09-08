@@ -1,4 +1,4 @@
-_PEP_
+# PEP
 
 PEP steht für Python Enhancement Proposal (Vorschlag zur Verbesserung von Python), und es gibt mehrere davon. 
 Ein PEP ist ein Dokument, das für Python vorgeschlagene Funktionen und Aspekte hinsichtlich Design und Stil beschreibt. Es gibt 8 Stück davon, daher sprechen wir von PEP8.
@@ -11,7 +11,7 @@ https://pep8.org/
 
 https://realpython.com/python-pep8/
 
-_CleanCode_
+# CleanCode
 
 Clean Code geht zurück auf Robert C. Martin und es geht dabei um mehr als Namenskonventionen. Es geht dabei darum, dass Entwicklung immer langsamer wird umso schwerer der Code zu verstehen ist. 
 
@@ -23,7 +23,7 @@ Ein Teil des Codes kann ordentlich geschrieben werden und korrekt funktionieren,
 
 Codestellen, ganze klassen oder Dateien die schwer verständlich oder kompliziert erweiterbar sind nennt man "Code Smells".
 
-Aufgabe:
+Aufgaben:
 1. Lese dich in PEP8 ein und formuliere ggf. die Regeln in eigenen Worten, die du anwenden willst.
 2. Wende auf einzelne Klassen des Codes der Projektphase die PEP8 Regeln an.
 3. Finde im Code der letzten Projektphase Code Smells und diskutiere diese im Team.
