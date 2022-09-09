@@ -28,3 +28,4 @@ Aufgaben:
 2. Wende auf einzelne Klassen des Codes der Projektphase die PEP8 Regeln an.
 3. Finde im Code der letzten Projektphase Code Smells und diskutiere diese im Team.
 4. Legt im Team fest welche Code Smells ihr beseitigen wollt und entwickelt eine Lösung die besser lesbar und erweiterbar ist als der jetztige Code.
+5. Erstellt ein Dokument, das festlegt wie euer Code gestaltet werden soll. Dieses Dokument ist eure "Coding Convention".
