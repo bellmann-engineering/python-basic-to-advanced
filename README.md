@@ -4,7 +4,8 @@
 2. Beim Installieren achte darauf, dass der Haken bei "Add Python to environment variables (PATH)" gesetzt wird.
 3. Installiere Visual Studio Code von Microsoft: https://code.visualstudio.com/
 4. Nach öffnen des Visual Studio Codes installiere über die Linke leiste und das Bausteinsymbol das Plugin "Python" (Python extension for Visual Studio Code) vom Hersteller Microsoft.
-5. Überprüfe in der Statusleiste des Visual Studio Codes, ob dort die Python Versionsnummer angezeigt wird die in Schritt 1 auch installiert wurde. Sollte sie abweichen, so kann über Klick auf die Version eine andere ausgewählt werden.
+5. Überprüfe in der Statusleiste des Visual Studio Codes, ob dort die Python Versionsnummer angezeigt wird die in Schritt 1 auch installiert wurde. Sollte sie abweichen, so kann über Klick auf die Version eine andere ausgewählt werden.  
+  **Info: Die Pythonversion wird nur angezeigt, wenn eine Python Datei geöffnet ist in Visual Studio Code.**
 6. Die REPL kann entweder in der CMD oder Powershell über den Befehl "python" aufgerufen werden. Zum Verlassen `exit()`.
 
 # Installation Python Bilbiotheken
