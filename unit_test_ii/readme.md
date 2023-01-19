@@ -606,7 +606,7 @@ ausgeben.
 Testgetriebene Entwicklung oder "Am Anfang war der Test"
 ==
 
-Im vorigen Kapitel hatten wir bereits eine fertig geschriebene
+Im vorigen Abschnitt hatten wir bereits eine fertig geschriebene
 Fibonacci-Funktion. Man kann auch so vorgehen, dass man bereits am Anfang
 Ergebnisse in den Docstring schreibt und die Funktion dann erst entwickelt. Das
 ist die Grund-Idee von "Testgetriebener Entwicklung". Der Entwickler definiert
@@ -701,6 +701,7 @@ mit Berechnungsfunktionen für Umfang und Fläche.
 3. Teste die Korrektheit der _Geo_-Klasse mit Hilfe von doctests.
 4. Nutze TDD um ein Klasse zu entwickeln, die mathematische Grundoperationen
 ermöglicht, also z.B. `add()`, `sub()`, `mul()` und `div()`. Erstelle dazu das
-Klassengerüst mit "leeren" Funktionen und entwickle zuerst die Testmethoden nach
+Klassengerüst mit "leeren" Funktionen und entwickle zuerst die (Unit-)Testmethoden nach
 dem Muster "Was muss das Ergebnis einer Addition, Subtraktion, etc sein".
 Ziel ist es eine möglichst hohe Testabdeckung zu erreichen!
+5. Welches Verhalten sollte bei der `div()` Methode umbedingt getestet werden? 
