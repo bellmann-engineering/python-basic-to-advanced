@@ -14,3 +14,4 @@ zusammenzuführen: a zu 1, b zu 2, ...
 4. Filter eine Liste von `scores = [66, 90, 68, 59, 76, 60, 88, 74, 81, 65, 92, 85]` sodass nurnoch Einträge größer als 80 übrig bleiben.
 5. Filter eine Liste von Wörtern, sodass nur die Wörter übrig bleiben die ein sog. Palindrom sind (Vor- und Rückwärts das gleiche Wort). Hierbei soll Groß- und Kleinschreibung keine Rolle spielen. `myStrings = ("Regallager", "Anna", "C++", "python", "Volkswagen", "PHP")`
 6. Nutze die `reduce` Funktion um eine Liste von Zahlen `[3, 4, 6, 9, 34, 12]` zu summieren. Hierbei soll zuerst 3+4(=7), dann 7+6, ... gerechnet werden. Hinweis: Es wird `from functools import reduce` dazu benötigt.
+7. Schreibe eine Funktion "group_by", die eine Liste von Zahlen und eine Funktion als Parameter erhält und eine neue Liste zurückgibt, die die ursprüngliche Liste nach der Ausführung der Funktion gruppiert.
