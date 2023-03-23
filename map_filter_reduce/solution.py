@@ -60,12 +60,3 @@ def custom_sum(first, second):
 result = reduce(custom_sum, myNumbers)
 print(result)
 
-#7
-input_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-def group_function(x):
-    if x % 2 == 0:
-        return "even"
-    else:
-        return "odd"
-result = group_by(input_list, group_function)
-print(result)
