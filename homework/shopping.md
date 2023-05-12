@@ -1,4 +1,4 @@
-__Aufgabe 2__
+__Aufgabe 1__
 
 1.	Erstelle eine Liste namens shopping_list mit den Elementen "Milch", "Eier", "Brot", "Butter".
 2.	Gib die Länge der Liste shopping_list aus.
