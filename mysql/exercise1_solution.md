@@ -1,5 +1,9 @@
 Schritt 1: 1. Normalform (1NF)
 
+Jede Zelle in der Tabelle enthält einen atomaren Wert. Mehrwertige Attribute wurden aufgespalten, um sicherzustellen, dass jede Zelle nur einen einzelnen Wert enthält.
+Jede Zeile in der Tabelle ist eindeutig identifizierbar. Es wurde ein Primärschlüssel, in diesem Fall die Spalte "FahrtNr.", hinzugefügt, um sicherzustellen, dass jede Zeile eindeutig identifiziert werden kann.
+Es gibt keine Duplikate in den Zeilen. Jede Zeile in der Tabelle stellt eine eindeutige Fahrte dar.
+
 | FahrtNr. | BusNr. | Busbezeichnung | Bustyp   | Vorname | Nachname   | Ziel          |
 |----------|--------|----------------|----------|---------|------------|---------------|
 | 1        | 455    | EG1            | Lang     | Hans    | Meier      | Heide         |
@@ -9,7 +13,7 @@ Schritt 1: 1. Normalform (1NF)
 
 Schritt 2: 2. Normalform (2NF)
 
-In diesem Schritt stellen wir sicher, dass jedes Attribut von der vollständigen Primärschlüsselabhängig ist. Der Primärschlüssel besteht aus "FahrtNr." und "BusNr.". Wir sehen, dass die Attribute "Busbezeichnung" und "Bustyp" nur von "BusNr." abhängig sind, während "FahrerID" von "FahrtNr." abhängig ist. Um dies zu beheben, erstellen wir zusätzliche Tabellen:
+In diesem Schritt stellen wir sicher, dass jedes Attribut vollständig vom Primärschlüssel abhängig ist. Der Primärschlüssel besteht aus "FahrtNr." und "BusNr.". Wir sehen, dass die Attribute "Busbezeichnung" und "Bustyp" nur von "BusNr." abhängig sind, während "FahrerID" von "FahrtNr." abhängig ist. Um dies zu beheben, erstellen wir zusätzliche Tabellen:
 
 
 Tabelle "Busse":
@@ -31,7 +35,7 @@ Tabelle "Fahrer":
 | 3        | Bill    | Gates    |
 
 
-In der 3. Normalform sind alle Attribute von der Primärschlüsselabhängig und es gibt keine transitive Abhängigkeit zwischen den Attributen. Die Attribute "Busbezeichnung" und "Bustyp" hängen nur von "BusNr." ab und sind nicht von "FahrtNr." abhängig. Daher wurden sie in die separate Tabelle "Busse" verschoben. "Fahrer" und "Busse" werden den Fahrten über Fremdschlüssel zugeordnet. 
+In der 3. Normalform sind alle Attribute vom Primärschlüssel abhängig und es gibt keine transitive Abhängigkeit zwischen den Attributen. Die Attribute "Busbezeichnung" und "Bustyp" hängen nur von "BusNr." ab und sind nicht von "FahrtNr." abhängig. Daher wurden sie in die separate Tabelle "Busse" verschoben. "Fahrer" und "Busse" werden den Fahrten über Fremdschlüssel zugeordnet. 
 
 Tabelle "Fahrten":
 
