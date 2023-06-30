@@ -43,12 +43,14 @@ https://www.sqlite.org/datatype3.html
  - Erzeuge eine Schleife die zeilenweise Daten aus der CSV Datei einließt und diese in `INSERT`-Befehle übersetzt
  - Führe anschließend die erzeugten `INSERT` Befehle aus um die Daten in der Datenbank zu speichern
 
-6. Entwickle auf Basis des Programms der Vorwoche eine Version, die **ohne CSV dafür mit SQL** arbeitet.
+6. Entwickle auf Basis des Programms der Woche 3<sup>1</sup> eine Version, die **ohne CSV dafür mit SQL** arbeitet.
  Beginne mit dem Einlesen der Fahrzeuge:
  - Ersetze die Datei-Einleseroutinen durch passende SQL Aufrufe.
  - Füge testweise neue Daten in die SQL Datenbank ein und prüfe das Ergebnis.
  - Nun sollen die Fahrten aus der Fahrtenbuchtabelle gelesen werden: Da wir keine Dateien mit Kennzeichen als Dateinamen mehr führen benötigt die Tabelle Fahrtenbuch eine Spalte `kennzeichen` zur Zuordnung. Achte darauf die die Spalte `kennzeichen` in der Tabelle `fahrzeuge` und `fahrtenbuch` den exakt gleichen Typen haben.  
  Erstelle ein Python Script `alter_tables.py`, um die Spalte der Tabelle hinzufügen. Der SQL Befehl `ALTER TABLE` ermöglicht Anpassungen an bestehenden Datenbankstrukturen.
+
+1: https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/files-data-and-oop/files-data-and-oop.md
 
 Optional:
 
