@@ -51,16 +51,16 @@ Eine mögliche Umstrukturierung könnte wie folgt aussehen:
 
 Tabelle 1: Personen
 
-    id (Primärschlüssel)
-    vorname
+    Id (Primärschlüssel)
+    FName
     nachname
     email
 
 Tabelle 2: Adresse
 
-    id (Primärschlüssel)
-    straße
-    ort
+    Id (Primärschlüssel)
+    Strasse
+    Ort
 
 ## Dritte Normalform
 Eine Relation befindet sich in der dritten Normalform, wenn 
