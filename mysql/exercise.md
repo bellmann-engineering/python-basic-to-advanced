@@ -53,7 +53,7 @@ Tabelle 1: Personen
 
     Id (Primärschlüssel)
     FName
-    nachname
+    LName
     email
 
 Tabelle 2: Adresse
