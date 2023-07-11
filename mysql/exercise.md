@@ -45,7 +45,7 @@ In unserem Beispiel handelt es sich um die Spalte "Id", welche eine fortlaufende
 
 In diesem Fall ist die Tabelle bereits in der 2. Normalform, da es keine partiale Abhängigkeit eines Nicht-Schlüsselattributs von einem Teilschlüssel gibt. Es müssen keine weiteren Änderungen vorgenommen werden.
 
-Angenommen, die Spalte "id" ist der Primärschlüssel und "straße" ist von der Kombination aus "ort" und "id" abhängig, während die restlichen Attribute ("vorname", "nachname" und "email") nur von "id" abhängen. In diesem Fall müssten wir die Tabelle umstrukturieren, um die 2. Normalform zu erreichen.
+Angenommen, die Spalte "id" ist der Primärschlüssel und "Strasse" ist von der Kombination aus "Ort" und "Id" abhängig, während die restlichen Attribute ("FName", "LName" und "E-mail") nur von "id" abhängen. In diesem Fall müssten wir die Tabelle umstrukturieren, um die 2. Normalform zu erreichen.
 
 Eine mögliche Umstrukturierung könnte wie folgt aussehen:
 
