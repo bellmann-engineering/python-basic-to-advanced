@@ -1,4 +1,3 @@
-# Camp2Code
 ## Aufgabe zu Klassen und Vererbung
 
 [![uml](https://github.com/bellmann-engineering/python-basic-to-advanced/raw/main/fahrzeug_uml.png)](https://github.com/bellmann-engineering/python-basic-to-advanced/raw/main/fahrzeug_uml.png)
