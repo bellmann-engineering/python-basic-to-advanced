@@ -35,7 +35,7 @@ employee = {
 
 2. Verwende `map`, um das Gesamtgehalt (Stundenlohn * Stunden gearbeitet) für jeden Mitarbeiter zu berechnen und eine neue Liste mit diesen Gesamtgehältern zu erstellen.
 
-3. Verwende `filter`, um eine Liste der Mitarbeiter zu erstellen, die ein Gesamtgehalt von mindestens 1000 Euro haben.
+3. Verwende `filter`, um eine Liste der Mitarbeiter zu erstellen, die ein Gesamtgehalt von mindestens 4000 Euro haben.
 
 4. Erstelle eine Liste mit den Namen der Mitarbeiter, die die Filterung in Schritt 3 bestanden haben.
 
