@@ -1,5 +1,6 @@
 Ziel der Aufgabenstellung ist *Funktionale Programmierung* besser kennenzulernen. Mit kleinen Aufgaben zur Verarbeitung von Daten wollen wir im Umgang mit `map/filter/reduce/zip` sicher werden. 
 
+**Aufgaben:**
 
 1. Erstelle eine Liste von Namen. Alle Namen in der Liste sind in Kleinbuchstaben. Nun soll der erste Buchstabe eines jeden Namens Großgeschrieben werden. 
  - a) Verwerden dazu zuerst die imperative/native Herangehensweise (Schleife)
@@ -15,3 +16,29 @@ zusammenzuführen: a zu 1, b zu 2, ...
 5. Filter eine Liste von Wörtern, sodass nur die Wörter übrig bleiben die ein sog. Palindrom sind (Vor- und Rückwärts das gleiche Wort). Hierbei soll Groß- und Kleinschreibung keine Rolle spielen. `myStrings = ("Regallager", "Anna", "C++", "python", "Volkswagen", "PHP")`
 6. Nutze die `reduce` Funktion um eine Liste von Zahlen `[3, 4, 6, 9, 34, 12]` zu summieren. Hierbei soll zuerst 3+4(=7), dann 7+6, ... gerechnet werden. Hinweis: Es wird `from functools import reduce` dazu benötigt.
 
+---
+
+(Optionale) ganzheitliche **Zusatzaufgabe:**
+
+Angenommen, du hast eine Liste von Mitarbeiterdaten in Form von Dictionaries, wobei jedes Dictionary die folgenden Informationen enthält:
+```python
+employee = {
+    "name": "Max Mustermann",
+    "id": "EMP123",
+    "stundenlohn": 20.0,
+    "stunden gearbeitet": [40, 35, 42, 38, 45]
+}
+
+```
+
+1. Erstelle eine Liste von solchen Mitarbeiterdaten-Dictionaries mit Informationen von mindestens 5 Mitarbeitern.
+
+2. Verwende `map`, um das Gesamtgehalt (Stundenlohn * Stunden gearbeitet) für jeden Mitarbeiter zu berechnen und eine neue Liste mit diesen Gesamtgehältern zu erstellen.
+
+3. Verwende `filter`, um eine Liste der Mitarbeiter zu erstellen, die ein Gesamtgehalt von mindestens 1000 Euro haben.
+
+4. Erstelle eine Liste mit den Namen der Mitarbeiter, die die Filterung in Schritt 3 bestanden haben.
+
+5. Verwende die `reduce` Funktion, um die Gesamtsumme aller Gesamtgehälter zu berechnen. Sprich, die Lohnkosten, die das Unternehmen hat.
+
+6. Sortiere die Liste der Mitarbeiterdaten nach den Mitarbeiter-IDs in aufsteigender Reihenfolge.
