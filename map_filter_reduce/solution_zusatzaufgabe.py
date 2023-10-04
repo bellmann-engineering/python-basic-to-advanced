@@ -43,6 +43,9 @@ filtered_employees = list(filter(lambda emp: emp["stundenlohn"] * sum(emp["stund
 # 4. Erstelle eine Liste der Namen der Mitarbeiter, die die Filterung in Schritt 3 bestanden haben
 filtered_employee_names = [emp["name"] for emp in filtered_employees]
 
+# 4. Alternative: Verwende `map` und `filter`, um eine Liste der Namen der Mitarbeiter zu erstellen
+filtered_employee_names = list(map(lambda emp: emp["name"], filtered_employees))
+
 # 5. Verwende die `reduce` Funktion, um die Gesamtsumme aller Gehälter zu berechnen
 total_salary_sum = reduce(lambda x, y: x + y, total_salaries)
 
