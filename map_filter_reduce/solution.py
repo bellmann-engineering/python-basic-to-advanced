@@ -3,8 +3,8 @@ persons = ['tina', 'marcus', 'natalie', 'dirk']
 uppered_persons = []
 
 for person in persons:
-    persons_ = person.capitalize()
-    uppered_persons.append(persons_)
+    p = person.capitalize()
+    uppered_persons.append(p)
     
 print(uppered_persons)
 
