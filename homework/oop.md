@@ -8,7 +8,7 @@ __Aufgabe 1:__
 6.	Definiere einen Konstruktor __init__ für die Klasse Student, der zusätzlich zur Initialisierung der Eigenschaften der Elternklasse auch die Matrikelnummer initialisiert.
 7.	Erstelle ein Objekt student1 der Klasse Student mit dem Namen "Anna Müller", dem Alter 20, dem Wohnort "Hamburg" und der Matrikelnummer 123456.
 8.	Rufe die Methode say_hello des Objekts student1 auf.
-9.	
+
 __Aufgabe 2:__
 
 1.	Erstelle eine Klasse Shape mit der Methode area(), die die Fläche der Form berechnet und zurückgibt.
