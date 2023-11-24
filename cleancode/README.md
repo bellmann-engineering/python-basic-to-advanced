@@ -1,6 +1,6 @@
 # PEP
 
-PEP steht für Python Enhancement Proposal (Vorschlag zur Verbesserung von Python), und es gibt mehrere davon. 
+PEP steht für _Python Enhancement Proposal_ (Vorschlag zur Verbesserung von Python), und es gibt mehrere davon. 
 Ein PEP ist ein Dokument, das für Python vorgeschlagene Funktionen und Aspekte hinsichtlich Design und Stil beschreibt. Es gibt 8 Stück davon, daher sprechen wir von PEP8.
 
 Linksammlung dazu:
