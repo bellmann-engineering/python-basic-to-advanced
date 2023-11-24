@@ -4,12 +4,10 @@ PEP steht für Python Enhancement Proposal (Vorschlag zur Verbesserung von Pytho
 Ein PEP ist ein Dokument, das für Python vorgeschlagene Funktionen und Aspekte hinsichtlich Design und Stil beschreibt. Es gibt 8 Stück davon, daher sprechen wir von PEP8.
 
 Linksammlung dazu:
+- [Intro to Clean Code in Python](https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/intro-to-clean-code/python-pep-8-style-guide/) ➡️
+- [PEP 8 Official Documentation](https://pep8.org/) ➡️
+- [Real Python Guide to PEP 8](https://realpython.com/python-pep8/) ➡️
 
-https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/intro-to-clean-code/python-pep-8-style-guide/
-
-https://pep8.org/
-
-https://realpython.com/python-pep8/
 
 # CleanCode
 
