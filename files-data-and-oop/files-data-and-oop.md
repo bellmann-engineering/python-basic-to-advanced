@@ -27,8 +27,9 @@ Nun möchten wir den Fuhrpark direkt aus einer Datei einlesen und daraus Objekte
 > 1.5.2021,Wolfsburg,Hannover,40100,40185,Warenlieferung,nein<br>
 > 4.5.2021,Hannover,Wolfsburg,40185,40270,Rückfahrt zum Standort,nein
 
-Das Beispiel kann so verwendet werden. 
-[Hier zum Download](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/f0d9cf24ba06eb580315f8a4437d5c43fa3cf95e/files-data-and-oop/fahrtenbuecher/H-EL-99.csv)
+Das Beispiel für ein Fahrzeug kann so verwendet werden. 
+[[Hier zum Download]](https://raw.githubusercontent.com/bellmann-engineering/python-basic-to-advanced/f0d9cf24ba06eb580315f8a4437d5c43fa3cf95e/files-data-and-oop/fahrtenbuecher/H-EL-99.csv)
+Es werden weitere solche Dateien benötigt, die du selbst anlegst.
 
 5. Erstelle eine Klasse ``Journey``, die für das Einlesen von Fahrtenbucheinträgen passend ist. Eine Fahrt im Fahrtenbuch besteht aus:
  - Datum
