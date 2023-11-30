@@ -3,7 +3,7 @@ from datetime import datetime
 import os.path
 
 
-class Fahrzeug():
+class Fahrzeug:
     def __init__(self, marke, kennzeichen, fahrgestellnummer, baujahr, erstzulassung):
         self.marke = marke
         self.kennzeichen = kennzeichen
