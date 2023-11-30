@@ -51,5 +51,5 @@ Optionale Zusatzaufgabe:
 10. Filtere die Fahrtenbucheinträge entsprechend, sodass Privatfahrten mittels des Parameters ``doNotShowPrivate`` ausgeblendet werden können.
 11. Entwickle eine Methode die Lücken im Fartenbuch aufdeckt.
 
-![uml](./classdiagramm.png)
+![uml](./classdiagramm1.png)
 
