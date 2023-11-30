@@ -33,7 +33,7 @@ class Lkw(Fahrzeug):
         super().__init__(marke, kennzeichen, fahrgestellnummer, baujahr, erstzulassung)
 
 
-class Journey():
+class Journey:
     def __init__(self, datum_as_string, startort, zielort, startkm, endkm, zweck, privat):
         self.datum = datetime.strptime(datum_as_string, '%d.%m.%Y')
         self.startort = startort
