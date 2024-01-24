@@ -1,4 +1,3 @@
-# Camp2Code
 ## Arbeiten mit Daten
 
 Uns liegt ein Datensatz in Form einer CSV Datei ([athletes.csv](athletes.csv)) vor, welcher Daten aller Athleten die 2016 in Rio an den Olympischen Spielen teilgenommen haben, enthält. Der Datensatz enthält 11.538 Athleten (6333 Männer und 5205 Frauen).
@@ -18,8 +17,8 @@ Aufgaben:
 6. Definiere einen Filter über das Dictionary aus Aufgabe 2, sodass ein neues Dictionary entsteht, welches nur die Länder mit mind. einer Goldmedaille enthält.
 7. Wieviele Ländern haben mind. eine Goldmedaille gewinnen können?
 
-Zusatzaufgabe A:
+Teil A:
 Die Aufgaben 1-5 lassen sich mit lamba(s) anstelle des nativen Weges lösen. Versuche geschickte, aber lesbare Lösungen zu finden.
 
-Zusatzaufgabe B:
+Teil B:
 Löse Aufgabe 1 statt mit dem CSV Reader mit `pandas`. Probiere anschließend Aufgabe 3 ff unter Zuhilfenahme der pandas Funktionen. Verwende zum Ausführen bevorzugt Jupiter Notebook.
