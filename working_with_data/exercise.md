@@ -18,7 +18,7 @@ Aufgaben:
 7. Wieviele Ländern haben mind. eine Goldmedaille gewinnen können?
 
 Teil A:
-Die Aufgaben 1-5 lassen sich mit lamba(s) anstelle des nativen Weges lösen. Versuche geschickte, aber lesbare Lösungen zu finden.
+Die Aufgaben 1-5 lassen sich mittels Funktionaler Prpgrammierung und lamba anstelle des nativen Weges lösen. Versuche geschickte, aber lesbare Lösungen zu finden.
 
 Teil B:
 Löse Aufgabe 1 statt mit dem CSV Reader mit `pandas`. Probiere anschließend Aufgabe 3 ff unter Zuhilfenahme der pandas Funktionen. Verwende zum Ausführen bevorzugt Jupiter Notebook.
