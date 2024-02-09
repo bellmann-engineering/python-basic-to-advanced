@@ -1,26 +1,21 @@
 import sqlite3
 
-# Datenbank erstellen / verbinden
 db = sqlite3.connect('fahrzeugverwaltung.db')
 
-db.execute("""CREATE TABLE IF NOT EXISTS fahrzeuge (
-    id INTEGER, 
-    marke varchar(50), 
-    kennzeichen varchar(10), 
-    PRIMARY KEY(id)
-    )""")
+db.execute("""CREATE TABLE IF NOT EXISTS fahrzeuge 
+           (
+           id INTEGER, marke TEXT, kennzeichen TEXT, 
+           PRIMARY KEY(id)
+           )""")
 
-# sql injection vermeiden durch parametrisiertes Statement
-sqlInsert = "INSERT INTO fahrzeuge (marke, kennzeichen) VALUES (?, ?)"
-#in datenbanktabelle einfügen
-db.execute(sqlInsert, ('audi', 'M-KB-123'))
-
-# Änderungen an die Datenbank senden
+marke = "Porsche"
+kennzeichen = "S-GO-911"
+sqlStatement = "INSERT INTO fahrzeuge (marke, kennzeichen) VALUES (?, ?)"
+db.execute(sqlStatement, 
+           (marke, kennzeichen) )
 db.commit()
 
-# auslesen der Tabelle fahrzeuge
 rows = db.execute("SELECT * FROM fahrzeuge")
 
-# zeilen durchlaufen
-for r in rows:
-    print("Der {} hat das Kennzeichen {}".format(r[1],r[2]))
+for row in rows:
+    print(f"Der {row[1]} hat das Kennzeichen {row[2]}")
