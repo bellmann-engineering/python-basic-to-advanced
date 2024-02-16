@@ -94,7 +94,7 @@ Führe schrittweise die Normalformen 1–3 durch.
 ## Übung 2
 
 Die nachfolgenden Aufgaben können in der MySQL Workbench (sofern installiert), dem MySQL Query Explorer, PhpMyAdmin oder auch einem Online Tool durchgeführt werden.
-Als Online-Tool empfiehlt sich z.B.: https://onecompiler.com/mysql
+Als Online-Tool empfiehlt sich z.B.: https://onecompiler.com/mysql oder https://www.programiz.com/sql/online-compiler/
 
 Wir möchten vier Tabellen anlegen: Abteilungen, Angestellte, Kunden und Autos.
 Wobei die Beziehungen zwischen den Tabellen folgendermaßen definiert sind:
@@ -104,10 +104,9 @@ Wobei die Beziehungen zwischen den Tabellen folgendermaßen definiert sind:
 
 Die Syntax für die erste Tabelle "Abteilung" ist folgende:
 
-``CREATE TABLE Departments (
-    Id INT NOT NULL AUTO_INCREMENT,
-    Name VARCHAR(25) NOT NULL,
-    PRIMARY KEY(Id)
+``CREATE TABLE Departments 
+( 
+  Id INT NOT NULL, Name VARCHAR(25) NOT NULL, PRIMARY KEY(Id) 
 );``
 
 Die Tabelle "Departments" (englisch für "Abteilung") hat zwei Spalten: "Id" und "Name". Der Primärschlüssel ist "Id". Der Schlüssel entspricht hier eine natürlichen Zahl, die fortlaufend hochgezählt wird.
