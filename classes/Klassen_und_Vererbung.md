@@ -47,6 +47,6 @@ die das aus ``hoehe``, ``breite`` und ``laenge`` errechnete Volumen zurückgibt.
 Optional:
 
 10. Mache es möglich, dass Objekte hinsichtlich ihres Volumens verglichen werden können.
-11. Überlade die ``__eq__`` Methode aller Klassen.
-12. Überlade die ``__ne__`` Methode aller Klassen.
+11. Überschreibe die ``__eq__`` Methode aller Klassen.
+12. Überschreibe die ``__ne__`` Methode aller Klassen.
 13. Wie muss ein ``@property`` für ``volumen`` aussehen um das Volumen direkt zu setzen?
