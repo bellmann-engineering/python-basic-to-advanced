@@ -48,5 +48,5 @@ Optional:
 
 10. Mache es möglich, dass Objekte hinsichtlich ihres Volumens verglichen werden können.
 11. Überschreibe die ``__eq__`` Methode aller Klassen.
-12. Überschreibe die ``__ne__`` Methode aller Klassen.
-13. Wie muss ein ``@property`` für ``volumen`` aussehen um das Volumen direkt zu setzen?
+12. Überschreibe die ``__gt__`` Methode aller Klassen.
+13. Ist es notwendig ``__lt__`` zu überschreiben, wenn ``__gt__`` bereits überschrieben wurde? Wie verhält es sich mit ``__eq__`` und ``__ne__``?
