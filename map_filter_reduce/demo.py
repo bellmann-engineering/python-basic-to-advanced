@@ -1,5 +1,9 @@
 import functools
 
+words = ["id3", "touran", "golf", "passat"]
+uppercase_words = list(map(lambda w: w.upper(), words))
+print(uppercase_words)
+
 numbers = list(range(1,11))
 
 even_numbers = list(filter(lambda n: n%2 == 0, numbers))
