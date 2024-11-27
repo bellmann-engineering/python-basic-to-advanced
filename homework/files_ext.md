@@ -1,8 +1,4 @@
 ### Übung: Schreiben in eine Datei
-
-#### Ziel:
-Lerne, wie du Text in eine Datei schreibst, eine Datei bearbeitest und Inhalte an eine bestehende Datei anhängst.
-
 ---
 
 ### Schritt 1: Erstellen und Schreiben in eine Datei
