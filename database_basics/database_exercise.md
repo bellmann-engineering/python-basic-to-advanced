@@ -8,7 +8,7 @@ Jetzt ist es an der Zeit in unserem Code die Logik und die Datenaufbewahrung von
 
 Wir möchten einen Fuhrpark bestehend aus LKWs, PKWs und Motorrädern aufbauen. Diese Datenmenge lässt sich nicht mehr gut in Dateien organisieren. Wir benötigen eine konsistente Datenhaltung.
 
-Dies erreichen wir mit einer einfachen `SQLite` Datenbank. Diese spricht wie alle anderen Datenbanken die Sprache `SQL`. Dies ist eine standartisierte Sprache die SQL Datenbankserver wie postgresql, MS SQL Server, MySQL oder MariaDB sprich.
+Dies erreichen wir mit einer einfachen `SQLite` Datenbank. Diese spricht wie viele anderen Datenbanken die Sprache `SQL`. Dies ist eine standartisierte Sprache die SQL Datenbankserver wie postgresql, MS SQL Server, MySQL oder MariaDB sprich.
 
 [Wikipedia Artikel zu SQL Sprache](https://de.wikipedia.org/wiki/SQL)
 
