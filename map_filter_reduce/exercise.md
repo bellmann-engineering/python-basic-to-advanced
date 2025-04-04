@@ -1,6 +1,6 @@
 Ziel der Aufgabenstellung ist *Funktionale Programmierung* besser kennenzulernen. Mit kleinen Aufgaben zur Verarbeitung von Daten wollen wir im Umgang mit `map/filter/reduce/zip` sicher werden. 
 
-**Aufgaben:**
+**Aufgaben Teil 1:**
 
 1. Erstelle eine Liste von Namen. Alle Namen in der Liste sind in Kleinbuchstaben. Nun soll der erste Buchstabe eines jeden Namens Großgeschrieben werden. 
  - a) Verwende dazu zuerst die imperative/native Herangehensweise (Schleife)
@@ -18,7 +18,7 @@ zusammenzuführen: a zu 1, b zu 2, ...
 
 ---
 
-(Optionale) ganzheitliche **Zusatzaufgabe:**
+**Aufgaben Teil 2:**
 
 Angenommen, du hast eine Liste von Mitarbeiterdaten in Form von Dictionaries, wobei jedes Dictionary die folgenden Informationen enthält:
 ```python
