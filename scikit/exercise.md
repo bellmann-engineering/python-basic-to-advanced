@@ -1,34 +1,121 @@
 # Machine Learning mit Scikit-Learn
 
-Uns liegt ein Datensatz zu Häusern in Califonien vor. Wir wollen etwas über den Zusammenhang von Häuservariablen (Features) und Hauspreisen lernen.
-Die Ausführung der Analyse soll in *jupyter notebook* stattfinden.
+Uns liegt ein Datensatz zu Häusern in Kalifornien vor. Wir wollen untersuchen, welche Zusammenhänge zwischen bestimmten Hausmerkmalen (Features) und den Hauspreisen bestehen.
+Die Analyse soll in *Jupyter Notebook* durchgeführt werden.
 
-Orientiere dich bei der nachfolgenden Aufgabe an der Durchführung ähnlicher Aufgaben am _Boston_ Datensatz: [Link](https://github.com/bellmann-engineering/python-basic-to-advanced/blob/main/scikit/boston3.ipynb)
+---
 
-1. Lade den Datensatz mittels
-`from sklearn.datasets import fetch_california_housing`
-`housing = fetch_california_housing()`
+### 1. Datensatz laden
 
-2. Sieh dir an welche Felder es gibt und analysiere die Spalten in `data`. Welche Ausprägung haben diese?
-3. Erstelle aus `data` und Hauspreisen in `target` ein `pandas dataframe`.
-4. Gibt es Nullwerte in diesem?
-5. Sieh dir die Verteilung der Häuser bezogen auf dem Preis innerhalb des Datensatzes an. Erstelle dazu mit `matplotlib` ein Diagramm.
-6. Erstelle eine Korrelationsmatrix und treffe eine Aussage welche Variablen mit dem Hauspreis korrelieren.
-7. Welche Variablen (Features) korrelieren mehr als 0.5? Gebe diese aus. Welche korreliert am Stärksten?
-8. Teile das Dataframe in X und y Anteil auf. 
- - X enthält die Daten über die Häuser
- - y enthält die Preise (`target`)
-9. Wende LinearRegression und KNeighborsRegressor und DecisionTreeRegressor als Modelle an (`fit` + `predict`).
-10. Vergleiche die Daten aus y mit den vom Modell geschätzten Daten mittels eines Scatterplot.
-11. Wie verhält es sich wenn du Variablen aus dem Datensatz entfernst die eine mittelstarke Korrelation aufweisen.
-12. Warum hat die Variable Location scheinbar keinen Einfluss obwohl Häuser an der Küste doch sicherer teuer sind.
+Lade den Datensatz mit:
 
-Aufgabe 11 + 12 sind optional.
+```python
+from sklearn.datasets import fetch_california_housing
+housing = fetch_california_housing()
+```
 
-Weiterführende Informationen:
+---
 
-https://de.wikipedia.org/wiki/N%C3%A4chste-Nachbarn-Klassifikation
+### 2. Überblick verschaffen
 
-https://towardsdatascience.com/decisiontreeregressor-stop-using-for-future-projections-e27104537f6a
+Untersuche, welche Felder (`feature_names`) es gibt und welche Bedeutung sie haben. Analysiere die Spalten in `data`: Welche Wertebereiche und Ausprägungen haben sie?
 
-https://de.wikipedia.org/wiki/Streudiagramm
+---
+
+### 3. DataFrame erstellen
+
+Erstelle aus `housing.data` und den Hauspreisen in `housing.target` ein `pandas DataFrame`.
+Füge die Spaltennamen hinzu.
+
+---
+
+### 4. Fehlende Werte prüfen
+
+Überprüfe, ob im DataFrame Nullwerte (`NaN`) enthalten sind.
+
+---
+
+### 5. Preisverteilung visualisieren
+
+Untersuche die Verteilung der Hauspreise mit einem Histogramm oder einem geeigneten Diagramm (`matplotlib` oder `seaborn`).
+
+---
+
+### 6. Korrelation analysieren
+
+Erstelle eine Korrelationsmatrix und visualisiere sie (z. B. mit `sns.heatmap`).
+Welche Variablen zeigen die stärkste Korrelation mit dem Hauspreis?
+
+---
+
+### 7. Stärkste Korrelate identifizieren
+
+Welche Variablen (Features) korrelieren mit einem Betrag größer als 0.5 mit dem Preis (`target`)?
+Gib diese aus und benenne die am stärksten korrelierende Variable.
+
+---
+
+### 8. Aufteilung in Features und Zielvariable
+
+Teile das DataFrame auf in:
+
+* **X**: die unabhängigen Variablen (Hausmerkmale)
+* **y**: die abhängige Variable (Hauspreis)
+
+---
+
+### 9. Train-/Test-Split
+
+Teile den Datensatz in Trainings- und Testdaten, z. B.:
+
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+
+Warum ist dieser Schritt wichtig?
+
+---
+
+### 10. Modelle anwenden
+
+Trainiere drei verschiedene Regressionsmodelle auf den Trainingsdaten:
+
+* `LinearRegression`
+* `KNeighborsRegressor`
+* `DecisionTreeRegressor`
+
+Führe anschließend Vorhersagen (`predict`) auf den **Testdaten** durch.
+
+---
+
+### 11. Modelle bewerten
+
+Vergleiche die echten Preise (`y_test`) mit den vorhergesagten Preisen der Modelle:
+
+* Verwende Scatterplots (`plt.scatter(y_test, y_pred)`), um die Übereinstimmung zu visualisieren.
+* Berechne zusätzlich den **R²-Score** und den **Mean Squared Error (MSE)** zur quantitativen Bewertung.
+
+---
+
+### 12. Einfluss einzelner Variablen (optional)
+
+Entferne einige Variablen mit mittlerer Korrelation und beobachte, wie sich die Modellgüte verändert.
+
+---
+
+### 13. Diskussion (optional)
+
+Warum scheint die Variable *Location* (geografische Lage) im Datensatz keinen starken Einfluss zu haben, obwohl man annehmen würde, dass Häuser an der Küste teurer sind?
+
+---
+
+### Weiterführende Informationen
+
+* [Nächste-Nachbarn-Klassifikation (Wikipedia)](https://de.wikipedia.org/wiki/N%C3%A4chste-Nachbarn-Klassifikation)
+* [DecisionTreeRegressor: Warum er für Zukunftsprognosen problematisch ist](https://towardsdatascience.com/decisiontreeregressor-stop-using-for-future-projections-e27104537f6a)
+* [Streudiagramm (Wikipedia)](https://de.wikipedia.org/wiki/Streudiagramm)
+
+---
+
+Möchtest du, dass ich das als vollständige Notebook-Vorlage mit Codezellen formatiere (also sofort ausführbar in `.ipynb`)?
