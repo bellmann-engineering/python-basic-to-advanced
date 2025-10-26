@@ -115,7 +115,3 @@ Warum scheint die Variable *Location* (geografische Lage) im Datensatz keinen st
 * [Nächste-Nachbarn-Klassifikation (Wikipedia)](https://de.wikipedia.org/wiki/N%C3%A4chste-Nachbarn-Klassifikation)
 * [DecisionTreeRegressor: Warum er für Zukunftsprognosen problematisch ist](https://towardsdatascience.com/decisiontreeregressor-stop-using-for-future-projections-e27104537f6a)
 * [Streudiagramm (Wikipedia)](https://de.wikipedia.org/wiki/Streudiagramm)
-
----
-
-Möchtest du, dass ich das als vollständige Notebook-Vorlage mit Codezellen formatiere (also sofort ausführbar in `.ipynb`)?
