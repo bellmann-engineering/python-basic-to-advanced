@@ -1,7 +1,7 @@
 from datetime import date
 
 
-class Person():
+class Person:
     def __init__(self, vorname, nachname, geburtstag):
         self.vorname = vorname
         self.nachname = nachname
@@ -13,7 +13,7 @@ class Person():
         return today.year - self.geburtstag.year - ((today.month, today.day) < (self.geburtstag.month, self.geburtstag.day))
 
 
-class Fahrzeug():
+class Fahrzeug:
     def __init__(self, baujahr, erstzulassung):
         self.baujahr = baujahr
         self.erstzulassung = erstzulassung
@@ -22,10 +22,10 @@ class Fahrzeug():
         self.laenge = 0
 
     def __repr__(self):
-        return '<{0}.{1} object at {2}>'.format(self.__module__, type(self).__name__, hex(id(self)))
-
+        return f"<{self.__module__}.{type(self).__name__} object at {hex(id(self))}>"
+    
     def __str__(self):
-        return "EZ: {}, BJ: {}".format(self.erstzulassung, self.baujahr)
+        return f"EZ: {self.erstzulassung}, BJ: {self.baujahr}"
 
     def setSize(self, hoehe, breite, laenge):
         self.hoehe = hoehe
@@ -77,7 +77,7 @@ if brummi.hasFahrerlaubnis(paul) == False:
     print("\nPaul ist zu jung um Lkw zu fahren.")
 
 brummi.setSize(2.50, 2.80, 12)
-print("\nDer LKW mit {} hat ein Volumen von {} m³".format(brummi, brummi.volumen))
+print(f"\nDer LKW mit {brummi} hat ein Volumen von {brummi.volumen} m³")
 
 audi.setSize(1.20, 2, 3.8)
 if brummi.isBiggerThan(audi):
