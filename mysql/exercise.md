@@ -45,14 +45,6 @@ In unserem Beispiel handelt es sich um die Spalte "Id", welche eine fortlaufende
 
 In diesem Fall ist die Tabelle bereits in der 2. Normalform, da es keine partiale Abhängigkeit eines Nicht-Schlüsselattributs von einem Teilschlüssel gibt. Es müssen keine weiteren Änderungen vorgenommen werden.
 
-
-## Ausgangstabelle (aus dem Bild)
-
-| Id | FName | LName | Strasse | Ort | Email |
-|----|-------|-------|---------|-----|-------|
-| 1 | Hans | Müller | Musterstr. 1 | 99871 Berlin | h@mueller.de |
-| 2 | Peter | Meier | Hauptstr. 5 | 12345 Entenhausen | peter@gmail.com |
-
 Hier ist `Id` der **einzige** Primärschlüssel (einspaltig). Damit ist 2NF automatisch erfüllt - es gibt keinen "Teil" des Schlüssels, von dem etwas nur partiell abhängen könnte.
 
 ## Negativbeispiel
@@ -94,7 +86,6 @@ Man sieht das Problem auch praktisch: "Hans Müller" mit seiner Email steht dopp
 | 2 | Entenhausen | Hauptstr. 5 |
 
 Jetzt hängt in `Adresse` die `Strasse` am vollständigen Schlüssel (`Id + Ort`), und `FName`/`LName`/`Email` stehen in `Personen` nur einmal pro Person - unabhängig davon, wie viele Adressen sie hat.
-
 
 ## Dritte Normalform
 Eine Relation befindet sich in der dritten Normalform, wenn 
