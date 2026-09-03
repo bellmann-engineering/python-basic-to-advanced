@@ -45,22 +45,56 @@ In unserem Beispiel handelt es sich um die Spalte "Id", welche eine fortlaufende
 
 In diesem Fall ist die Tabelle bereits in der 2. Normalform, da es keine partiale Abhängigkeit eines Nicht-Schlüsselattributs von einem Teilschlüssel gibt. Es müssen keine weiteren Änderungen vorgenommen werden.
 
-Angenommen, die Spalte "id" ist der Primärschlüssel und "Strasse" ist von der Kombination aus "Ort" und "Id" abhängig, während die restlichen Attribute ("FName", "LName" und "Email") nur von "Id" abhängen. In diesem Fall müssten wir die Tabelle umstrukturieren, um die 2. Normalform zu erreichen.
 
-Eine mögliche Umstrukturierung könnte wie folgt aussehen:
+## Ausgangstabelle (aus dem Bild)
 
-Tabelle 1: Personen
+| Id | FName | LName | Strasse | Ort | Email |
+|----|-------|-------|---------|-----|-------|
+| 1 | Hans | Müller | Musterstr. 1 | 99871 Berlin | h@mueller.de |
+| 2 | Peter | Meier | Hauptstr. 5 | 12345 Entenhausen | peter@gmail.com |
 
-    Id (Primärschlüssel)
-    FName
-    LName
-    Email
+Hier ist `Id` der **einzige** Primärschlüssel (einspaltig). Damit ist 2NF automatisch erfüllt - es gibt keinen "Teil" des Schlüssels, von dem etwas nur partiell abhängen könnte.
 
-Tabelle 2: Adresse
+## Negativbeispiel
 
-    Id (Primärschlüssel)
-    Strasse
-    Ort
+Stellen wir uns vor, eine Person kann **mehrere Adressen** haben (z. B. Hauptwohnsitz und Nebenwohnsitz), und die Tabelle sieht deshalb so aus:
+
+| Id | Ort | FName | LName | Strasse | Email |
+|----|-----|-------|-------|---------|-------|
+| 1 | Berlin | Hans | Müller | Musterstr. 1 | h@mueller.de |
+| 1 | München | Hans | Müller | Nebenstr. 9 | h@mueller.de |
+| 2 | Entenhausen | Peter | Meier | Hauptstr. 5 | peter@gmail.com |
+
+Der einzige Unterschied: Weil `Id` allein jetzt **nicht mehr eindeutig** ist (Zeile 1 und 2 haben beide `Id = 1`), braucht man `Id + Ort` als **zusammengesetzten Primärschlüssel**, um jede Zeile eindeutig zu identifizieren.
+
+### Warum das die 2NF verletzt
+
+- `Strasse` hängt von `Id` **und** `Ort` ab (welche Straße, hängt davon ab, um welchen Wohnsitz es geht) -> das ist ok, volle Abhängigkeit vom ganzen Schlüssel.
+- `FName`, `LName`, `Email` hängen aber **nur von `Id`** ab - eine Person heißt "Hans Müller", egal an welchem Ort. Das ist nur ein **Teil** des Schlüssels.
+
+Das ist die klassische **partielle Abhängigkeit**: Ein Attribut hängt nicht am vollständigen zusammengesetzten Schlüssel (`Id + Ort`), sondern nur an einer seiner Komponenten (`Id`). Genau das verbietet die 2NF.
+
+Man sieht das Problem auch praktisch: "Hans Müller" mit seiner Email steht doppelt in der Tabelle, weil er zwei Adressen hat.
+
+## Was man tun muss: Aufteilen
+
+**Tabelle 1: Personen**
+
+| Id | FName | LName | Email |
+|----|-------|-------|-------|
+| 1 | Hans | Müller | h@mueller.de |
+| 2 | Peter | Meier | peter@gmail.com |
+
+**Tabelle 2: Adresse**
+
+| Id | Ort | Strasse |
+|----|-----|---------|
+| 1 | Berlin | Musterstr. 1 |
+| 1 | München | Nebenstr. 9 |
+| 2 | Entenhausen | Hauptstr. 5 |
+
+Jetzt hängt in `Adresse` die `Strasse` am vollständigen Schlüssel (`Id + Ort`), und `FName`/`LName`/`Email` stehen in `Personen` nur einmal pro Person - unabhängig davon, wie viele Adressen sie hat.
+
 
 ## Dritte Normalform
 Eine Relation befindet sich in der dritten Normalform, wenn 
