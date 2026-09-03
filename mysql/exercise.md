@@ -2,10 +2,10 @@
 
 Die Hauptmotivation des Tabellendesign ist es innerhalb des rationalen Schemas folgende Ziele zu verfolgen:
 
-- Redundanz und Inkonsistenz vermeiden
-- Anomalien vermeiden
-- Verlustlose Zerlegungen finden
-- Abhängigkeiten bewahren
+- Redundanz und Inkonsistenz vermeiden - Daten nicht mehrfach speichern, sonst können sich Kopien widersprechen.
+- Anomalien vermeiden - Probleme beim Ändern (Update), Einfügen und Löschen von Daten verhindern.
+- Verlustlose Zerlegungen finden - Aufgeteilte Tabellen müssen sich per JOIN wieder exakt zur Originaltabelle zusammensetzen lassen.
+- Abhängigkeiten bewahren - Alle ursprünglichen Abhängigkeiten müssen auch nach der Aufteilung noch innerhalb der Tabellen prüfbar sein, ohne Join.
 
 ## Normalformen
 Unter Normalisierung eines relationalen Datenbankmodells versteht man die Aufteilung von Attributen in mehrere Relationen (Tabellen) mithilfe der Normalisierungsregeln und deren
