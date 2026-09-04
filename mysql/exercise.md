@@ -82,8 +82,8 @@ Man sieht das Problem auch praktisch: "Hans Müller" mit seiner Email steht dopp
 | Id | Ort | Strasse |
 |----|-----|---------|
 | 1 | Berlin | Musterstr. 1 |
-| 1 | München | Nebenstr. 9 |
-| 2 | Entenhausen | Hauptstr. 5 |
+| 2 | München | Nebenstr. 9 |
+| 3 | Entenhausen | Hauptstr. 5 |
 
 Jetzt hängt in `Adresse` die `Strasse` am vollständigen Schlüssel (`Id + Ort`), und `FName`/`LName`/`Email` stehen in `Personen` nur einmal pro Person - unabhängig davon, wie viele Adressen sie hat.
 
