@@ -8,31 +8,26 @@ These include:
  * Number of seats
  * Top speed
 
-
 ```text
-+------------------------------------------------------+
-|                                                      |
-+------------------------------------------------------+
-|                                                      |
-|  === Vehicle entry ===                               |
-|                                                      |
-|  Manufacturer   : Volkswagen                         |
-|  Model name     : ID3                                |
-|  HP             : 200                                |
-|  Number of seats: 4                                  |
-|  Top speed (km/h): 220                               |
-|                                                      |
-|  Vehicle saved.                                      |
-|  Enter another vehicle? (y/n): y                     |
-|                                                      |
-|  === Vehicle entry ===                               |
-|                                                      |
-|  Manufacturer   : Audi                               |
-|  Model name     : _                                  |
-|                                                      |
-+------------------------------------------------------+
++-----------------------------------------------------------------------+
+| PROBLEMS (1)    OUTPUT    DEBUG CONSOLE    TERMINAL                   |
+|                                            ========                   |
++-----------------------------------------------------------------------+
+|                                                                       |
+| Manufacturer: Audi                                                    |
+| Model name: A3                                                        |
+| HP: 200                                                               |
+| Seats: 4                                                              |
+| Top speed: 200                                                        |
+| Add another vehicle? (y/n): n                                         |
+| +--------------+--------------+-----+-----------------+-----------+  |
+| | Manufacturer | Vehicle name | HP  | Number of seats | Top speed |  |
+| +--------------+--------------+-----+-----------------+-----------+  |
+| |     Audi     |      A3      | 200 |        4        |    200    |  |
+| +--------------+--------------+-----+-----------------+-----------+  |
+| PS C:\Users\kai> _                                                    |
++-----------------------------------------------------------------------+
 ```
-
 
 Once a vehicle has been entered completely, the user should be asked whether they want to enter another vehicle.
 
@@ -56,3 +51,5 @@ Note: Storing the data in a database or text file is not required. The data is o
 
 Bonus task:
 Move as many operations as possible into functions to make the program more readable and maintainable.
+
+Hint: Use the [`prettytable`](https://pypi.org/project/prettytable/) library for the tabular output.
